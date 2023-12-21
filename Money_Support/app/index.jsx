@@ -1,17 +1,17 @@
 import React from 'react';
-import {Text, View, StyleSheet, Button, StatusBar} from 'react-native';
+import { View, StyleSheet, StatusBar} from 'react-native';
 import { useState } from 'react';
 import DefaultLable from '../components/Lables/default';
 
 const MainMenu = () => {
-    const [count, setCount] = useState(0)
 
   return (
       <View  style={{flex:1, ...style.dark}}>
-          <StatusBar backgroundColor="black"/>
-  
+      <StatusBar backgroundColor="black" barStyle="light-content"/>
+
           <DefaultLable text="Hello World"/>
-          <Text> Hello World </Text>
+  
+      
       </View>
   );
 };
