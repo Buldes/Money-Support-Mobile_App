@@ -1,18 +1,21 @@
 import React from 'react';
-import { View, StyleSheet, StatusBar, Dimensions } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import BankBalanceLable from '../components/Lables/bankBalance';
 import HeadLine from '../components/Lables/headlins';
 import colorPallet from '../constants/Colors';
 import { ScrollView } from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { StatusBar } from 'expo-status-bar';
 
 const MainMenu = () => {
 
   return (
+    <View style={{flex:1, ...style.dark}}>  
+      <StatusBar style="light" backgroundColor="black"/>    
+
       <ScrollView alignItems="center"  style={{flex:1, ...style.dark}}>
 
-          <StatusBar backgroundColor="black" barStyle="light-content"/>
-
-          <View style={style.dark}>
+          <View style={{marginTop:10, ...style.dark}}>
             <HeadLine text="no user jet"/>
           </View>
 
@@ -25,16 +28,16 @@ const MainMenu = () => {
           </View>
       
       </ScrollView>
+    </View>
+
   );
 };
 
 const style = StyleSheet.create({
-  light: {
-    color: '#000',
-    backgroundColor: '#fff',
+  screen: {
+      flex: 1,
   },
   dark: {
-    color: '#fff',
     backgroundColor: '#000'
   },
   upArear: {
