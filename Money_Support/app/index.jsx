@@ -4,24 +4,35 @@ import BankBalanceLable from '../components/Lables/bankBalance';
 import HeadLine from '../components/Lables/headlins';
 import colorPallet from '../constants/Colors';
 import { ScrollView } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
+import languageDirectory from '../Functions/getLanguageDirectory';
+import ExpendituresInfo from '../components/fullComp/info';
 
 const MainMenu = () => {
+  
+  const directory = languageDirectory();
 
   return (
     <View style={{flex:1, ...style.dark}}>  
-      <StatusBar style="light" backgroundColor="black"/>    
+    
+      <StatusBar style="light" backgroundColor="#000"/> 
 
       <ScrollView alignItems="center"  style={{flex:1, ...style.dark}}>
 
           <View style={{marginTop:10, ...style.dark}}>
-            <HeadLine text="no user jet"/>
+            <HeadLine text={directory["no user jet"]}/>
           </View>
 
           <View style={{alignItems:"center", ...style.upArear}}>
-            <BankBalanceLable text="1.134,87€" top={30}/>
+
+            <View>
+              <BankBalanceLable text="1.134,87€" marginTop={30}/>
+            </View>
+
+            <ExpendituresInfo/>
+
           </View>
+
 
           <View style={{alignItems:"center", ...style.downArear}}>
             <BankBalanceLable text="1.134,87€" top={30}/>

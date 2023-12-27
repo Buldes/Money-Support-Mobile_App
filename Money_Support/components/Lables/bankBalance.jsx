@@ -25,7 +25,7 @@ const BankBalanceLable = (props) => {
     return(
         <DefaultLabel 
             backGround={colorPallet.bg_3e} width={size} height={size} borderRadius={1000} fontFamily="digital-7" fontSize={fontSize}
-            text={props.text} top={props.top} left={props.left}/>
+            text={props.text} top={props.top} left={props.left} marginTop={props.marginTop}/>
     );
 }
 

@@ -1,5 +1,10 @@
 {
   "expo": {
+    "androidStatusBar": {
+      "backgroundColor": "#111111",
+      "style":"light",
+      "translucent": false
+    },
     "name": "Money_Support",
     "slug": "Money_Support",
     "version": "1.0.0",

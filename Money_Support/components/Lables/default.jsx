@@ -9,7 +9,7 @@ const DefaultLabel = (props) => {
 
     const styles = StyleSheet.create({
         textStyle: { color: textColor, fontSize: fontSize, fontFamily:fontFamily, backgroundColor:backGround, borderRadius:borderRadius, 
-                    top:props.top, left:props.left, width:props.width, height:props.height, marginLeft:props.marginLeft, marginTop:props.marginTop, 
+                    top:props.top, left:props.left, width:props.width, height:props.height, marginLeft:props.marginLeft, marginTop:props.marginTop, marginBottom:props.marginBottom,
                     ...props.add, textAlign:textAlign, textAlignVertical:textAlignVertical}
     });
 
