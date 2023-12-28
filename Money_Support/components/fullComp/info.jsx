@@ -1,12 +1,13 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import languageDirectory from "../../Functions/getLanguageDirectory";
+import languageDictionary from "../../Functions/getLanguageDictionary";
 import HeadLine from "../Lables/headlins";
 import DefaultLabel from "../Lables/default";
 import colorPallet from "../../constants/Colors";
+import ValueToString from "../../Functions/valueToString";
 
 const ExpendituresInfo = (props) => {
-    const directory = languageDirectory();
+    const dictionary = languageDictionary();
 
     const {} = props;
 
@@ -29,18 +30,18 @@ const ExpendituresInfo = (props) => {
 
     return(
         <View>
-            <HeadLine text={directory["Expenditures"]} marginTop={30}/>
+            <HeadLine text={dictionary["Expenditures"]} marginTop={30}/>
             
             <View style={styles.parantView}>
 
                 <View style={styles.childView}>
-                    <DefaultLabel text="Diesen Monat:" textAlign="left" backGround={colorPallet.bg_1f}/>
-                    <DefaultLabel text="Diesen Monat:" textAlign="left" backGround={colorPallet.bg_1f}/>
+                    <DefaultLabel text={`${dictionary["Current Month"]}:`} textAlign="left" backGround={colorPallet.transperent}/>
+                    <DefaultLabel text={ValueToString(props.currentMonthExpenditures)} marginLeft={10} textAlign="left" backGround={colorPallet.transperent}/>
                 </View>
 
-                <View style={styles.childView}>
-                    <DefaultLabel text="Durchschnitt:" textAlign="left" backGround={colorPallet.bg_1f}/>
-                    <DefaultLabel text="Diesen Monat:" textAlign="left" backGround={colorPallet.bg_1f}/>
+                <View style={{marginBottom:5, ...styles.childView}}>
+                    <DefaultLabel text={`${dictionary["Average"]}:`} textAlign="left" backGround={colorPallet.transperent}/>
+                    <DefaultLabel text={ValueToString(props.avargeExpenditures)} marginLeft={10} textAlign="left" backGround={colorPallet.transperent}/>
                 </View>
 
              </View>

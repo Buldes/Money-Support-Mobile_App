@@ -5,8 +5,9 @@ import HeadLine from '../components/Lables/headlins';
 import colorPallet from '../constants/Colors';
 import { ScrollView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import languageDirectory from '../Functions/getLanguageDirectory';
+import languageDirectory from '../Functions/getLanguageDictionary';
 import ExpendituresInfo from '../components/fullComp/info';
+import { avargeExpenditures, currentMonthExpenditures } from '../variables/float';
 
 const MainMenu = () => {
   
@@ -29,7 +30,7 @@ const MainMenu = () => {
               <BankBalanceLable text="1.134,87€" marginTop={30}/>
             </View>
 
-            <ExpendituresInfo/>
+            <ExpendituresInfo avargeExpenditures={avargeExpenditures} currentMonthExpenditures={currentMonthExpenditures}/>
 
           </View>
 
@@ -56,7 +57,7 @@ const style = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     flex: 1,
-    height:500,
+    height:400,
     borderRadius:10,
     width:Dimensions.get("window").width - 10
 

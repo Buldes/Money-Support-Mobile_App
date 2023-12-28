@@ -1,5 +1,8 @@
 {
-    "no user jet":"Zurzeit kein Nutzer",
+    "no user jet": "noch kein Benutzer",
     
-    "Expenditures":"Ausgaben"
+    "Expenditures": "Ausgaben",
+
+    "Current Month": "Aktueller Monat",
+    "Average": "Durchschnitt"
 }
