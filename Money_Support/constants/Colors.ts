@@ -7,7 +7,8 @@ const colorPallet = {
   bg_1f: "#1f1f1f",
   bg_Rgb_ef1f1f: "#ef1f1f", 
   bg_Rgb_9f2f1f: "#9f2f1f",
-  bg_rGb_2f9f1f: "#2f9f1f"
+  bg_rGb_2f9f1f: "#2f9f1f",
+  bg_rgB_0d0dff:"#0d0dff",
 }
 
 export default colorPallet;

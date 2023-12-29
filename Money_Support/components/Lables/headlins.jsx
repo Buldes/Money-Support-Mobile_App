@@ -7,7 +7,7 @@ const HeadLine = (props) => {
 
     return(
         <DefaultLable text={props.text} width={width} height={props.height} borderRadius={100} fontSize={22}
-                        top={props.top} left={props.left} marginLeft={props.marginLeft} marginTop={props.marginTop} />
+                        top={props.top} left={props.left} marginLeft={props.marginLeft} marginTop={props.marginTop} add={props.add}/>
     );
 }
 
