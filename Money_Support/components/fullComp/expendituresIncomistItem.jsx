@@ -19,8 +19,9 @@ const ExpendituresIncomListItem = (props) => {
             flexDirection:"row"
         }
     })
-
-    var bgColor;
+    
+    // check which color is needed
+    var bgColor = colorPallet.bg_4e;
     if (props.status == "Expenditures") {
         bgColor = colorPallet.bg_Rgb_9f2f1f;
     }
@@ -29,7 +30,7 @@ const ExpendituresIncomListItem = (props) => {
     }
 
     return(
-        <View style={styles.parantView}>    
+        <View style={styles.parantView} >    
             <DefaultLabel text="" width={30} marginLeft={5} marginTop={5} marginBottom={5} backGround={bgColor}/>
             <DefaultLabel text={props.date} width={120} marginLeft={5} marginTop={5} marginBottom={5} backGround={colorPallet.bg_4e}/>
             <DefaultLabel text={ValueToString(props.value)} width={screenWidth-220} marginLeft={5} marginTop={5} marginBottom={5} backGround={colorPallet.bg_4e}/>

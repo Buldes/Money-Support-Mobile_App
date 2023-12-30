@@ -1,49 +1,99 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import BankBalanceLable from '../components/Lables/bankBalance';
 import HeadLine from '../components/Lables/headlins';
 import colorPallet from '../constants/Colors';
 import { ScrollView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import languageDirectory from '../Functions/getLanguageDictionary';
 import ExpendituresInfo from '../components/fullComp/info';
 import { avargeExpenditures, currentMonthExpenditures } from '../variables/float';
 import ExpendituresIncomComp from '../components/fullComp/expendituresIncom';
 import ValueToString from '../Functions/valueToString';
+import { SaveCurrentUser, getData, storeData } from '../Functions/dataDealer';
+import { currentUserData, setCurrentUserData, setToWelcomeData } from '../variables/dictionary';
+import { currentuserKey } from '../variables/string';
+import ExpendituresIncomListItem from '../components/fullComp/expendituresIncomistItem';
+import languageDictionary from '../Functions/getLanguageDictionary';
+import SetDateString from '../Functions/dateTransformer';
+import { SortById } from '../Functions/dictionarySorting';
 
 const MainMenu = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  // 1. load current data
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        await getData(currentuserKey).then((data) => {
+          sorted = SortById(data)
+          setCurrentUserData(sorted)
+          setData(sorted);
+        })
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData()
+  }, []);
   
-  const directory = languageDirectory();
+  // wait until loading is finished
+  if (loading){
+    return (
+      <View style={{flex:1, ...style.dark}}> 
+      </View>
+    )
+  }
 
-  return (
-    <View style={{flex:1, ...style.dark}}>  
+  //check if data is null
+  if (data == null && !loading){
+    console.log(`No data for user ${currentuserKey}. Generating data...`)
+    setToWelcomeData()
+    setData(currentUserData)
+    SaveCurrentUser()
+  }
+  else if (data != null){
+    console.log(`loaded data: ${data.length} entrys`)
+  }
 
-      <ScrollView alignItems="center"  style={{flex:1, ...style.dark}}>
+  // get current language dictionary
+  const dictionary = languageDictionary()
 
-          <View style={{marginTop:10, alignItems:"center", ...style.dark}}>
-            <HeadLine text={directory["no user jet"]}/>
-          </View>
+  // loading is finished and data is not null
+  if (data != null)
+  {
+    return (
+      <View style={{flex:1, ...style.dark}}>  
 
-          <View style={{alignItems:"center", ...style.upArear}}>
+        <ScrollView alignItems="center"  style={{flex:1, ...style.dark}}>
 
-            <View>
-              <BankBalanceLable text={ValueToString(239.23)} marginTop={30}/>
+            <View style={{marginTop:10, alignItems:"center", ...style.dark}}>
+              <HeadLine text={dictionary["no user jet"]}/>
             </View>
 
-            <ExpendituresInfo avargeExpenditures={avargeExpenditures} currentMonthExpenditures={currentMonthExpenditures}/>
+            <View style={{alignItems:"center", ...style.upArear}}>
 
-          </View>
+              <View>
+                <BankBalanceLable text={ValueToString(data[data.length - 1].amount)} marginTop={30}/>
+              </View>
 
-          <View style={{alignItems:"center", ...style.downArear}}>
-            <ExpendituresIncomComp/>
-          </View>
-      
-      </ScrollView>
+              <ExpendituresInfo avargeExpenditures={avargeExpenditures} currentMonthExpenditures={currentMonthExpenditures}/>
 
-        <StatusBar style="light" backgroundColor='#000'/>
-    </View>
+            </View>
 
-  );
+            <View style={{alignItems:"center", ...style.downArear}}>
+              <ExpendituresIncomComp listItems={data.map((value) => <ExpendituresIncomListItem key={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
+            </View>
+        
+        </ScrollView>
+
+          <StatusBar style="light" backgroundColor='#000'/>
+      </View>
+
+    );
+  }
 };
 
 const style = StyleSheet.create({

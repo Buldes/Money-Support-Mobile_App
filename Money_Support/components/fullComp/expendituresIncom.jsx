@@ -31,7 +31,7 @@ const ExpendituresIncomComp = (props) => {
             borderRadius:20,
             width: screenWidth - 44,
             backgroundColor:colorPallet.bg_4e,
-            marginTop:-10,
+            marginTop:0,
             position:"absolute",
             zIndex:1
         }
@@ -44,6 +44,7 @@ const ExpendituresIncomComp = (props) => {
             <DefaultButton onPress={props.onPress} text="New Entry" width={150} height={30} backGround={colorPallet.bg_rgB_0d0dff} marginTop={460} left={screenWidth-199} add={{position:'absolute',zIndex:2}}/>
 
             <ScrollView borderRadius={20} alignItems={"center"} style={styles.listView}>
+                <DefaultLabel text="" backGround={colorPallet.transperent} marginBottom={10}/>
                 {props.listItems}
                 <DefaultLabel text="" backGround={colorPallet.transperent} marginBottom={10}/>
             </ScrollView>

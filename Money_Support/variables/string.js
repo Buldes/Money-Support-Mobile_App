@@ -20,3 +20,9 @@ export const currency = "EUR"
 export const setCurrency = (value) => {
     currency = value
 }
+
+export const currentuserKey = "justatest";
+
+export const setCurrentUserKey = (value) => {
+    currentuserKey = value
+}
