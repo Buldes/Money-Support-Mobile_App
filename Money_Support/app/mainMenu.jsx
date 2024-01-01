@@ -16,10 +16,12 @@ import ExpendituresIncomListItem from '../components/fullComp/expendituresIncomi
 import languageDictionary from '../Functions/getLanguageDictionary';
 import SetDateString from '../Functions/dateTransformer';
 import { SortById } from '../Functions/dictionarySorting';
+import AddEntryModal from '../components/fullComp/addEntryModal';
 
 const MainMenu = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [modal, setModal] = useState(false)
 
   // 1. load current data
   useEffect(() => {
@@ -36,6 +38,7 @@ const MainMenu = () => {
         setLoading(false);
       }
     };
+    // only refresh data, when modal is not open
     fetchData()
   }, []);
   
@@ -84,8 +87,10 @@ const MainMenu = () => {
             </View>
 
             <View style={{alignItems:"center", ...style.downArear}}>
-              <ExpendituresIncomComp listItems={data.map((value) => <ExpendituresIncomListItem key={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
+              <ExpendituresIncomComp onPress={() => setModal(true)} listItems={data.map((value) => <ExpendituresIncomListItem key={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
             </View>
+
+            <AddEntryModal isVisible={modal} closePress={() => setModal(false)}/>
         
         </ScrollView>
 

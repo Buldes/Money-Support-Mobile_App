@@ -6,8 +6,10 @@ import ExpendituresIncomListItem from "./expendituresIncomistItem";
 import { ScrollView } from "react-native-gesture-handler";
 import DefaultButton from "../Buttons/default";
 import DefaultLabel from "../Lables/default";
+import languageDictionary from "../../Functions/getLanguageDictionary";
 
 const ExpendituresIncomComp = (props) => {
+    const dictionary = languageDictionary()
     const screenWidth = Dimensions.get("window").width
     
     const {} = props;
@@ -39,9 +41,9 @@ const ExpendituresIncomComp = (props) => {
 
     return(
         <View style={styles.parentView}>
-            <HeadLine text="Entry List" width={screenWidth - 40} marginTop={-2} add={{borderColor:"black", borderWidth:2, position:'absolute',zIndex:2}}/>
+            <HeadLine text={dictionary["Entrys"]} width={screenWidth - 40} marginTop={-2} add={{borderColor:"black", borderWidth:2, position:'absolute',zIndex:2}}/>
 
-            <DefaultButton onPress={props.onPress} text="New Entry" width={150} height={30} backGround={colorPallet.bg_rgB_0d0dff} marginTop={460} left={screenWidth-199} add={{position:'absolute',zIndex:2}}/>
+            <DefaultButton onPress={props.onPress} text={dictionary["New Entry"]} width={150} height={30} backGround={colorPallet.bg_rgB_0d0dff} marginTop={460} left={screenWidth-199} add={{position:'absolute',zIndex:2}}/>
 
             <ScrollView borderRadius={20} alignItems={"center"} style={styles.listView}>
                 <DefaultLabel text="" backGround={colorPallet.transperent} marginBottom={10}/>

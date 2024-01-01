@@ -3,6 +3,7 @@ import { Dimensions, StyleSheet, View } from "react-native";
 import colorPallet from "../../constants/Colors";
 import DefaultLabel from "../Lables/default";
 import ValueToString from "../../Functions/valueToString";
+import FontAwsomeIcon from "react-native-vector-icons/FontAwesome"
 
 const ExpendituresIncomListItem = (props) => {
     const screenWidth = Dimensions.get("window").width
@@ -31,9 +32,11 @@ const ExpendituresIncomListItem = (props) => {
 
     return(
         <View style={styles.parantView} >    
-            <DefaultLabel text="" width={30} marginLeft={5} marginTop={5} marginBottom={5} backGround={bgColor}/>
+            <View style={{backgroundColor:bgColor, width:30, height:25, marginTop:5, marginLeft:5, borderRadius:5}}>
+                <FontAwsomeIcon name={`${props.status == "Expenditures" ? "arrow-down": props.status == "Income" ? "arrow-up": "arrow-right"}`} size={20} marginLeft={6} marginTop={2} color={colorPallet.bg_2e}/>
+            </View>
             <DefaultLabel text={props.date} width={120} marginLeft={5} marginTop={5} marginBottom={5} backGround={colorPallet.bg_4e}/>
-            <DefaultLabel text={ValueToString(props.value)} width={screenWidth-220} marginLeft={5} marginTop={5} marginBottom={5} backGround={colorPallet.bg_4e}/>
+            <DefaultLabel text={`${props.status == "Expenditures" ? "-": props.status == "Income" ? "+": ""}${ValueToString(props.value)}`} width={screenWidth-220} marginLeft={5} marginTop={5} marginBottom={5} backGround={colorPallet.bg_4e}/>
         </View>
     );
 }

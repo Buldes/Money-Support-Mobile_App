@@ -1,4 +1,7 @@
-export const language = "en";
+export const language = "de";
+/*All Languages:
+'en':   English
+'de':   German */
 
 export const setLanguage = (value) => {
     language = value
