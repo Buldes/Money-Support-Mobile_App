@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, View, Modal, Dimensions } from "react-native";
 import colorPallet from "../../constants/Colors";
 import DefaultLabel from "../Lables/default";
 import DefaultButton from "../Buttons/default";
+import DefaulDropBox from "../dropDown.jsx/default";
+import languageDictionary from "../../Functions/getLanguageDictionary";
+import FontAwsomeIcon from "react-native-vector-icons/FontAwesome"
+import DefaultInputField from "../inputField/default";
+import ValueToString from "../../Functions/valueToString";
 
 const AddEntryModal = (props) => {
     const screenSize = Dimensions.get("window").width
+    const dictionary = languageDictionary()
 
     const {} = props;
+
+    // for drop box:
+    
+    const [state, setState] = useState("Income");
+    const [items, setItems] = useState([
+      {label: dictionary['Expenditures'], value: 'Expenditures'},
+      {label: dictionary['Income'], value: 'Income'}
+    ]);
+    const [amount, setAmount] = useState(null);
 
     const styles = StyleSheet.create({
         backGroundView:{
@@ -38,19 +53,22 @@ const AddEntryModal = (props) => {
             <View style={styles.backGroundView}>
                 <View style={styles.parantView}>
 
-                    <DefaultLabel text="Add new Entry" borderRadius={20} marginBottom={10} width="100%"/>
+                    <DefaultLabel text={dictionary["Add new Entry"]} backGround={colorPallet.bg_4e} borderRadius={20} marginBottom={10} width="100%"/>
 
-                    <View style={styles.segment}> 
-                        <DefaultLabel text="Type:" borderRadius={20} marginLeft={10} backGround={colorPallet.transperent}/>  
+                    <View style={{zIndex:100, ...styles.segment}}> 
+                        <View style={{backgroundColor:state == "Expenditures" ? colorPallet.bg_Rgb_9f2f1f: state == "Income" ? colorPallet.bg_rGb_2f9f1f: colorPallet.bg_2e, width:30, height:25, marginTop:5, marginLeft:5, borderRadius:5}}>
+                            <FontAwsomeIcon name={`${state == "Expenditures" ? "arrow-down": state == "Income" ? "arrow-up": "arrow-right"}`} size={20} marginLeft={6} marginTop={2} color={colorPallet.bg_2e}/>
+                        </View>  
+                        <DefaulDropBox marginLeft={10} width={screenSize-85} value={state} setValue={setState} items={items} setItems={setItems} backGround={""}/>
                     </View>
 
-                    <View style={styles.segment}> 
-                        <DefaultLabel text="Amount:" borderRadius={20} marginLeft={10} backGround={colorPallet.transperent}/>  
+                    <View style={{zIndex:1, ...styles.segment}}> 
+                        <DefaultInputField value={amount} onChangeText={setAmount} width={screenSize-40} type="decimal-pad" placeholder={`[${dictionary["type amount here"]}]`} fontFamily="digital-7" fontSize={22}/>
                     </View>
 
                     <View style={{width:screenSize - 40, flexDirection:"row", marginTop:20}}> 
-                        <DefaultButton text="Cancel" width={(screenSize-40) / 2 - 5} marginRight={10} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.closePress}/>
-                        <DefaultButton text="Create" width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_rGb_2f9f1f}/>
+                        <DefaultButton text={dictionary["Cancel"]} width={(screenSize-40) / 2 - 5} height={30} marginRight={10} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.closePress}/>
+                        <DefaultButton text={dictionary["Create"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_rGb_2f9f1f}/>
                     </View>
 
                 </View>

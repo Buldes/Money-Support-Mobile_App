@@ -2,10 +2,17 @@
     "no user jet": "noch kein Benutzer",
     
     "Expenditures": "Ausgaben",
+    "Income":"Einkommen",
 
     "Current Month": "Aktueller Monat",
     "Average": "Durchschnitt",
     
     "Entrys":"Einträge",
-    "New Entry":"Neuer Eintrag"
+    "New Entry":"Neuer Eintrag",
+    "Add new Entry":"Neuer Eintrag",
+
+    "Cancel":"Abbrechen",
+    "Create":"Hinzufügen",
+    
+    "type amount here":"Betrag hier eingeben"
 }

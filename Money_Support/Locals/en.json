@@ -8,5 +8,11 @@
     "Average":"Average",
 
     "Entrys":"Entrys",
-    "New Entry":"New Entry"
+    "New Entry":"New Entry",
+    "Add new Entry":"Add new Entry",
+
+    "Cancel":"Cancel",
+    "Create":"Create",
+    
+    "type amount here":"type amount here"
 }

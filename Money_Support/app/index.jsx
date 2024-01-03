@@ -1,6 +1,5 @@
 import React from 'react';
 import MainMenu from './mainMenu';
-
 const App = () => {
 
   return (
