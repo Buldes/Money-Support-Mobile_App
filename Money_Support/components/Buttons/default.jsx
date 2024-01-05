@@ -2,9 +2,10 @@ import React from "react";
 import { Pressable, StyleSheet, Text } from "react-native";
 import DefaultLabel from "../Lables/default";
 import colorPallet from "../../constants/Colors";
+import pressColorPallet from "../../constants/onPressColor";
 
 const DefaultButton = (props) => {
-    const {backGround=colorPallet.bg_rgB_0d0dff, width=undefined, height=undefined} = props;
+    const {backGround=colorPallet.bg_rgB_0d0dff, width=undefined, height=undefined, pressedColor=pressColorPallet.bg_rgB_134ab0} = props;
 
     const styles = StyleSheet.create({
         button: {
@@ -26,7 +27,7 @@ const DefaultButton = (props) => {
     })
 
     return(
-        <Pressable style={styles.button} onPress={props.onPress}>
+        <Pressable style={({pressed}) => [ styles.button, pressed ? { backgroundColor:pressedColor } : {} ]} onPress={props.onPress}>
             <DefaultLabel text={props.text} backGround={colorPallet.transperent}/>
             {props.addComp}
         </Pressable>

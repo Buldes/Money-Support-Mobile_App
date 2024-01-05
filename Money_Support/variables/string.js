@@ -24,7 +24,7 @@ export const setCurrency = (value) => {
     currency = value
 }
 
-export const currentuserKey = "Test#2";
+export const currentuserKey = "Test#3";
 
 export const setCurrentUserKey = (value) => {
     currentuserKey = value

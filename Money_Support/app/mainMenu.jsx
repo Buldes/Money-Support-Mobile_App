@@ -114,7 +114,7 @@ const MainMenu = () => {
         
         </ScrollView>
 
-          <StatusBar style="light" backgroundColor='#000'/>
+          <StatusBar style="light" backgroundColor={colorPallet.black}/>
       </View>
 
     );
@@ -126,7 +126,7 @@ const style = StyleSheet.create({
       flex: 1,
   },
   dark: {
-    backgroundColor: '#000'
+    backgroundColor:colorPallet.black
   },
   upArear: {
     backgroundColor: colorPallet.bg_1f,
@@ -142,6 +142,7 @@ const style = StyleSheet.create({
     backgroundColor: colorPallet.bg_2e,
     marginBottom: 10,
     flex: 1,
+    height:700,
     borderRadius:10,
     width:Dimensions.get("window").width - 10,
   }

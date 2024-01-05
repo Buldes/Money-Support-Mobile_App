@@ -8,6 +8,7 @@ import languageDictionary from "../../Functions/getLanguageDictionary";
 import FontAwsomeIcon from "react-native-vector-icons/FontAwesome"
 import DefaultInputField from "../inputField/default";
 import AddData from "../../Functions/addData";
+import pressColorPallet from "../../constants/onPressColor";
 
 const AddEntryModal = (props) => {
     const screenSize = Dimensions.get("window").width
@@ -73,8 +74,8 @@ const AddEntryModal = (props) => {
                     </View>
 
                     <View style={{width:screenSize - 40, flexDirection:"row", marginTop:20}}> 
-                        <DefaultButton text={dictionary["Cancel"]} width={(screenSize-40) / 2 - 5} height={30} marginRight={10} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.closePress}/>
-                        <DefaultButton text={dictionary["Create"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_rGb_2f9f1f} onPress={CreateClick}/>
+                        <DefaultButton text={dictionary["Cancel"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.closePress} pressedColor={pressColorPallet.bg_Rgb_bf1f1f} height={30} marginRight={10}/>
+                        <DefaultButton text={dictionary["Create"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_rGb_2f9f1f} onPress={CreateClick} pressedColor={pressColorPallet.bg_rGb_2f9f1f}/>
                     </View>
 
                 </View>
