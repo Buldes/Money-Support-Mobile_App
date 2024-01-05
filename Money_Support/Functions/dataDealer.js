@@ -5,7 +5,9 @@ import { currentuserKey } from '../variables/string';
 export const storeData = async (value, key) => {
     try {
       const jsonValue = JSON.stringify(value);
-      await AsyncStorage.setItem(key, jsonValue);
+      await AsyncStorage.setItem(key, jsonValue).then((e) => {
+        return e
+      });
     } catch (e) {
         console.error(e)
         return e
@@ -21,8 +23,10 @@ export const getData = async (key) => {
    }
  };
 
-export function SaveCurrentUser(){
-    storeData(currentUserData, currentuserKey)
+export async function SaveCurrentUser(){
+    await storeData(currentUserData, currentuserKey).then((e) => {
+      return e
+    })
 }
 
 export function GetCurrentData(){

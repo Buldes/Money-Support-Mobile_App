@@ -10,13 +10,15 @@ import { avargeExpenditures, currentMonthExpenditures } from '../variables/float
 import ExpendituresIncomComp from '../components/fullComp/expendituresIncom';
 import ValueToString from '../Functions/valueToString';
 import { SaveCurrentUser, getData, storeData } from '../Functions/dataDealer';
-import { currentUserData, setCurrentUserData, setToWelcomeData } from '../variables/dictionary';
+import { AddToCurrentUserData, currentUserData, newEntry, setCurrentUserData, setToWelcomeData } from '../variables/dictionary';
 import { currentuserKey } from '../variables/string';
 import ExpendituresIncomListItem from '../components/fullComp/expendituresIncomistItem';
 import languageDictionary from '../Functions/getLanguageDictionary';
 import SetDateString from '../Functions/dateTransformer';
 import { SortById } from '../Functions/dictionarySorting';
 import AddEntryModal from '../components/fullComp/addEntryModal';
+import DefaultButton from '../components/Buttons/default';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const MainMenu = () => {
   const [data, setData] = useState(null)
@@ -28,7 +30,12 @@ const MainMenu = () => {
     const fetchData = async () => {
       try {
         await getData(currentuserKey).then((data) => {
-          sorted = SortById(data)
+          try {
+            sorted = SortById(data)
+          }
+          catch {
+            sorted = null
+          }
           setCurrentUserData(sorted)
           setData(sorted);
         })
@@ -42,7 +49,7 @@ const MainMenu = () => {
     fetchData()
   }, []);
   
-  // wait until loading is finished
+  // 2. wait until loading is finished
   if (loading){
     return (
       <View style={{flex:1, ...style.dark}}> 
@@ -50,7 +57,7 @@ const MainMenu = () => {
     )
   }
 
-  //check if data is null
+  // 3. check if data is null
   if (data == null && !loading){
     console.log(`No data for user ${currentuserKey}. Generating data...`)
     setToWelcomeData()
@@ -59,12 +66,23 @@ const MainMenu = () => {
   }
   else if (data != null){
     console.log(`loaded data: ${data.length} entrys`)
+    console.log(currentUserData)
   }
 
-  // get current language dictionary
+  // 4. get current language dictionary
   const dictionary = languageDictionary()
 
-  // loading is finished and data is not null
+  // 5. create add Data function / create Click
+  const AddDataClick = async () => {
+    AddToCurrentUserData(newEntry)
+    setCurrentUserData(SortById(currentUserData))
+    await SaveCurrentUser().then(() => {
+      setData(currentUserData)
+      setModal(false)
+    })
+  }
+
+  // 4. loading is finished and data is not null
   if (data != null)
   {
     return (
@@ -73,24 +91,26 @@ const MainMenu = () => {
         <ScrollView alignItems="center"  style={{flex:1, ...style.dark}}>
 
             <View style={{marginTop:10, alignItems:"center", ...style.dark}}>
-              <HeadLine text={dictionary["no user jet"]}/>
+              <HeadLine text={currentuserKey}/>
             </View>
 
             <View style={{alignItems:"center", ...style.upArear}}>
 
               <View>
-                <BankBalanceLable text={ValueToString(data[data.length - 1].amount)} marginTop={30}/>
+                <BankBalanceLable text={ValueToString(data[0].bankBalance)} marginTop={30}/>
               </View>
 
               <ExpendituresInfo avargeExpenditures={avargeExpenditures} currentMonthExpenditures={currentMonthExpenditures}/>
 
             </View>
 
+            <DefaultButton text ="delete data" onPress={() => AsyncStorage.removeItem(currentuserKey)}/>
+
             <View style={{alignItems:"center", ...style.downArear}}>
               <ExpendituresIncomComp onPress={() => setModal(true)} listItems={data.map((value) => <ExpendituresIncomListItem key={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
             </View>
 
-            <AddEntryModal isVisible={modal} closePress={() => setModal(false)}/>
+            <AddEntryModal isVisible={modal} closePress={() => setModal(false)} createClick={AddDataClick}/>
         
         </ScrollView>
 

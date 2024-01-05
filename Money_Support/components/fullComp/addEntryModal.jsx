@@ -7,7 +7,7 @@ import DefaulDropBox from "../dropDown.jsx/default";
 import languageDictionary from "../../Functions/getLanguageDictionary";
 import FontAwsomeIcon from "react-native-vector-icons/FontAwesome"
 import DefaultInputField from "../inputField/default";
-import ValueToString from "../../Functions/valueToString";
+import AddData from "../../Functions/addData";
 
 const AddEntryModal = (props) => {
     const screenSize = Dimensions.get("window").width
@@ -16,7 +16,6 @@ const AddEntryModal = (props) => {
     const {} = props;
 
     // for drop box:
-    
     const [state, setState] = useState("Income");
     const [items, setItems] = useState([
       {label: dictionary['Expenditures'], value: 'Expenditures'},
@@ -24,6 +23,7 @@ const AddEntryModal = (props) => {
     ]);
     const [amount, setAmount] = useState(null);
 
+    // styles
     const styles = StyleSheet.create({
         backGroundView:{
             flex:1,
@@ -48,6 +48,12 @@ const AddEntryModal = (props) => {
         }
     })
 
+    // add data function
+    const CreateClick = () => {
+        AddData(state, parseFloat(parseFloat(amount).toFixed(2)))
+        {props.createClick()}
+    }
+
     return(
         <Modal transparent={true} visible={props.isVisible} animationType="fade">
             <View style={styles.backGroundView}>
@@ -68,7 +74,7 @@ const AddEntryModal = (props) => {
 
                     <View style={{width:screenSize - 40, flexDirection:"row", marginTop:20}}> 
                         <DefaultButton text={dictionary["Cancel"]} width={(screenSize-40) / 2 - 5} height={30} marginRight={10} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.closePress}/>
-                        <DefaultButton text={dictionary["Create"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_rGb_2f9f1f}/>
+                        <DefaultButton text={dictionary["Create"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_rGb_2f9f1f} onPress={CreateClick}/>
                     </View>
 
                 </View>
