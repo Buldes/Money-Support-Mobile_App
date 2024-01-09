@@ -9,7 +9,8 @@ const pressColorPallet = {
   bg_Rgb_bf1f1f: "#e33d3d", 
   bg_Rgb_9f2f1f: "#ad2310",
   bg_rGb_2f9f1f: "#42c92e", 
-  bg_rgB_134ab0:"#1364b0"
+  bg_rgB_134ab0:"#1364b0",
+  bg_rgB_3065e8:"#4382e8"
 }
 
 export default pressColorPallet;

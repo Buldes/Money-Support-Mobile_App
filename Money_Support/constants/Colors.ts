@@ -10,7 +10,8 @@ const colorPallet = {
   bg_Rgb_bf1f1f: "#bf1f1f", 
   bg_Rgb_9f2f1f: "#9f2f1f",
   bg_rGb_2f9f1f: "#2f9f1f",
-  bg_rgB_134ab0:"#134ab0"
+  bg_rgB_134ab0:"#134ab0",
+  bg_rgB_3065e8:"#3065e8"
 }
 
 export default colorPallet;

@@ -51,13 +51,18 @@ const AddEntryModal = (props) => {
 
     // add data function
     const CreateClick = () => {
-        AddData(state, parseFloat(parseFloat(amount).toFixed(2)))
+        if (parseFloat(parseFloat(amount).toFixed(2)) <= 0 || isNaN(parseFloat(parseFloat(amount).toFixed(2)))){
+            AddData("Stay", 0.00)
+        }
+        else{
+            AddData(state, parseFloat(parseFloat(amount).toFixed(2)))
+        }
         {props.createClick()}
     }
 
     return(
-        <Modal transparent={true} visible={props.isVisible} animationType="fade">
-            <View style={styles.backGroundView}>
+        <Modal transparent={true} visible={props.isVisible} animationType="fade" onRequestClose={props.closePress}>
+            <View style={styles.backGroundView} onStartShouldSetResponder={() => console.log("Pressed")}>
                 <View style={styles.parantView}>
 
                     <DefaultLabel text={dictionary["Add new Entry"]} backGround={colorPallet.bg_4e} borderRadius={20} marginBottom={10} width="100%"/>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet, Dimensions, BackHandler, Alert } from 'react-native';
 import BankBalanceLable from '../components/Lables/bankBalance';
 import HeadLine from '../components/Lables/headlins';
 import colorPallet from '../constants/Colors';
@@ -17,13 +17,14 @@ import languageDictionary from '../Functions/getLanguageDictionary';
 import SetDateString from '../Functions/dateTransformer';
 import { SortById } from '../Functions/dictionarySorting';
 import AddEntryModal from '../components/fullComp/addEntryModal';
-import DefaultButton from '../components/Buttons/default';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import CahngeUserButton from '../components/fullComp/changeUserButton';
+import ChangeUserModal from '../components/fullComp/changeUserModal';
 
 const MainMenu = () => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [modal, setModal] = useState(false)
+  const [changeUserModal, setChangeUserModal] = useState(false)
 
   // 1. load current data
   useEffect(() => {
@@ -82,7 +83,7 @@ const MainMenu = () => {
     })
   }
 
-  // 4. loading is finished and data is not null
+  // 6. loading is finished and data is not null
   if (data != null)
   {
     return (
@@ -104,17 +105,20 @@ const MainMenu = () => {
 
             </View>
 
-            <DefaultButton text ="delete data" onPress={() => AsyncStorage.removeItem(currentuserKey)}/>
-
             <View style={{alignItems:"center", ...style.downArear}}>
               <ExpendituresIncomComp onPress={() => setModal(true)} listItems={data.map((value) => <ExpendituresIncomListItem key={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
             </View>
 
             <AddEntryModal isVisible={modal} closePress={() => setModal(false)} createClick={AddDataClick}/>
+            
+          <ChangeUserModal isVisible={changeUserModal} closeModal={() => setChangeUserModal(false)}/>
         
         </ScrollView>
 
-          <StatusBar style="light" backgroundColor={colorPallet.black}/>
+        <CahngeUserButton onPress={() => setChangeUserModal(true)}/>
+
+
+        <StatusBar style="light" backgroundColor={colorPallet.black}/>
       </View>
 
     );
