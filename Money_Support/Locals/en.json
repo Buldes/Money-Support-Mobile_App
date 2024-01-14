@@ -1,4 +1,7 @@
 {
+    "Choose youre Language":"Choose youre Language",
+    "Choose youre Currency":"Choose youre Currency",
+
     "no user jet":"no user jet",
     
     "Expenditures":"Expenditures",
@@ -13,6 +16,20 @@
 
     "Cancel":"Cancel",
     "Create":"Create",
+    "Next":"Next",
+    "Back":"Back",
+    "Finish":"Finish",
     
-    "type amount here":"type amount here"
+    "type amount here":"type amount here",
+
+    "USD": "US-Dollars",
+    "EUR": "Euro",
+    "GBP": "British pound",
+    "JPY": "Japanese Yen",
+    "CNY": "Chinese Yuan",
+    "CAD": "Canadian dollar",
+    "AUD": "Australian dollar",
+    "INR": "Indian Rupee",
+    "BRL": "Brazilian Real",
+    "CHF": "Swiss franc"
 }

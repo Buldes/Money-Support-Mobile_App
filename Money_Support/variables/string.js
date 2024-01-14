@@ -1,4 +1,4 @@
-export const language = "de";
+export var language = "de";
 /*All Languages:
 'en':   English
 'de':   German */
@@ -7,7 +7,7 @@ export const setLanguage = (value) => {
     language = value
 }
 
-export const currency = "EUR" 
+export var currency = "EUR" 
 /* All Currencies:
 'USD': US dollars
 'EUR': Euro
@@ -24,7 +24,7 @@ export const setCurrency = (value) => {
     currency = value
 }
 
-export const currentuserKey = "Test#8";
+export var currentuserKey = "Test#8";
 
 export const setCurrentUserKey = (value) => {
     currentuserKey = value

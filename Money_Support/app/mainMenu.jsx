@@ -19,26 +19,34 @@ import { SortById } from '../Functions/dictionarySorting';
 import AddEntryModal from '../components/fullComp/addEntryModal';
 import CahngeUserButton from '../components/fullComp/changeUserButton';
 import ChangeUserModal from '../components/fullComp/changeUserModal';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const MainMenu = () => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [modal, setModal] = useState(false)
   const [changeUserModal, setChangeUserModal] = useState(false)
+  const [allKeys, setAllKeys] = useState([])
+  const [currentUser, setCurrenUser] = useState(currentuserKey)
 
   // 1. load current data
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await getData(currentuserKey).then((data) => {
+        await getData(currentuserKey).then(async (data) => {
           try {
             sorted = SortById(data)
           }
           catch {
             sorted = null
           }
+          await AsyncStorage.getAllKeys().then((data) => {
+            setAllKeys(data == undefined ? [`[ERROR] no user found`]: data)
+          })
+
           setCurrentUserData(sorted)
           setData(sorted);
+
         })
       } catch (error) {
         console.error(error);
@@ -111,7 +119,7 @@ const MainMenu = () => {
 
             <AddEntryModal isVisible={modal} closePress={() => setModal(false)} createClick={AddDataClick}/>
             
-          <ChangeUserModal isVisible={changeUserModal} closeModal={() => setChangeUserModal(false)}/>
+          <ChangeUserModal isVisible={changeUserModal} closeModal={() => setChangeUserModal(false)} keys={allKeys}/>
         
         </ScrollView>
 

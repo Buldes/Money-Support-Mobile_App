@@ -1,4 +1,7 @@
 {
+    "Choose youre Language":"Wähle deine Sprache",
+    "Choose youre Currency":"Wähle deine Währung",
+
     "no user jet": "noch kein Benutzer",
     
     "Expenditures": "Ausgaben",
@@ -13,6 +16,20 @@
 
     "Cancel":"Abbrechen",
     "Create":"Hinzufügen",
+    "Next":"Weiter",
+    "Back":"Zurück",
+    "Finish":"Fertig",
     
-    "type amount here":"Betrag hier eingeben"
+    "type amount here":"Betrag hier eingeben",
+    
+    "USD": "US-Dollar",
+    "EUR": "Euro",
+    "GBP": "Britisches Pfund",
+    "JPY": "Japanischer Yen",
+    "CNY": "Chinesischer Yuan",
+    "CAD": "Kanadischer Dollar",
+    "AUD": "Australischer Dollar",
+    "INR": "Indische Rupie",
+    "BRL": "Brasilianischer Real",
+    "CHF": "Schweizer Franken"
 }

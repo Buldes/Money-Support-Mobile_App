@@ -5,7 +5,7 @@ import colorPallet from "../../constants/Colors";
 import pressColorPallet from "../../constants/onPressColor";
 
 const DefaultButton = (props) => {
-    const {backGround=colorPallet.bg_rgB_0d0dff, width=undefined, height=undefined, pressedColor=pressColorPallet.bg_rgB_134ab0} = props;
+    const {backGround=colorPallet.bg_rgB_134ab0, width=undefined, height=undefined, pressedColor=pressColorPallet.bg_rgB_134ab0} = props;
 
     const styles = StyleSheet.create({
         button: {
