@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { currentUserData, setCurrentUserData } from '../variables/dictionary';
-import { currentuserKey } from '../variables/string';
+import { currency, currentuserKey, language, numLayout } from '../variables/string';
 
 export const storeData = async (value, key) => {
     try {
@@ -34,4 +34,21 @@ export function GetCurrentData(){
         setCurrentUserData(data)
         return true
     })
+}
+
+export async function SaveSettings(){
+  let settingsList = {
+    "language":language,
+    "currency":currency,
+    "numLayout":numLayout
+  }
+  await storeData(settingsList, "settings").then((e) => {
+    return e
+  })
+}
+
+export async function SaveCurrentUserKey(){
+  await storeData(currentuserKey, "currentUser").then((e) => {
+    return e
+  })
 }

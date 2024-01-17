@@ -3,19 +3,25 @@ import { StyleSheet, View } from "react-native";
 import colorPallet from "../../../constants/Colors";
 import { StatusBar } from "expo-status-bar";
 import SetupLanguage from "./setupLanguage";
-import { setCurrency, setLanguage } from "../../../variables/string";
+import { SetNumLayout, setCurrency, setLanguage } from "../../../variables/string";
 import SetupCurrency from "./setupCurrency";
 import DefaultButton from "../../Buttons/default";
 import languageDictionary from "../../../Functions/getLanguageDictionary";
 import pressColorPallet from "../../../constants/onPressColor";
+import SetupLayout from "./setupLayout";
+import SetupSetNewName from "./setupSetNewName";
 
 const Setup = (props) => {
     const [languageSelected, setLanguageSelected] = useState("en")
     const [currencySelected, setCurrencySelected] = useState("EUR")
-    const [stage, setStage] = useState("SetCurrency")
+    const [layoutSelected, setLayoutSelected] = useState("de-DE")
+    const [newName, SetNewName] = useState(null)
+    const [stage, setStage] = useState("SetLanguage") // 1. SetLanguage, 2. SetCurrency, 3. SetLayout
+    const [finish, setFinish] = useState(false) // finish is true, when user input for newUserName is vailid
 
     setLanguage(languageSelected)
     setCurrency(currencySelected)
+    SetNumLayout(languageSelected)
     
 
     const dictionary = languageDictionary()
@@ -39,24 +45,37 @@ const Setup = (props) => {
     const NextCick = () => {
         if (stage == "SetLanguage") setStage("SetCurrency")
         else if (stage == "SetCurrency") setStage("SetLayout")
-        else if (stage == "SetLayout") setStage("setup-finish")
+        else if (stage == "SetLayout") setStage("SetNewName")
+        else if (stage == "SetNewName") {
+            setStage("setup-finish")
+        }
     }
     const BackCick = () => {
         if (stage == "SetLanguage") setLanguageSelected("en")
         else if (stage == "SetCurrency") setStage("SetLanguage")
         else if (stage == "SetLayout") setStage("SetCurrency")
+        else if (stage == "SetNewName") setStage("SetLayout")
+    }
+
+    const HandleInput = (value) => {
+        SetNewName(value)
+        if (value != null && value != "" && value.trim() != "") setFinish(true)
+        else setFinish(false)
     }
 
     return(
         <View style={styles.container}>
             {stage == "SetLanguage" ? <SetupLanguage selected={languageSelected} setSelected={setLanguageSelected}/>
-            : stage == "SetCurrency" ? <SetupCurrency  selected={currencySelected} setSelected={setCurrencySelected}/>: ""}
+            : stage == "SetCurrency" ? <SetupCurrency  selected={currencySelected} setSelected={setCurrencySelected}/>
+            : stage == "SetLayout" ? <SetupLayout selected={layoutSelected} setSelected={setLayoutSelected}/> 
+            : stage == "SetNewName" ? <SetupSetNewName value={newName} onChangeText={(e) => HandleInput(e)}/>: ""}
 
             <View style={styles.buttonView}>
                 {stage != "SetLanguage" ? <DefaultButton text={dictionary["Back"]} add={{flex:1}} backGround={colorPallet.bg_5e} pressedColor={pressColorPallet.bg_5e} onPress={BackCick} marginRight={10}/>: ""}
 
-                {stage != "SetLayout" ? <DefaultButton text={dictionary["Next"]} add={{flex:1}}  onPress={NextCick}/>:
-                                        <DefaultButton text={dictionary["Finish"]} backGround={colorPallet.bg_rGb_2f9f1f} pressedColor={pressColorPallet.bg_rGb_2f9f1f} add={{flex:1}}  onPress={NextCick}/>}
+                {stage != "SetNewName" ? <DefaultButton text={dictionary["Next"]} add={{flex:1}}  onPress={NextCick}/>:
+                 finish ? <DefaultButton text={dictionary["Finish"]} backGround={colorPallet.bg_rGb_2f9f1f} pressedColor={pressColorPallet.bg_rGb_2f9f1f} add={{flex:1}}  onPress={NextCick}/>:
+                 <DefaultButton text={dictionary["Finish"]} backGround={colorPallet.bg_2e} pressedColor={pressColorPallet.bg_Rgb_bf1f1f} add={{flex:1}} />}
                 
             </View>
 

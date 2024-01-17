@@ -20,7 +20,8 @@ const DefaultInputField = (props) => {
             marginRight:props.marginRight,
             fontFamily:fontFamily,
             fontSize:fontSize,
-            color:fontColor
+            color:fontColor,
+            backgroundColor:props.backGround
         }
     })
 

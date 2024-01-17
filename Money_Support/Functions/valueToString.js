@@ -1,7 +1,8 @@
-import { currency } from "../variables/string";
+import { currency, numLayout } from "../variables/string";
 
-function ValueToString(value){
-    return value.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: currency})
+function ValueToString(value, layout=numLayout){
+    let num = value
+    return num.toLocaleString(layout, {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: currency})
 }
 
 export default ValueToString;

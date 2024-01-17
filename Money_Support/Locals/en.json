@@ -1,6 +1,8 @@
 {
     "Choose youre Language":"Choose youre Language",
     "Choose youre Currency":"Choose youre Currency",
+    "Choose youre Layout":"Choose youre Layout",
+    "Type in a name for your first User.": "Type in a name for your first User.",
 
     "no user jet":"no user jet",
     
@@ -21,6 +23,7 @@
     "Finish":"Finish",
     
     "type amount here":"type amount here",
+    "Type name here":"Type name here",
 
     "USD": "US-Dollars",
     "EUR": "Euro",
