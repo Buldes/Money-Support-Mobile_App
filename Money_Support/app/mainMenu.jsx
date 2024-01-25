@@ -11,14 +11,14 @@ import ExpendituresIncomComp from '../components/fullComp/expendituresIncom';
 import ValueToString from '../Functions/valueToString';
 import { DeleteCurrentUserKey, SaveCurrentUser, getData, storeData } from '../Functions/dataDealer';
 import { AddToCurrentUserData, currentUserData, newEntry, setCurrentUserData, setToWelcomeData } from '../variables/dictionary';
-import { currentuserKey } from '../variables/string';
+import { currentuserKey, setCurrentUserKey } from '../variables/string';
 import ExpendituresIncomListItem from '../components/fullComp/expendituresIncomistItem';
 import languageDictionary from '../Functions/getLanguageDictionary';
 import SetDateString from '../Functions/dateTransformer';
 import { SortById } from '../Functions/dictionarySorting';
-import AddEntryModal from '../components/fullComp/addEntryModal';
+import AddEntryModal from '../components/Modals/addEntryModal';
 import CahngeUserButton from '../components/fullComp/changeUserButton';
-import ChangeUserModal from '../components/fullComp/changeUserModal';
+import ChangeUserModal from '../components/Modals/changeUserModal';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import DefaultButton from '../components/Buttons/default';
 
@@ -27,34 +27,41 @@ const MainMenu = () => {
   const [loading, setLoading] = useState(true)
   const [modal, setModal] = useState(false)
   const [changeUserModal, setChangeUserModal] = useState(false)
+  const [createNewUserModal, setCreateNewUserModal] = useState(false)
   const [allKeys, setAllKeys] = useState([])
   const [currentUser, setCurrenUser] = useState(currentuserKey)
 
-  // 1. load current data
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        await getData(currentuserKey).then(async (data) => {
-          try {
-            sorted = SortById(data)
-          }
-          catch {
-            sorted = null
-          }
-          await AsyncStorage.getAllKeys().then((data) => {
-            setAllKeys(data == undefined ? [`[ERROR] no user found`]: data)
-          })
-
-          setCurrentUserData(sorted)
-          setData(sorted);
-
+  // 1.1 Create function, to load all data
+  const fetchData = async () => {
+    try {
+      await getData(currentUser).then(async (data) => {
+        try {
+          sorted = SortById(data)
+        }
+        catch {
+          sorted = null
+        }
+        await AsyncStorage.getAllKeys().then((data) => {
+          setAllKeys(data == undefined ? [`[ERROR] no user found`]: data.filter(item => item != "settings" && item != "currentUser"))
         })
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
+
+        setCurrentUserData(sorted)
+        setData(sorted)
+        
+        console.log(`loaded data: ${data.length} entrys`)
+        console.log(`from User ${currentUser}`)
+
+      })
+    } catch (error) {
+      console.error(error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  // 1.2 load current data
+  useEffect(() => {
+
     // only refresh data, when modal is not open
     fetchData()
   }, []);
@@ -68,27 +75,38 @@ const MainMenu = () => {
   }
 
   // 3. check if data is null
-  if (data == null && !loading){
-    console.log(`No data for user ${currentuserKey}. Generating data...`)
+  if  (data == null && !loading){
+    console.log(`No data for user ${currentUser}. Generating data...`)
     setToWelcomeData()
     setData(currentUserData)
-    SaveCurrentUser()
-  }
-  else if (data != null){
-    console.log(`loaded data: ${data.length} entrys`)
-    console.log(currentUserData)
+    const saveAndRefresh = async () => {
+      await SaveCurrentUser().then(() => {
+        fetchData()
+      })
+    }
+    saveAndRefresh()
+    
   }
 
   // 4. get current language dictionary
   const dictionary = languageDictionary()
 
-  // 5. create add Data function / create Click
+  // 5. create add Data function / create Click and ChangeUser function
   const AddDataClick = async () => {
     AddToCurrentUserData(newEntry)
     setCurrentUserData(SortById(currentUserData))
     await SaveCurrentUser().then(() => {
       setData(currentUserData)
       setModal(false)
+    })
+  }
+
+  const ChangeUser = async (keyOfUser) => {
+    setCurrenUser(keyOfUser)
+    setCurrentUserKey(keyOfUser)
+    setChangeUserModal(false)
+    await fetchData().then(() => {
+      console.log("Loaded")
     })
   }
 
@@ -101,7 +119,7 @@ const MainMenu = () => {
         <ScrollView alignItems="center"  style={{flex:1, ...style.dark}}>
 
             <View style={{marginTop:10, alignItems:"center", ...style.dark}}>
-              <HeadLine text={currentuserKey}/>
+              <HeadLine text={currentUser}/>
             </View>
 
             <DefaultButton text="Delet UserKey" onPress={DeleteCurrentUserKey}/>
@@ -122,7 +140,7 @@ const MainMenu = () => {
 
             <AddEntryModal isVisible={modal} closePress={() => setModal(false)} createClick={AddDataClick}/>
             
-          <ChangeUserModal isVisible={changeUserModal} closeModal={() => setChangeUserModal(false)} keys={allKeys}/>
+          <ChangeUserModal openCreateUser={() => setCreateNewUserModal(true)} isVisible={changeUserModal} closeModal={() => setChangeUserModal(false)} keys={allKeys} reloadData={(keyOfUser) => ChangeUser(keyOfUser)}/>
         
         </ScrollView>
 

@@ -61,9 +61,15 @@ export async function SaveCurrentUserKey(){
   })
 }
 
+
+
 export async function DeleteCurrentUserKey(){
   await AsyncStorage.removeItem("currentUser").then((e) => {
     if (e != undefined) console.log(e)
     console.log("Deleted User")
   })
+}
+
+export async function ClearAllData(){
+  await AsyncStorage.clear()
 }

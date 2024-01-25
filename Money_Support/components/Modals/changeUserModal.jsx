@@ -1,10 +1,11 @@
 import React from "react";
 import { Dimensions, Modal, Pressable, StyleSheet, View } from "react-native";
-import { ScrollView, TouchableOpacity, TouchableWithoutFeedback } from "react-native-gesture-handler";
-import DefaultLabel from "../Lables/default";
+import { ScrollView } from "react-native-gesture-handler";
 import colorPallet from "../../constants/Colors";
 import DefaultButton from "../Buttons/default";
 import pressColorPallet from "../../constants/onPressColor";
+import { currentuserKey, setCurrentUserKey } from "../../variables/string";
+import { SaveCurrentUser, SaveCurrentUserKey } from "../../Functions/dataDealer";
 
 const ChangeUserModal = (props) => {
     const keys = props.keys
@@ -39,6 +40,13 @@ const ChangeUserModal = (props) => {
         }
     })
 
+    const HanldeOnPress = async (keyOfUser) => {
+        setCurrentUserKey(keyOfUser)
+        SaveCurrentUserKey().then(() => {
+            props.reloadData(keyOfUser)
+        })
+    }
+
     return(
         <Modal transparent={true} visible={props.isVisible} animationType="fade" onRequestClose={props.closeModal}>
             <View style={styles.backGround}>
@@ -48,7 +56,10 @@ const ChangeUserModal = (props) => {
                 <View style={[styles.container, {alignItems:"center"}]}>
                     <ScrollView alignItems="center" style={[styles.container, {marginBottom:0}]} >
 
-                        {keys.map((value, index) => <DefaultButton backGround={colorPallet.bg_3e} pressedColor={colorPallet.bg_4e} text={value} key={index} height={35} width={screenSize - 30} marginTop={5} />)}
+                        {keys.map((value, index) => 
+                            value != currentuserKey ? <DefaultButton onPress={() => HanldeOnPress(value)} backGround={colorPallet.bg_3e} pressedColor={colorPallet.bg_4e} text={value} key={index} height={35} width={screenSize - 30} marginTop={5} />
+                            : <DefaultButton onPress={props.closeModal} backGround={colorPallet.bg_4e} pressedColor={colorPallet.bg_5e} text={value} key={index} height={35} width={screenSize - 30} marginTop={5} />
+                            )}
                     </ScrollView>
                     
                     <DefaultButton text={"Create new User"} backGround={colorPallet.bg_rGb_2f9f1f} pressedColor={pressColorPallet.bg_rGb_2f9f1f} height={35} width={screenSize - 30} marginBottom={5} marginTop={10} />

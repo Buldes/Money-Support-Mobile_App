@@ -72,7 +72,7 @@ const Setup = (props) => {
 
     const HandleInput = (value) => {
         SetNewName(value)
-        if (value != null && value != "" && value.trim() != "") setFinish(true)
+        if (value != null && value != "" && value.trim() != "" && value != "settings" && value != "currentUser") setFinish(true)
         else setFinish(false)
     }
 

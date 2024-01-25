@@ -6,13 +6,13 @@ import SettingsMenu from './settingmenu';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { currentuserKey, setCurrentUserKey } from '../variables/string';
 import Setup from '../components/fullComp/SetupComp/setup';
-import { RefreshSettings } from '../Functions/dataDealer';
+import { ClearAllData, RefreshSettings } from '../Functions/dataDealer';
 
 const App = () => {
   const [menu, setMenu] = useState("MainMenu");
   const [status, setStatus] = useState(null)
-  console.log(menu);
-
+  console.log(menu)
+  //ClearAllData()
   // add BackHandler, to return to main Menu, when seng is open
   const handleBackPress = () => {
     if (menu === "Settings") {
@@ -26,7 +26,7 @@ const App = () => {
     const backPressListener = BackHandler.addEventListener("hardwareBackPress", handleBackPress);
 
     return () => {
-      backPressListener.remove(); // Event Listener rmove at Unmount
+      backPressListener.remove(); // Event Listener remove at Unmount
     };
   }, [menu]); 
 
