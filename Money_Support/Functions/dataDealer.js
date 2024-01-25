@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { currentUserData, setCurrentUserData } from '../variables/dictionary';
-import { currency, currentuserKey, language, numLayout } from '../variables/string';
+import { SetNumLayout, currency, currentuserKey, language, numLayout, setCurrency, setLanguage } from '../variables/string';
 
 export const storeData = async (value, key) => {
     try {
@@ -47,8 +47,23 @@ export async function SaveSettings(){
   })
 }
 
+export async function RefreshSettings(){
+  await getData("settings").then((data) => {{
+    setLanguage(data["language"])
+    setCurrency(data["currency"])
+    SetNumLayout(data["numLayout"])
+  }})
+}
+
 export async function SaveCurrentUserKey(){
-  await storeData(currentuserKey, "currentUser").then((e) => {
+  await AsyncStorage.setItem("currentUser", currentuserKey).then((e) => {
     return e
+  })
+}
+
+export async function DeleteCurrentUserKey(){
+  await AsyncStorage.removeItem("currentUser").then((e) => {
+    if (e != undefined) console.log(e)
+    console.log("Deleted User")
   })
 }

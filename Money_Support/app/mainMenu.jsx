@@ -9,7 +9,7 @@ import ExpendituresInfo from '../components/fullComp/info';
 import { avargeExpenditures, currentMonthExpenditures } from '../variables/float';
 import ExpendituresIncomComp from '../components/fullComp/expendituresIncom';
 import ValueToString from '../Functions/valueToString';
-import { SaveCurrentUser, getData, storeData } from '../Functions/dataDealer';
+import { DeleteCurrentUserKey, SaveCurrentUser, getData, storeData } from '../Functions/dataDealer';
 import { AddToCurrentUserData, currentUserData, newEntry, setCurrentUserData, setToWelcomeData } from '../variables/dictionary';
 import { currentuserKey } from '../variables/string';
 import ExpendituresIncomListItem from '../components/fullComp/expendituresIncomistItem';
@@ -20,6 +20,7 @@ import AddEntryModal from '../components/fullComp/addEntryModal';
 import CahngeUserButton from '../components/fullComp/changeUserButton';
 import ChangeUserModal from '../components/fullComp/changeUserModal';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import DefaultButton from '../components/Buttons/default';
 
 const MainMenu = () => {
   const [data, setData] = useState(null)
@@ -102,6 +103,8 @@ const MainMenu = () => {
             <View style={{marginTop:10, alignItems:"center", ...style.dark}}>
               <HeadLine text={currentuserKey}/>
             </View>
+
+            <DefaultButton text="Delet UserKey" onPress={DeleteCurrentUserKey}/>
 
             <View style={{alignItems:"center", ...style.upArear}}>
 

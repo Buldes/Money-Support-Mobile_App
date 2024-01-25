@@ -4,8 +4,9 @@ import { BackHandler, View, Text } from 'react-native';
 import BottomBar from '../components/fullComp/bottomBar';
 import SettingsMenu from './settingmenu';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { setCurrentUserKey } from '../variables/string';
+import { currentuserKey, setCurrentUserKey } from '../variables/string';
 import Setup from '../components/fullComp/SetupComp/setup';
+import { RefreshSettings } from '../Functions/dataDealer';
 
 const App = () => {
   const [menu, setMenu] = useState("MainMenu");
@@ -31,13 +32,23 @@ const App = () => {
 
   // get/check for current selected user
   const getCurrentUserKey = async () =>{
-    await AsyncStorage.getItem("currentUser").then((data) => {
-      setCurrentUserKey(data)
-      if (data == null) setStatus("setup")
-      else setStatus("menu")
+    await AsyncStorage.getItem("currentUser").then( async (data) => {
+      if (data == null) {
+        setStatus("setup")
+        return
+      }
+      else {
+        setCurrentUserKey(data)
+        console.log(`Getting UserKey Value ${currentuserKey}`)
+        await RefreshSettings().then(() => {
+          setStatus("menu")
+        })
+      }
     })
   }
   getCurrentUserKey()
+
+  // get Settings
 
   if (status == null){
     return(
@@ -49,14 +60,14 @@ const App = () => {
   else if (status == "setup"){
     return(
       <View style={{flex:1}}>
-        <Setup/>
+        <Setup setupFinish={() => setStatus(null)}/>
       </View>
     )
   }
   else if (status == "menu"){
     return (
       <View style={{flex:1}}>
-        {menu === "MainMenu" ? <MainMenu /> : <SettingsMenu />}
+        {menu === "MainMenu" ? <MainMenu /> : <SettingsMenu/>}
 
         <BottomBar menu={menu} settingsPress={() => setMenu("Settings")} homePress={() => setMenu("MainMenu")} />
       </View>
