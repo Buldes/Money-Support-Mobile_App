@@ -6,6 +6,7 @@ const colorPallet = {
   bg_4e: "#4e4e4e",
   bg_3e: "#3e3e3e",
   bg_2e: "#2e2e2e",
+  bg_1a: "#1a1a1a",
   bg_1f: "#1f1f1f",
   bg_Rgb_bf1f1f: "#bf1f1f", 
   bg_Rgb_9f2f1f: "#9f2f1f",

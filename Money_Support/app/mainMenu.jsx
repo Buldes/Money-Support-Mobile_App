@@ -9,7 +9,7 @@ import ExpendituresInfo from '../components/fullComp/info';
 import { avargeExpenditures, currentMonthExpenditures } from '../variables/float';
 import ExpendituresIncomComp from '../components/fullComp/expendituresIncom';
 import ValueToString from '../Functions/valueToString';
-import { DeleteCurrentUserKey, SaveCurrentUser, getData, storeData } from '../Functions/dataDealer';
+import { DeleteCurrentUserKey, GetAllUserKeys, SaveCurrentUser, getData, storeData } from '../Functions/dataDealer';
 import { AddToCurrentUserData, currentUserData, newEntry, setCurrentUserData, setToWelcomeData } from '../variables/dictionary';
 import { currentuserKey, setCurrentUserKey } from '../variables/string';
 import ExpendituresIncomListItem from '../components/fullComp/expendituresIncomistItem';
@@ -21,6 +21,7 @@ import CahngeUserButton from '../components/fullComp/changeUserButton';
 import ChangeUserModal from '../components/Modals/changeUserModal';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import DefaultButton from '../components/Buttons/default';
+import CreateNewUserModal from '../components/Modals/createUserModal';
 
 const MainMenu = () => {
   const [data, setData] = useState(null)
@@ -28,11 +29,13 @@ const MainMenu = () => {
   const [modal, setModal] = useState(false)
   const [changeUserModal, setChangeUserModal] = useState(false)
   const [createNewUserModal, setCreateNewUserModal] = useState(false)
-  const [allKeys, setAllKeys] = useState([])
+  const [allKeys, setAllKeys] = useState(null)
   const [currentUser, setCurrenUser] = useState(currentuserKey)
 
   // 1.1 Create function, to load all data
   const fetchData = async () => {
+    console.log(``)
+    console.log(`\nLoding data from User ${currentUser}`)
     try {
       await getData(currentUser).then(async (data) => {
         try {
@@ -42,14 +45,20 @@ const MainMenu = () => {
           sorted = null
         }
         await AsyncStorage.getAllKeys().then((data) => {
-          setAllKeys(data == undefined ? [`[ERROR] no user found`]: data.filter(item => item != "settings" && item != "currentUser"))
+          data = data == undefined ? [`[ERROR] no user found`]: data.filter(item => item != "settings" && item != "currentUser")
+          setAllKeys(data)
+          console.log(`got ${data.length} userKeys: ${data}`)
         })
 
         setCurrentUserData(sorted)
         setData(sorted)
         
-        console.log(`loaded data: ${data.length} entrys`)
-        console.log(`from User ${currentUser}`)
+        try{
+          console.log(`loaded data: ${data.length} entrys from User "${currentUser}"`)
+        }
+        catch{
+          console.log(`No data found for User "${currentUser}"`)
+        }
 
       })
     } catch (error) {
@@ -64,19 +73,20 @@ const MainMenu = () => {
 
     // only refresh data, when modal is not open
     fetchData()
-  }, []);
+  }, [currentUser]);
   
   // 2. wait until loading is finished
   if (loading){
     return (
       <View style={{flex:1, ...style.dark}}> 
+        <StatusBar style="light" backgroundColor={colorPallet.black}/>
       </View>
     )
   }
 
   // 3. check if data is null
   if  (data == null && !loading){
-    console.log(`No data for user ${currentUser}. Generating data...`)
+    console.log(`Generating data...`)
     setToWelcomeData()
     setData(currentUserData)
     const saveAndRefresh = async () => {
@@ -93,6 +103,7 @@ const MainMenu = () => {
 
   // 5. create add Data function / create Click and ChangeUser function
   const AddDataClick = async () => {
+    console.log(`Add ${newEntry} to ${currentuserKey}`)
     AddToCurrentUserData(newEntry)
     setCurrentUserData(SortById(currentUserData))
     await SaveCurrentUser().then(() => {
@@ -102,12 +113,15 @@ const MainMenu = () => {
   }
 
   const ChangeUser = async (keyOfUser) => {
+    console.log(`\nChange User to "${keyOfUser}"`)
+    
     setCurrenUser(keyOfUser)
     setCurrentUserKey(keyOfUser)
+
     setChangeUserModal(false)
-    await fetchData().then(() => {
-      console.log("Loaded")
-    })
+    setCreateNewUserModal(false)
+
+    // setLoading(true)
   }
 
   // 6. loading is finished and data is not null
@@ -121,8 +135,6 @@ const MainMenu = () => {
             <View style={{marginTop:10, alignItems:"center", ...style.dark}}>
               <HeadLine text={currentUser}/>
             </View>
-
-            <DefaultButton text="Delet UserKey" onPress={DeleteCurrentUserKey}/>
 
             <View style={{alignItems:"center", ...style.upArear}}>
 
@@ -140,8 +152,10 @@ const MainMenu = () => {
 
             <AddEntryModal isVisible={modal} closePress={() => setModal(false)} createClick={AddDataClick}/>
             
-          <ChangeUserModal openCreateUser={() => setCreateNewUserModal(true)} isVisible={changeUserModal} closeModal={() => setChangeUserModal(false)} keys={allKeys} reloadData={(keyOfUser) => ChangeUser(keyOfUser)}/>
+            <ChangeUserModal openCreateUser={() => setCreateNewUserModal(true)} isVisible={changeUserModal} closeModal={() => setChangeUserModal(false)} keys={allKeys} reloadData={(keyOfUser) => ChangeUser(keyOfUser)}/>
         
+            <CreateNewUserModal isVisible={createNewUserModal} closeModal={() => setCreateNewUserModal(false)} allUserKeys={allKeys} reloadData={(newUser) => ChangeUser(newUser)}/>
+
         </ScrollView>
 
         <CahngeUserButton onPress={() => setChangeUserModal(true)}/>

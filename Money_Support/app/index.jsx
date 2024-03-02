@@ -6,13 +6,13 @@ import SettingsMenu from './settingmenu';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { currentuserKey, setCurrentUserKey } from '../variables/string';
 import Setup from '../components/fullComp/SetupComp/setup';
-import { ClearAllData, RefreshSettings } from '../Functions/dataDealer';
+import { RefreshSettings } from '../Functions/dataDealer';
 
 const App = () => {
   const [menu, setMenu] = useState("MainMenu");
   const [status, setStatus] = useState(null)
-  console.log(menu)
-  //ClearAllData()
+  console.log(`\nloading current Menu: ${menu}`)
+  
   // add BackHandler, to return to main Menu, when seng is open
   const handleBackPress = () => {
     if (menu === "Settings") {
@@ -39,7 +39,7 @@ const App = () => {
       }
       else {
         setCurrentUserKey(data)
-        console.log(`Getting UserKey Value ${currentuserKey}`)
+        console.log(`Getting UserKey-Value ${currentuserKey}`)
         await RefreshSettings().then(() => {
           setStatus("menu")
         })
@@ -67,7 +67,7 @@ const App = () => {
   else if (status == "menu"){
     return (
       <View style={{flex:1}}>
-        {menu === "MainMenu" ? <MainMenu /> : <SettingsMenu/>}
+        {menu === "MainMenu" ? <MainMenu /> : <SettingsMenu SetMenu={(menu) => setMenu(menu)}/>}
 
         <BottomBar menu={menu} settingsPress={() => setMenu("Settings")} homePress={() => setMenu("MainMenu")} />
       </View>

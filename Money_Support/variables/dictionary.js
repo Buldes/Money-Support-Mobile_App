@@ -18,6 +18,12 @@ export const setToWelcomeData = () => {
     ])
 }
 
+export var allUserKeys = []
+
+export const SetAllUserKeys = (value) => {
+    allUserKeys = value
+}
+
 export var newEntry = {}
 
 export const setNewEntry = (value) => {

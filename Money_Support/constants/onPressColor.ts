@@ -2,9 +2,9 @@ const pressColorPallet = {
   /*transperent: "#00000000",*/
   bg_5e: "#7e7e7e",
   /*bg_4e: "#4e4e4e",
-  bg_3e: "#3e3e3e",
-  bg_2e: "#2e2e2e",
-  bg_1f: "#1f1f1f",*/
+  bg_3e: "#3e3e3e",*/
+  bg_2e: "#3e3e3e",
+  /*bg_1f: "#1f1f1f",*/
   black: "#171717",
   bg_Rgb_bf1f1f: "#e33d3d", 
   bg_Rgb_9f2f1f: "#ad2310",

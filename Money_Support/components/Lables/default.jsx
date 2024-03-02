@@ -8,8 +8,8 @@ const DefaultLabel = (props) => {
             backGround=colorPallet.bg_5e, textAlign="center", textAlignVertical='center'} = props;
 
     const styles = StyleSheet.create({
-        textStyle: { color: textColor, fontSize: fontSize, fontFamily:fontFamily, backgroundColor:backGround, borderRadius:borderRadius, 
-                    top:props.top, left:props.left, width:props.width, height:props.height, marginLeft:props.marginLeft, marginTop:props.marginTop, marginBottom:props.marginBottom,
+        textStyle: { color: textColor, fontSize: fontSize, fontFamily:fontFamily, backgroundColor:backGround, borderRadius:borderRadius, flex:props.flex,
+                    top:props.top, left:props.left, width:props.width, height:props.height, marginLeft:props.marginLeft, marginTop:props.marginTop, marginBottom:props.marginBottom, marginRight:props.marginRight,
                     ...props.add, textAlign:textAlign, textAlignVertical:textAlignVertical}
     });
 

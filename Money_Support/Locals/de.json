@@ -3,8 +3,10 @@
     "Choose youre Currency":"Wähle deine Währung",
     "Choose youre Layout":"Wähle dein Layout",
     "Type in a name for your first User.": "Gebe einen Namen für deinen ersten Benutzer ein.",
+    "Create new user":"Neuer Nutzer erstellen",
+    "Rename user":"Nutzer unbenennen",
 
-    "no user jet": "noch kein Benutzer",
+    "no user jet": "Noch keinen Benutzer",
     
     "Expenditures": "Ausgaben",
     "Income":"Einkommen",
@@ -18,12 +20,21 @@
 
     "Cancel":"Abbrechen",
     "Create":"Hinzufügen",
+    "Confirm":"Bestätigen",
     "Next":"Weiter",
     "Back":"Zurück",
     "Finish":"Fertig",
+    "Rename":"Name ändern",
+
+    "Name must contain letters or numbers":"Name muss Zahlen/Buchstaben enthalten.",
+    "is already in use.":"wird bereits verwendet.",
+    "is not allowed to use, do to storage problems.":"darf nicht verwendet werden, aufgrund von Speicher-Problemen.",
+    "Invalid Name:":"Ungültiger Name:",
+    "Valid name":"Gültiger name",
+    "Current name":"Aktueller Name",
     
-    "type amount here":"Betrag hier eingeben",
-    "Type name here":"Namen hier eingeben",
+    "type amount here":"Betrag eingeben",
+    "Type name here":"Name eingeben",
     
     "USD": "US-Dollar",
     "EUR": "Euro",

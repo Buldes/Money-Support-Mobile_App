@@ -6,6 +6,8 @@ import DefaultButton from "../Buttons/default";
 import pressColorPallet from "../../constants/onPressColor";
 import { currentuserKey, setCurrentUserKey } from "../../variables/string";
 import { SaveCurrentUser, SaveCurrentUserKey } from "../../Functions/dataDealer";
+import FontAwsomeIcon from "react-native-vector-icons/FontAwesome"
+import DefaultLabel from "../Lables/default";
 
 const ChangeUserModal = (props) => {
     const keys = props.keys
@@ -13,6 +15,8 @@ const ChangeUserModal = (props) => {
     const screenSize = Dimensions.get("window").width
 
     const {} = props;
+    const selectedIcon = "circle"
+    const selectedIconSize = 10
 
     const styles = StyleSheet.create({
         backGround:{
@@ -25,7 +29,7 @@ const ChangeUserModal = (props) => {
             width:screenSize - 20,
             borderRadius:20,
             backgroundColor:colorPallet.bg_2e,
-            height: keys.length <= 7 ? null: 340,
+            height: keys.length <= 7 ? null: 350,
             overflow:"hidden"
         },
         downExit:{
@@ -37,6 +41,11 @@ const ChangeUserModal = (props) => {
             width:screenSize,
             flex:1,
             backgroundColor:colorPallet.transperent
+        },
+        selectedUserView:{
+            flexDirection:"row",
+            justifyContent:"center",
+            alignItems:"center"
         }
     })
 
@@ -45,6 +54,11 @@ const ChangeUserModal = (props) => {
         SaveCurrentUserKey().then(() => {
             props.reloadData(keyOfUser)
         })
+    }
+
+    const HandleCreatUserPress = () =>{
+        props.closeModal()
+        props.openCreateUser()
     }
 
     return(
@@ -58,11 +72,11 @@ const ChangeUserModal = (props) => {
 
                         {keys.map((value, index) => 
                             value != currentuserKey ? <DefaultButton onPress={() => HanldeOnPress(value)} backGround={colorPallet.bg_3e} pressedColor={colorPallet.bg_4e} text={value} key={index} height={35} width={screenSize - 30} marginTop={5} />
-                            : <DefaultButton onPress={props.closeModal} backGround={colorPallet.bg_4e} pressedColor={colorPallet.bg_5e} text={value} key={index} height={35} width={screenSize - 30} marginTop={5} />
+                            : <DefaultButton onPress={props.closeModal} backGround={colorPallet.bg_4e} pressedColor={colorPallet.bg_5e} text={<View style={styles.selectedUserView}><FontAwsomeIcon name={selectedIcon} size={selectedIconSize} color={colorPallet.white}/><DefaultLabel text={value} marginLeft={5} marginRight={5} backGround={colorPallet.transperent}/><FontAwsomeIcon name={selectedIcon} size={selectedIconSize} color={colorPallet.white}/></View>} key={index} height={35} width={screenSize - 30} marginTop={5} />
                             )}
                     </ScrollView>
                     
-                    <DefaultButton text={"Create new User"} backGround={colorPallet.bg_rGb_2f9f1f} pressedColor={pressColorPallet.bg_rGb_2f9f1f} height={35} width={screenSize - 30} marginBottom={5} marginTop={10} />
+                    <DefaultButton onPress={() => HandleCreatUserPress()} text={"Create new User"} backGround={colorPallet.bg_rGb_2f9f1f} pressedColor={pressColorPallet.bg_rGb_2f9f1f} height={35} width={screenSize - 30} marginBottom={5} marginTop={10} />
                 
                 </View>
 

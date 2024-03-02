@@ -22,6 +22,7 @@ const DefaultButton = (props) => {
             left:props.left,
             right:props.right,
             position:props.position,
+            flex:props.flex,
             ...props.add
         }
     })
