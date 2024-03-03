@@ -11,6 +11,7 @@ const SettingsContainerLayout = (props) => {
             borderRadius:10,
             backgroundColor:colorPallet.bg_1a,
             width:screenSize - 10,
+            marginBottom:30,
         },
         headline:{
             borderRadius:10,

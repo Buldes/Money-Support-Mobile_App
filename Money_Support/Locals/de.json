@@ -3,8 +3,20 @@
     "Choose youre Currency":"Wähle deine Währung",
     "Choose youre Layout":"Wähle dein Layout",
     "Type in a name for your first User.": "Gebe einen Namen für deinen ersten Benutzer ein.",
+
+    "Are you sure you want to RESET the current User?\nUser:":"Bist du sicher, dass du den Nutzer ZURÜCKSETZEN möchtest?\n Nutzer:",
+    "Are you sure you want to DELETE the crrent User?\nUser:":"Bist du sicher, dass du den Nutzer LÖSCHEN möchtest?\nNutzer:",
+
     "Create new user":"Neuer Nutzer erstellen",
     "Rename user":"Nutzer unbenennen",
+    "Reset user":"Nutzer zurücksetzen",
+    "Delete user":"Nutzer löschen",
+    "Change language":"Sprache ändern",
+    "Change currency":"Währung ändern",
+    "Change layout":"Layout ändern",
+
+    "User":"Nutzer",
+    "Personalize":"Personalisierung",
 
     "no user jet": "Noch keinen Benutzer",
     
