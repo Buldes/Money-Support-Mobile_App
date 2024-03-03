@@ -1,31 +1,54 @@
 {
-    "Choose youre Language":"Choose youre Language",
-    "Choose youre Currency":"Choose youre Currency",
-    "Choose youre Layout":"Choose youre Layout",
+    "Choose your Language": "Choose your Language",
+    "Choose your Currency": "Choose your Currency",
+    "Choose your Layout": "Choose your Layout",
     "Type in a name for your first User.": "Type in a name for your first User.",
 
-    "no user jet":"no user jet",
-    
-    "Expenditures":"Expenditures",
-    "Income":"Income",
+    "Are you sure you want to RESET the current User?\nUser:": "Are you sure you want to RESET the current User?\nUser:",
+    "Are you sure you want to DELETE the current User?\nUser:": "Are you sure you want to DELETE the current User?\nUser:",
 
-    "Current Month":"Current Month",
-    "Average":"Average",
+    "Create new user": "Create new user",
+    "Rename user": "Rename user",
+    "Reset user": "Reset user",
+    "Delete user": "Delete user",
+    "Change language": "Change language",
+    "Change currency": "Change currency",
+    "Change layout": "Change layout",
 
-    "Entrys":"Entrys",
-    "New Entry":"New Entry",
-    "Add new Entry":"Add new Entry",
+    "User": "User",
+    "Personalize": "Personalize",
 
-    "Cancel":"Cancel",
-    "Create":"Create",
-    "Next":"Next",
-    "Back":"Back",
-    "Finish":"Finish",
-    
-    "type amount here":"type amount here",
-    "Type name here":"Type name here",
+    "no user jet": "No user yet",
 
-    "USD": "US-Dollars",
+    "Expenditures": "Expenditures",
+    "Income": "Income",
+
+    "Current Month": "Current Month",
+    "Average": "Average",
+
+    "Entries": "Entries",
+    "New Entry": "New Entry",
+    "Add new Entry": "Add new Entry",
+
+    "Cancel": "Cancel",
+    "Create": "Create",
+    "Confirm": "Confirm",
+    "Next": "Next",
+    "Back": "Back",
+    "Finish": "Finish",
+    "Rename": "Rename",
+
+    "Name must contain letters or numbers": "Name must contain letters or numbers",
+    "is already in use.": "is already in use.",
+    "is not allowed to use, do to storage problems.": "is not allowed to use, due to storage problems.",
+    "Invalid Name:": "Invalid Name:",
+    "Valid name": "Valid name",
+    "Current name": "Current name",
+
+    "type amount here": "Type amount here",
+    "Type name here": "Type name here",
+
+    "USD": "US dollars",
     "EUR": "Euro",
     "GBP": "British pound",
     "JPY": "Japanese Yen",

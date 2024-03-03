@@ -32,7 +32,7 @@ const SetupLayout = (props) => {
 
     return(
         <View style={styles.container}>
-            <DefaultLabel text={dictionary["Choose youre Layout"]} backGround={colorPallet.bg_3e} marginTop={0} width={300} marginBottom={10} borderRadius={40} height={60}/>
+            <DefaultLabel text={dictionary["Choose your Layout"]} backGround={colorPallet.bg_3e} marginTop={0} width={300} marginBottom={10} borderRadius={40} height={60}/>
 
             <View style={[styles.container, {flex:1, overflow:"hidden"}]}>
                 <ScrollView alignItems={"center"} style={styles.scrollView}>

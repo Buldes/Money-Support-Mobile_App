@@ -1,0 +1,61 @@
+{
+    "Choose your Language": "Elige tu idioma",
+    "Choose your Currency": "Elige tu moneda",
+    "Choose your Layout": "Elige tu diseño",
+    "Type in a name for your first User.": "Ingresa un nombre para tu primer usuario.",
+
+    "Are you sure you want to RESET the current User?\nUser:": "¿Estás seguro de que quieres REINICIAR al usuario actual?\nUsuario:",
+    "Are you sure you want to DELETE the current User?\nUser:": "¿Estás seguro de que quieres ELIMINAR al usuario actual?\nUsuario:",
+
+    "Create new user": "Crear nuevo usuario",
+    "Rename user": "Cambiar nombre de usuario",
+    "Reset user": "Reiniciar usuario",
+    "Delete user": "Eliminar usuario",
+    "Change language": "Cambiar idioma",
+    "Change currency": "Cambiar moneda",
+    "Change layout": "Cambiar diseño",
+
+    "User": "Usuario",
+    "Personalize": "Personalizar",
+
+    "no user jet": "Aún no hay usuario",
+
+    "Expenditures": "Gastos",
+    "Income": "Ingresos",
+
+    "Current Month": "Mes actual",
+    "Average": "Promedio",
+
+    "Entries": "Entradas",
+    "New Entry": "Nueva entrada",
+    "Add new Entry": "Agregar nueva entrada",
+
+    "Cancel": "Cancelar",
+    "Create": "Crear",
+    "Confirm": "Confirmar",
+    "Next": "Siguiente",
+    "Back": "Atrás",
+    "Finish": "Finalizar",
+    "Rename": "Cambiar nombre",
+
+    "Name must contain letters or numbers": "El nombre debe contener letras o números.",
+    "is already in use.": "ya está en uso.",
+    "is not allowed to use, do to storage problems.": "no se permite usar debido a problemas de almacenamiento.",
+    "Invalid Name:": "Nombre inválido:",
+    "Valid name": "Nombre válido",
+    "Current name": "Nombre actual",
+
+    "type amount here": "Ingresa la cantidad aquí",
+    "Type name here": "Ingresa el nombre aquí",
+
+    "USD": "Dólar estadounidense",
+    "EUR": "Euro",
+    "GBP": "Libra esterlina",
+    "JPY": "Yen japonés",
+    "CNY": "Yuan chino",
+    "CAD": "Dólar canadiense",
+    "AUD": "Dólar australiano",
+    "INR": "Rupia india",
+    "BRL": "Real brasileño",
+    "CHF": "Franco suizo"
+}

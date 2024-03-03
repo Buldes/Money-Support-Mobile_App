@@ -1,0 +1,61 @@
+{
+    "Choose your Language": "اختر لغتك",
+    "Choose your Currency": "اختر عملتك",
+    "Choose your Layout": "اختر تخطيطك",
+    "Type in a name for your first User.": "اكتب اسمًا لمستخدمك الأول",
+
+    "Are you sure you want to RESET the current User?\nUser:": "هل أنت متأكد أنك تريد إعادة تعيين المستخدم الحالي؟\nالمستخدم:",
+    "Are you sure you want to DELETE the current User?\nUser:": "هل أنت متأكد أنك تريد حذف المستخدم الحالي؟\nالمستخدم:",
+
+    "Create new user": "إنشاء مستخدم جديد",
+    "Rename user": "إعادة تسمية المستخدم",
+    "Reset user": "إعادة تعيين المستخدم",
+    "Delete user": "حذف المستخدم",
+    "Change language": "تغيير اللغة",
+    "Change currency": "تغيير العملة",
+    "Change layout": "تغيير التخطيط",
+
+    "User": "المستخدم",
+    "Personalize": "تخصيص",
+
+    "no user jet": "لا يوجد مستخدم حتى الآن",
+
+    "Expenditures": "المصروفات",
+    "Income": "الدخل",
+
+    "Current Month": "الشهر الحالي",
+    "Average": "المتوسط",
+
+    "Entries": "الإدخالات",
+    "New Entry": "إدخال جديد",
+    "Add new Entry": "إضافة إدخال جديد",
+
+    "Cancel": "إلغاء",
+    "Create": "إنشاء",
+    "Confirm": "تأكيد",
+    "Next": "التالي",
+    "Back": "رجوع",
+    "Finish": "إنهاء",
+    "Rename": "إعادة تسمية",
+
+    "Name must contain letters or numbers": "يجب أن يحتوي الاسم على أحرف أو أرقام",
+    "is already in use.": "مستخدم بالفعل.",
+    "is not allowed to use, do to storage problems.": "غير مسموح باستخدامه بسبب مشاكل التخزين.",
+    "Invalid Name:": "اسم غير صالح:",
+    "Valid name": "اسم صالح",
+    "Current name": "الاسم الحالي",
+
+    "type amount here": "اكتب المبلغ هنا",
+    "Type name here": "اكتب الاسم هنا",
+
+    "USD": "الدولار الأمريكي",
+    "EUR": "اليورو",
+    "GBP": "الجنيه البريطاني",
+    "JPY": "الين الياباني",
+    "CNY": "اليوان الصيني",
+    "CAD": "الدولار الكندي",
+    "AUD": "الدولار الأسترالي",
+    "INR": "الروبية الهندية",
+    "BRL": "الريال البرازيلي",
+    "CHF": "الفرنك السويسري"
+}

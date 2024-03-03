@@ -38,7 +38,7 @@ const SetupCurrency = (props) => {
     return(
     <View style={styles.container}>
         <View style={styles.headLine}>
-            <DefaultLabel text={dictionary["Choose youre Currency"]} backGround={colorPallet.transperent} marginTop={5}/>
+            <DefaultLabel text={dictionary["Choose your Currency"]} backGround={colorPallet.transperent} marginTop={5}/>
             <DefaultLabel text={`${props.selected} - ${ValueToString(0.00)}`} backGround={colorPallet.transperent}/>
         </View>
 

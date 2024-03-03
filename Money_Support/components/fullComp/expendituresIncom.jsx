@@ -41,7 +41,7 @@ const ExpendituresIncomComp = (props) => {
 
     return(
         <View style={styles.parentView}>
-            <HeadLine text={dictionary["Entrys"]} width={screenWidth - 40} marginTop={0} add={{/*borderColor:"black", borderWidth:2, */position:'absolute',zIndex:2}}/>
+            <HeadLine text={dictionary["Entries"]} width={screenWidth - 40} marginTop={0} add={{/*borderColor:"black", borderWidth:2, */position:'absolute',zIndex:2}}/>
 
             <DefaultButton onPress={props.onPress} text={dictionary["New Entry"]} width={150} height={30} backGround={colorPallet.bg_rgB_134ab0} marginTop={460} left={screenWidth-199} add={{position:'absolute',zIndex:2}}/>
 

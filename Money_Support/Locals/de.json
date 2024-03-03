@@ -1,11 +1,11 @@
 {
-    "Choose youre Language":"Wähle deine Sprache",
-    "Choose youre Currency":"Wähle deine Währung",
-    "Choose youre Layout":"Wähle dein Layout",
+    "Choose your Language":"Wähle deine Sprache",
+    "Choose your Currency":"Wähle deine Währung",
+    "Choose your Layout":"Wähle dein Layout",
     "Type in a name for your first User.": "Gebe einen Namen für deinen ersten Benutzer ein.",
 
     "Are you sure you want to RESET the current User?\nUser:":"Bist du sicher, dass du den Nutzer ZURÜCKSETZEN möchtest?\n Nutzer:",
-    "Are you sure you want to DELETE the crrent User?\nUser:":"Bist du sicher, dass du den Nutzer LÖSCHEN möchtest?\nNutzer:",
+    "Are you sure you want to DELETE the current User?\nUser:":"Bist du sicher, dass du den Nutzer LÖSCHEN möchtest?\nNutzer:",
 
     "Create new user":"Neuer Nutzer erstellen",
     "Rename user":"Nutzer unbenennen",
@@ -26,7 +26,7 @@
     "Current Month": "Aktueller Monat",
     "Average": "Durchschnitt",
     
-    "Entrys":"Einträge",
+    "Entries":"Einträge",
     "New Entry":"Neuer Eintrag",
     "Add new Entry":"Neuer Eintrag",
 

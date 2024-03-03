@@ -1,0 +1,61 @@
+{
+    "Choose your Language": "Wybierz swój język",
+    "Choose your Currency": "Wybierz swoją walutę",
+    "Choose your Layout": "Wybierz swój układ",
+    "Type in a name for your first User.": "Wprowadź imię dla swojego pierwszego użytkownika",
+
+    "Are you sure you want to RESET the current User?\nUser:": "Czy na pewno chcesz ZRESETOWAĆ obecnego użytkownika?\nUżytkownik:",
+    "Are you sure you want to DELETE the current User?\nUser:": "Czy na pewno chcesz USUNĄĆ obecnego użytkownika?\nUżytkownik:",
+
+    "Create new user": "Utwórz nowego użytkownika",
+    "Rename user": "Zmień nazwę użytkownika",
+    "Reset user": "Zresetuj użytkownika",
+    "Delete user": "Usuń użytkownika",
+    "Change language": "Zmień język",
+    "Change currency": "Zmień walutę",
+    "Change layout": "Zmień układ",
+
+    "User": "Użytkownik",
+    "Personalize": "Spersonalizuj",
+
+    "no user jet": "Brak użytkownika",
+
+    "Expenditures": "Wydatki",
+    "Income": "Dochody",
+
+    "Current Month": "Bieżący miesiąc",
+    "Average": "Średnia",
+
+    "Entries": "Wpisy",
+    "New Entry": "Nowy wpis",
+    "Add new Entry": "Dodaj nowy wpis",
+
+    "Cancel": "Anuluj",
+    "Create": "Utwórz",
+    "Confirm": "Potwierdź",
+    "Next": "Następny",
+    "Back": "Wróć",
+    "Finish": "Zakończ",
+    "Rename": "Zmień nazwę",
+
+    "Name must contain letters or numbers": "Nazwa musi zawierać litery lub cyfry",
+    "is already in use.": "jest już w użyciu.",
+    "is not allowed to use, do to storage problems.": "nie można używać z powodu problemów z przechowywaniem.",
+    "Invalid Name:": "Nieprawidłowa nazwa:",
+    "Valid name": "Poprawna nazwa",
+    "Current name": "Bieżąca nazwa",
+
+    "type amount here": "Wpisz kwotę tutaj",
+    "Type name here": "Wpisz nazwę tutaj",
+
+    "USD": "Dolar amerykański",
+    "EUR": "Euro",
+    "GBP": "Funt brytyjski",
+    "JPY": "Jen japoński",
+    "CNY": "Juan chiński",
+    "CAD": "Dolar kanadyjski",
+    "AUD": "Dolar australijski",
+    "INR": "Rupia indyjska",
+    "BRL": "Real brazylijski",
+    "CHF": "Frank szwajcarski"
+}

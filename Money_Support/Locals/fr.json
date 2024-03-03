@@ -1,0 +1,61 @@
+{
+    "Choose your Language": "Choisissez votre langue",
+    "Choose your Currency": "Choisissez votre devise",
+    "Choose your Layout": "Choisissez votre mise en page",
+    "Type in a name for your first User.": "Tapez un nom pour votre premier utilisateur.",
+
+    "Are you sure you want to RESET the current User?\nUser:": "Êtes-vous sûr de vouloir RÉINITIALISER l'utilisateur actuel ?\nUtilisateur :",
+    "Are you sure you want to DELETE the current User?\nUser:": "Êtes-vous sûr de vouloir SUPPRIMER l'utilisateur actuel ?\nUtilisateur :",
+
+    "Create new user": "Créer un nouvel utilisateur",
+    "Rename user": "Renommer l'utilisateur",
+    "Reset user": "Réinitialiser l'utilisateur",
+    "Delete user": "Supprimer l'utilisateur",
+    "Change language": "Changer la langue",
+    "Change currency": "Changer la devise",
+    "Change layout": "Changer la mise en page",
+
+    "User": "Utilisateur",
+    "Personalize": "Personnaliser",
+
+    "no user jet": "Aucun utilisateur pour le moment",
+
+    "Expenditures": "Dépenses",
+    "Income": "Revenus",
+
+    "Current Month": "Mois en cours",
+    "Average": "Moyenne",
+
+    "Entries": "Entrées",
+    "New Entry": "Nouvelle entrée",
+    "Add new Entry": "Ajouter une nouvelle entrée",
+
+    "Cancel": "Annuler",
+    "Create": "Créer",
+    "Confirm": "Confirmer",
+    "Next": "Suivant",
+    "Back": "Retour",
+    "Finish": "Terminer",
+    "Rename": "Renommer",
+
+    "Name must contain letters or numbers": "Le nom doit contenir des lettres ou des chiffres",
+    "is already in use.": "est déjà utilisé.",
+    "is not allowed to use, do to storage problems.": "n'est pas autorisé en raison de problèmes de stockage.",
+    "Invalid Name:": "Nom invalide :",
+    "Valid name": "Nom valide",
+    "Current name": "Nom actuel",
+
+    "type amount here": "Tapez le montant ici",
+    "Type name here": "Tapez le nom ici",
+
+    "USD": "Dollars américains",
+    "EUR": "Euro",
+    "GBP": "Livre britannique",
+    "JPY": "Yen japonais",
+    "CNY": "Yuan chinois",
+    "CAD": "Dollar canadien",
+    "AUD": "Dollar australien",
+    "INR": "Roupie indienne",
+    "BRL": "Real brésilien",
+    "CHF": "Franc suisse"
+}

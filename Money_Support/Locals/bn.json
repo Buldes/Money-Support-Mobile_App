@@ -1,0 +1,61 @@
+{
+    "Choose your Language": "আপনার ভাষা চয়ন করুন",
+    "Choose your Currency": "আপনার মুদ্রা চয়ন করুন",
+    "Choose your Layout": "আপনার লেআউট চয়ন করুন",
+    "Type in a name for your first User.": "আপনার প্রথম ব্যবহারকারীর জন্য একটি নাম টাইপ করুন",
+
+    "Are you sure you want to RESET the current User?\nUser:": "আপনি কি নিশ্চিত যে আপনি বর্তমান ব্যবহারকারীকে রিসেট করতে চান?\nব্যবহারকারী:",
+    "Are you sure you want to DELETE the current User?\nUser:": "আপনি কি নিশ্চিত যে আপনি বর্তমান ব্যবহারকারীকে মুছতে চান?\nব্যবহারকারী:",
+
+    "Create new user": "নতুন ব্যবহারকারী তৈরি করুন",
+    "Rename user": "ব্যবহারকারীর নাম পরিবর্তন করুন",
+    "Reset user": "ব্যবহারকারী রিসেট করুন",
+    "Delete user": "ব্যবহারকারী মুছুন",
+    "Change language": "ভাষা পরিবর্তন করুন",
+    "Change currency": "মুদ্রা পরিবর্তন করুন",
+    "Change layout": "লেআউট পরিবর্তন করুন",
+
+    "User": "ব্যবহারকারী",
+    "Personalize": "ব্যক্তিগতকরণ",
+
+    "no user jet": "এখনও কোনও ব্যবহারকারী নেই",
+
+    "Expenditures": "ব্যয়",
+    "Income": "আয়",
+
+    "Current Month": "বর্তমান মাস",
+    "Average": "গড়",
+
+    "Entries": "এন্ট্রি",
+    "New Entry": "নতুন এন্ট্রি",
+    "Add new Entry": "নতুন এন্ট্রি যোগ করুন",
+
+    "Cancel": "বাতিল করুন",
+    "Create": "তৈরি করুন",
+    "Confirm": "কনফার্ম করুন",
+    "Next": "পরবর্তী",
+    "Back": "পৃষ্ঠায় ফিরুন",
+    "Finish": "শেষ করুন",
+    "Rename": "নাম পরিবর্তন করুন",
+
+    "Name must contain letters or numbers": "নামে অক্ষর অথবা সংখ্যা থাকতে হবে",
+    "is already in use.": "ইতিমধ্যে ব্যবহৃত হয়েছে।",
+    "is not allowed to use, do to storage problems.": "স্টোরেজ সমস্যার কারণে ব্যবহার করা যাচ্ছে না।",
+    "Invalid Name:": "অবৈধ নাম:",
+    "Valid name": "বৈধ নাম",
+    "Current name": "বর্তমান নাম",
+
+    "type amount here": "এখানে পরিমাণ লিখুন",
+    "Type name here": "এখানে নাম লিখুন",
+
+    "USD": "মার্কিন ডলার",
+    "EUR": "ইউরো",
+    "GBP": "ব্রিটিশ পাউন্ড",
+    "JPY": "জাপানি ইয়েন",
+    "CNY": "চীনা য়ুয়ান",
+    "CAD": "কানাডিয়ান ডলার",
+    "AUD": "অস্ট্রেলিয়ান ডলার",
+    "INR": "ভারতীয় রুপি",
+    "BRL": "ব্রাজিলিয়ান রিয়েল",
+    "CHF": "সুইস ফ্রাঙ্ক"
+}

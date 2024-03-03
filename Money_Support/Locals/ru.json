@@ -1,0 +1,61 @@
+{
+    "Choose your Language": "Выберите свой язык",
+    "Choose your Currency": "Выберите свою валюту",
+    "Choose your Layout": "Выберите свой макет",
+    "Type in a name for your first User.": "Введите имя для вашего первого пользователя",
+
+    "Are you sure you want to RESET the current User?\nUser:": "Вы уверены, что хотите СБРОСИТЬ текущего пользователя?\nПользователь:",
+    "Are you sure you want to DELETE the current User?\nUser:": "Вы уверены, что хотите УДАЛИТЬ текущего пользователя?\nПользователь:",
+
+    "Create new user": "Создать нового пользователя",
+    "Rename user": "Переименовать пользователя",
+    "Reset user": "Сбросить пользователя",
+    "Delete user": "Удалить пользователя",
+    "Change language": "Изменить язык",
+    "Change currency": "Изменить валюту",
+    "Change layout": "Изменить макет",
+
+    "User": "Пользователь",
+    "Personalize": "Персонализировать",
+
+    "no user jet": "Пока нет пользователя",
+
+    "Expenditures": "Расходы",
+    "Income": "Доход",
+
+    "Current Month": "Текущий месяц",
+    "Average": "Среднее",
+
+    "Entries": "Записи",
+    "New Entry": "Новая запись",
+    "Add new Entry": "Добавить новую запись",
+
+    "Cancel": "Отмена",
+    "Create": "Создать",
+    "Confirm": "Подтвердить",
+    "Next": "Далее",
+    "Back": "Назад",
+    "Finish": "Готово",
+    "Rename": "Переименовать",
+
+    "Name must contain letters or numbers": "Имя должно содержать буквы или цифры",
+    "is already in use.": "уже используется.",
+    "is not allowed to use, do to storage problems.": "нельзя использовать из-за проблем с хранением.",
+    "Invalid Name:": "Недопустимое имя:",
+    "Valid name": "Допустимое имя",
+    "Current name": "Текущее имя",
+
+    "type amount here": "Введите сумму здесь",
+    "Type name here": "Введите имя здесь",
+
+    "USD": "Доллар США",
+    "EUR": "Евро",
+    "GBP": "Фунт стерлингов",
+    "JPY": "Японская иена",
+    "CNY": "Китайский юань",
+    "CAD": "Канадский доллар",
+    "AUD": "Австралийский доллар",
+    "INR": "Индийская рупия",
+    "BRL": "Бразильский реал",
+    "CHF": "Швейцарский франк"
+}

@@ -8,11 +8,13 @@ import { currentuserKey, setCurrentUserKey } from "../../variables/string";
 import { SaveCurrentUser, SaveCurrentUserKey } from "../../Functions/dataDealer";
 import FontAwsomeIcon from "react-native-vector-icons/FontAwesome"
 import DefaultLabel from "../Lables/default";
+import languageDictionary from "../../Functions/getLanguageDictionary";
 
 const ChangeUserModal = (props) => {
     const keys = props.keys
 
     const screenSize = Dimensions.get("window").width
+    const dictionary = languageDictionary()
 
     const {} = props;
     const selectedIcon = "circle"
@@ -76,7 +78,7 @@ const ChangeUserModal = (props) => {
                             )}
                     </ScrollView>
                     
-                    <DefaultButton onPress={() => HandleCreatUserPress()} text={"Create new User"} backGround={colorPallet.bg_rGb_2f9f1f} pressedColor={pressColorPallet.bg_rGb_2f9f1f} height={35} width={screenSize - 30} marginBottom={5} marginTop={10} />
+                    <DefaultButton onPress={() => HandleCreatUserPress()} text={dictionary["Create new user"]} backGround={colorPallet.bg_rGb_2f9f1f} pressedColor={pressColorPallet.bg_rGb_2f9f1f} height={35} width={screenSize - 30} marginBottom={5} marginTop={10} />
                 
                 </View>
 

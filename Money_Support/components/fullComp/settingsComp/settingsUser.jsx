@@ -57,7 +57,7 @@ const UserSettings = (props) => {
             <CreateNewUserModal isVisible={createUserModal} closeModal={() => setCreateUserModal(false)} allUserKeys={props.allUserKeys} reloadData={BackToMain}/>
             <RenameuserModal isVisible={renameUserModal} closeModal={() => setRenameUserModal(false)} allUserKeys={props.allUserKeys} backtoMain={BackToMain}/>
             <ConfirmModal isVisible={resetUserModal} closeModal={() => setResetUserModal(false)} cancel={() => setResetUserModal(false)} confirmed={ResetUserData} text={`${dictionary["Are you sure you want to RESET the current User?\nUser:"]} "${currentuserKey}"`} headline={dictionary["Reset user"]}/>
-            <ConfirmModal isVisible={deletUserModal} closeModal={() => setDeletUserModal(false)} cancel={() => setDeletUserModal(false)} confirmed={DeleteUser} text={`${dictionary["Are you sure you want to DELETE the crrent User?\nUser:"]} "${currentuserKey}"`} headline={dictionary["Delete user"]}/>
+            <ConfirmModal isVisible={deletUserModal} closeModal={() => setDeletUserModal(false)} cancel={() => setDeletUserModal(false)} confirmed={DeleteUser} text={`${dictionary["Are you sure you want to DELETE the current User?\nUser:"]} "${currentuserKey}"`} headline={dictionary["Delete user"]}/>
         </View>
     );
 }

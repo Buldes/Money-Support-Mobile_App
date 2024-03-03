@@ -1,0 +1,61 @@
+{
+    "Choose your Language": "选择您的语言",
+    "Choose your Currency": "选择您的货币",
+    "Choose your Layout": "选择您的布局",
+    "Type in a name for your first User.": "为您的第一个用户输入一个名称",
+
+    "Are you sure you want to RESET the current User?\nUser:": "您确定要重置当前用户吗？\n用户：",
+    "Are you sure you want to DELETE the current User?\nUser:": "您确定要删除当前用户吗？\n用户：",
+
+    "Create new user": "创建新用户",
+    "Rename user": "重命名用户",
+    "Reset user": "重置用户",
+    "Delete user": "删除用户",
+    "Change language": "更改语言",
+    "Change currency": "更改货币",
+    "Change layout": "更改布局",
+
+    "User": "用户",
+    "Personalize": "个性化",
+
+    "no user jet": "还没有用户",
+
+    "Expenditures": "支出",
+    "Income": "收入",
+
+    "Current Month": "当前月份",
+    "Average": "平均",
+
+    "Entries": "条目",
+    "New Entry": "新条目",
+    "Add new Entry": "添加新条目",
+
+    "Cancel": "取消",
+    "Create": "创建",
+    "Confirm": "确认",
+    "Next": "下一步",
+    "Back": "返回",
+    "Finish": "完成",
+    "Rename": "重命名",
+
+    "Name must contain letters or numbers": "名称必须包含字母或数字",
+    "is already in use.": "已经被使用。",
+    "is not allowed to use, do to storage problems.": "由于存储问题不允许使用。",
+    "Invalid Name:": "无效的名称：",
+    "Valid name": "有效的名称",
+    "Current name": "当前名称",
+
+    "type amount here": "在这里输入金额",
+    "Type name here": "在这里输入名称",
+
+    "USD": "美元",
+    "EUR": "欧元",
+    "GBP": "英镑",
+    "JPY": "日元",
+    "CNY": "人民币",
+    "CAD": "加拿大元",
+    "AUD": "澳大利亚元",
+    "INR": "印度卢比",
+    "BRL": "巴西雷亚尔",
+    "CHF": "瑞士法郎"
+}
