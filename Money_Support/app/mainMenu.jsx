@@ -147,7 +147,7 @@ const MainMenu = () => {
             </View>
 
             <View style={{alignItems:"center", ...style.downArear}}>
-              <ExpendituresIncomComp onPress={() => setModal(true)} listItems={data.map((value) => <ExpendituresIncomListItem key={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
+              <ExpendituresIncomComp onPress={() => setModal(true)} listItems={data.slice(0, 40).map((value) => <ExpendituresIncomListItem key={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
             </View>
 
             <AddEntryModal isVisible={modal} closePress={() => setModal(false)} createClick={AddDataClick}/>
