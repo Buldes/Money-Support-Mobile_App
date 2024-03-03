@@ -60,7 +60,7 @@ const SettingsMenu = (props) => {
           <DefaultLabel text={`Money Support ${appVersion}`} backGround={colorPallet.transperent} fontSize={infoFontSize}/>
           <DefaultLabel text={`Expo React Nativ V${version}`} backGround={colorPallet.transperent} fontSize={infoFontSize} marginBottom={5}/>
           <DefaultLabel text={`Language translation made with ChatGPT`} backGround={colorPallet.transperent} fontSize={infoFontSize} marginBottom={5}/>
-          <DefaultLabel text={`You are in Early Acess! Please report error and bugs.`} backGround={colorPallet.transperent} fontSize={infoFontSize}/>
+          <DefaultLabel text={`You are in Early Acess! Please report error and bugs.\nMore features comming soon...`} backGround={colorPallet.transperent} fontSize={infoFontSize} marginBottom={5}/>
           <DefaultLabel text={`App testet and develop on Samsung Galaxy S20 FE`} backGround={colorPallet.transperent} fontSize={infoFontSize}/>
         </View>
 

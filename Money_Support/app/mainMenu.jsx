@@ -142,7 +142,7 @@ const MainMenu = () => {
                 <BankBalanceLable text={ValueToString(data[0].bankBalance)} marginTop={30}/>
               </View>
 
-              <ExpendituresInfo avargeExpenditures={avargeExpenditures} currentMonthExpenditures={currentMonthExpenditures}/>
+              {/*<ExpendituresInfo avargeExpenditures={avargeExpenditures} currentMonthExpenditures={currentMonthExpenditures}/>*/}
 
             </View>
 
@@ -180,7 +180,7 @@ const style = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     flex: 1,
-    height:400,
+    height:280,
     borderRadius:10,
     width:Dimensions.get("window").width - 10
 
