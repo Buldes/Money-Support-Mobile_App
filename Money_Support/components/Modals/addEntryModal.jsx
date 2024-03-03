@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Modal, Dimensions } from "react-native";
+import { StyleSheet, View, Modal, Dimensions, Pressable } from "react-native";
 import colorPallet from "../../constants/Colors";
 import DefaultLabel from "../Lables/default";
 import DefaultButton from "../Buttons/default";
@@ -34,7 +34,7 @@ const AddEntryModal = (props) => {
         },
         parantView:{
             width:screenSize - 30,
-            height:200,
+            height:185,
             backgroundColor:colorPallet.bg_2e,
             borderRadius:20,
             alignItems:"center"
@@ -46,6 +46,10 @@ const AddEntryModal = (props) => {
             borderRadius:10,
             flexDirection:"row",
             marginTop:10
+        },
+        exitArea:{
+            flex:1,
+            width:screenSize,
         }
     })
 
@@ -62,7 +66,8 @@ const AddEntryModal = (props) => {
 
     return(
         <Modal transparent={true} visible={props.isVisible} animationType="fade" onRequestClose={props.closePress}>
-            <View style={styles.backGroundView} onStartShouldSetResponder={() => console.log("Pressed")}>
+            <View style={styles.backGroundView}>
+                <Pressable style={styles.exitArea} onPress={props.closePress}/>
                 <View style={styles.parantView}>
 
                     <DefaultLabel text={dictionary["Add new Entry"]} backGround={colorPallet.bg_4e} borderRadius={20} marginBottom={10} width="100%"/>
@@ -84,6 +89,7 @@ const AddEntryModal = (props) => {
                     </View>
 
                 </View>
+                <Pressable style={styles.exitArea} onPress={props.closePress}></Pressable>
             </View>
         </Modal>
     );
