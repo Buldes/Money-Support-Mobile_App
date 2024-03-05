@@ -50,4 +50,12 @@ Language translations made with ChatGPT
 - Swiss Franc: CHF
 
 ## Screenshots
+
+*The Main Menu*
 ![Error](screenshots/MainMenu.jpg)
+
+![Error](screenshots/MainMenu_AddEntry.jpg)
+
+![Error](screenshots/MainMenu_ChangeUser.jpg)
+
+![Error](screenshots/MainMenu_AddUser.jpg)
