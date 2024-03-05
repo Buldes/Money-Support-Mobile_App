@@ -54,8 +54,8 @@ Language translations made with ChatGPT
 *The Main Menu*
 ![Error](screenshots/MainMenu.jpg)
 
-![Error](screenshots/MainMenu_AddEntry.jpg)
+![Error](screenshots/MainMenu-AddEntry.jpg)
 
-![Error](screenshots/MainMenu_ChangeUser.jpg)
+![Error](screenshots/MainMenu-ChangeUser.jpg)
 
-![Error](screenshots/MainMenu_AddUser.jpg)
+![Error](screenshots/MainMenu-AddUser.jpg)
