@@ -63,7 +63,7 @@ Language translations made with ChatGPT
 
 **Settings**
 
-![Error](screenshots/settings.jpg)
+![Error](screenshots/Settings.jpg)
 
 **Easy Setup**
 
@@ -73,5 +73,5 @@ Language translations made with ChatGPT
 
 ![Error](screenshots/Setup-Layout.jpg)
 
-![Error](screenshots/MainMenu-Name.jpg)
+![Error](screenshots/Setup-Name.jpg)
 
