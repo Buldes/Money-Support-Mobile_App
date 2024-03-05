@@ -51,7 +51,7 @@ Language translations made with ChatGPT
 
 ## Screenshots
 
-*The Main Menu*
+**The Main Menu**
 ![Error](screenshots/MainMenu.jpg)
 
 ![Error](screenshots/MainMenu-AddEntry.jpg)
@@ -59,3 +59,19 @@ Language translations made with ChatGPT
 ![Error](screenshots/MainMenu-ChangeUser.jpg)
 
 ![Error](screenshots/MainMenu-AddUser.jpg)
+
+
+**Settings**
+
+![Error](screenshots/settings.jpg)
+
+**Easy Setup**
+
+![Error](screenshots/Setup-Language.jpg)
+
+![Error](screenshots/Setup-Currency.jpg)
+
+![Error](screenshots/Setup-Layout.jpg)
+
+![Error](screenshots/MainMenu-Name.jpg)
+
