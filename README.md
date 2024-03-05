@@ -20,7 +20,7 @@ In this repository, you'll find the mobile app (currently available only for And
 
 ## Supported Languages
 
-Language translations made with ChatGPT
+Language translation made with ChatGPT
 
 - English
 - German
