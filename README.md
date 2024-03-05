@@ -50,4 +50,4 @@ Language translations made with ChatGPT
 - Swiss Franc: CHF
 
 ## Screenshots
-![Error](screenshots/MainMenu.png)
+![Error](screenshots/MainMenu.jpg)
