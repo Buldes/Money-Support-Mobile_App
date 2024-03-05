@@ -48,3 +48,6 @@ Language translations made with ChatGPT
 - Indian Rupee: ₹
 - Brazilian Real: R$
 - Swiss Franc: CHF
+
+## Screenshots
+![Error](screenshots/MainMenu.png)
