@@ -2,14 +2,14 @@
     "Choose your Language": "Elige tu idioma",
     "Choose your Currency": "Elige tu moneda",
     "Choose your Layout": "Elige tu diseño",
-    "Type in a name for your first User.": "Ingresa un nombre para tu primer usuario.",
+    "Type in a name for your first User.": "Escribe un nombre para tu primer usuario",
 
-    "Are you sure you want to RESET the current User?\nUser:": "¿Estás seguro de que quieres REINICIAR al usuario actual?\nUsuario:",
+    "Are you sure you want to RESET the current User?\nUser:": "¿Estás seguro de que quieres RESTABLECER al usuario actual?\nUsuario:",
     "Are you sure you want to DELETE the current User?\nUser:": "¿Estás seguro de que quieres ELIMINAR al usuario actual?\nUsuario:",
 
     "Create new user": "Crear nuevo usuario",
     "Rename user": "Cambiar nombre de usuario",
-    "Reset user": "Reiniciar usuario",
+    "Reset user": "Restablecer usuario",
     "Delete user": "Eliminar usuario",
     "Change language": "Cambiar idioma",
     "Change currency": "Cambiar moneda",
@@ -17,11 +17,17 @@
 
     "User": "Usuario",
     "Personalize": "Personalizar",
+    "Info Box": "Caja de información",
 
-    "no user jet": "Aún no hay usuario",
+    "no user jet": "Aún no hay usuarios",
 
     "Expenditures": "Gastos",
     "Income": "Ingresos",
+
+    "Avarge income": "Ingreso promedio",
+    "Current income": "Ingreso actual",
+    "Avarge expenditures": "Gastos promedio",
+    "Current expenditures": "Gastos actuales",
 
     "Current Month": "Mes actual",
     "Average": "Promedio",
@@ -40,13 +46,13 @@
 
     "Name must contain letters or numbers": "El nombre debe contener letras o números.",
     "is already in use.": "ya está en uso.",
-    "is not allowed to use, do to storage problems.": "no se permite usar debido a problemas de almacenamiento.",
+    "is not allowed to use, do to storage problems.": "no se permite su uso debido a problemas de almacenamiento.",
     "Invalid Name:": "Nombre inválido:",
     "Valid name": "Nombre válido",
     "Current name": "Nombre actual",
 
-    "type amount here": "Ingresa la cantidad aquí",
-    "Type name here": "Ingresa el nombre aquí",
+    "type amount here": "escribe la cantidad aquí",
+    "Type name here": "escribe el nombre aquí",
 
     "USD": "Dólar estadounidense",
     "EUR": "Euro",

@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { currentUserData, setCurrentUserData } from '../variables/dictionary';
+import { SetInfoLableSettings, currentUserData, infoLableSettings, setCurrentUserData } from '../variables/dictionary';
 import { SetNumLayout, currency, currentuserKey, language, numLayout, setCurrency, setLanguage } from '../variables/string';
 
 export const storeData = async (value, key) => {
@@ -40,7 +40,8 @@ export async function SaveSettings(){
   let settingsList = {
     "language":language,
     "currency":currency,
-    "numLayout":numLayout
+    "numLayout":numLayout,
+    "infoLable":infoLableSettings
   }
   await storeData(settingsList, "settings").then((e) => {
     return e
@@ -48,10 +49,21 @@ export async function SaveSettings(){
 }
 
 export async function RefreshSettings(){
-  await getData("settings").then((data) => {{
+  await getData("settings").then(async (data) => {{
     setLanguage(data["language"])
     setCurrency(data["currency"])
     SetNumLayout(data["numLayout"])
+
+    // saved Variables of newer Versions
+    if (data["infoLable"] == null){
+        console.log(`setting/infoLable unvalid. Saving and Refresh again`)
+        await SaveSettings().then(() => {
+          RefreshSettings()
+        })
+    }
+
+    SetInfoLableSettings(data["infoLable"])
+
   }})
 }
 

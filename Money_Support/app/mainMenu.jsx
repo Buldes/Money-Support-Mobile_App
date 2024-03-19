@@ -5,8 +5,7 @@ import HeadLine from '../components/Lables/headlins';
 import colorPallet from '../constants/Colors';
 import { ScrollView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import ExpendituresInfo from '../components/fullComp/info';
-import { avargeExpenditures, currentMonthExpenditures } from '../variables/float';
+import InfoBox from '../components/fullComp/info';
 import ExpendituresIncomComp from '../components/fullComp/expendituresIncom';
 import ValueToString from '../Functions/valueToString';
 import { DeleteCurrentUserKey, GetAllUserKeys, SaveCurrentUser, getData, storeData } from '../Functions/dataDealer';
@@ -20,8 +19,8 @@ import AddEntryModal from '../components/Modals/addEntryModal';
 import CahngeUserButton from '../components/fullComp/changeUserButton';
 import ChangeUserModal from '../components/Modals/changeUserModal';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import DefaultButton from '../components/Buttons/default';
 import CreateNewUserModal from '../components/Modals/createUserModal';
+import CalculateExpendituresIcome from '../Functions/calcuateCurrentAndMonth';
 
 const MainMenu = () => {
   const [data, setData] = useState(null)
@@ -31,6 +30,10 @@ const MainMenu = () => {
   const [createNewUserModal, setCreateNewUserModal] = useState(false)
   const [allKeys, setAllKeys] = useState(null)
   const [currentUser, setCurrenUser] = useState(currentuserKey)
+  const [currentExpenditures, setCurrentExpenditures] = useState(null)
+  const [avargeExpenditures, setAvargeExpenditures] = useState(null)
+  const [avargeIncome, setAvargeIncome] = useState(null)
+  const [currentIncome, setCurrentIncome] = useState(null)
 
   // 1.1 Create function, to load all data
   const fetchData = async () => {
@@ -52,6 +55,17 @@ const MainMenu = () => {
 
         setCurrentUserData(sorted)
         setData(sorted)
+
+        await CalculateExpendituresIcome().then((d) => {
+          setCurrentExpenditures(d[0])
+          setAvargeExpenditures(d[1])
+          console.log(`loaded expenditures: current: ${d[0]} avarge: ${d[1]}`)
+
+          setCurrentIncome(d[2])
+          setAvargeIncome(d[3])
+          console.log(`loaded income: current: ${d[2]} avarge: ${d[3]}`)
+          
+        })
         
         try{
           console.log(`loaded data: ${data.length} entrys from User "${currentUser}"`)
@@ -71,8 +85,8 @@ const MainMenu = () => {
   // 1.2 load current data
   useEffect(() => {
 
-    // only refresh data, when modal is not open
     fetchData()
+
   }, [currentUser]);
   
   // 2. wait until loading is finished
@@ -103,12 +117,19 @@ const MainMenu = () => {
 
   // 5. create add Data function / create Click and ChangeUser function
   const AddDataClick = async () => {
-    console.log(`Add ${newEntry} to ${currentuserKey}`)
+    console.log(`\nAdd ${JSON.stringify(newEntry)} to ${currentuserKey}`)
     AddToCurrentUserData(newEntry)
     setCurrentUserData(SortById(currentUserData))
-    await SaveCurrentUser().then(() => {
+    await SaveCurrentUser().then(async () => {
       setData(currentUserData)
       setModal(false)
+
+      await CalculateExpendituresIcome().then((d) => {
+        setCurrentExpenditures(d[0])
+        setAvargeExpenditures(d[1])
+        console.log(`loaded expenditures: current: ${d[0]} avarge: ${d[1]}`)
+      })
+
     })
   }
 
@@ -139,10 +160,10 @@ const MainMenu = () => {
             <View style={{alignItems:"center", ...style.upArear}}>
 
               <View>
-                <BankBalanceLable text={ValueToString(data[0].bankBalance)} marginTop={30}/>
+                <BankBalanceLable text={ValueToString(data[0].bankBalance)} marginTop={30} marginBottom={50}/>
               </View>
 
-              {/*<ExpendituresInfo avargeExpenditures={avargeExpenditures} currentMonthExpenditures={currentMonthExpenditures}/>*/}
+              <InfoBox avargeIncome={avargeIncome} currentMonthIncome={currentIncome} avargeExpenditures={avargeExpenditures} currentMonthExpenditures={currentExpenditures}/>
 
             </View>
 
@@ -180,7 +201,6 @@ const style = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     flex: 1,
-    height:280,
     borderRadius:10,
     width:Dimensions.get("window").width - 10
 

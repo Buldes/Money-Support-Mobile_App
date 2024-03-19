@@ -2,7 +2,7 @@
     "Choose your Language": "اختر لغتك",
     "Choose your Currency": "اختر عملتك",
     "Choose your Layout": "اختر تخطيطك",
-    "Type in a name for your first User.": "اكتب اسمًا لمستخدمك الأول",
+    "Type in a name for your first User.": "اكتب اسمًا لمستخدمك الأول.",
 
     "Are you sure you want to RESET the current User?\nUser:": "هل أنت متأكد أنك تريد إعادة تعيين المستخدم الحالي؟\nالمستخدم:",
     "Are you sure you want to DELETE the current User?\nUser:": "هل أنت متأكد أنك تريد حذف المستخدم الحالي؟\nالمستخدم:",
@@ -17,16 +17,22 @@
 
     "User": "المستخدم",
     "Personalize": "تخصيص",
+    "Info Box": "صندوق المعلومات",
 
     "no user jet": "لا يوجد مستخدم حتى الآن",
 
-    "Expenditures": "المصروفات",
+    "Expenditures": "المصاريف",
     "Income": "الدخل",
 
-    "Current Month": "الشهر الحالي",
-    "Average": "المتوسط",
+    "Avarge income": "الدخل المتوسط",
+    "Current income": "الدخل الحالي",
+    "Avarge expenditures": "المصاريف المتوسطة",
+    "Current expenditures": "المصاريف الحالية",
 
-    "Entries": "الإدخالات",
+    "Current Month": "الشهر الحالي",
+    "Average": "متوسط",
+
+    "Entries": "المدخلات",
     "New Entry": "إدخال جديد",
     "Add new Entry": "إضافة إدخال جديد",
 
@@ -34,11 +40,11 @@
     "Create": "إنشاء",
     "Confirm": "تأكيد",
     "Next": "التالي",
-    "Back": "رجوع",
+    "Back": "السابق",
     "Finish": "إنهاء",
-    "Rename": "إعادة تسمية",
+    "Rename": "إعادة التسمية",
 
-    "Name must contain letters or numbers": "يجب أن يحتوي الاسم على أحرف أو أرقام",
+    "Name must contain letters or numbers": "يجب أن يحتوي الاسم على أحرف أو أرقام.",
     "is already in use.": "مستخدم بالفعل.",
     "is not allowed to use, do to storage problems.": "غير مسموح باستخدامه بسبب مشاكل التخزين.",
     "Invalid Name:": "اسم غير صالح:",

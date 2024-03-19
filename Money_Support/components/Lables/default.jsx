@@ -34,7 +34,7 @@ const DefaultLabel = (props) => {
 
     // retrun defult Lable, when setup is ready
     return (
-        <Text style={styles.textStyle}>{props.text}</Text>
+        <Text style={styles.textStyle} onPress={props.onPress}>{props.text}</Text>
     );
 };
 

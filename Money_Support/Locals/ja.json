@@ -1,11 +1,11 @@
 {
-    "Choose your Language": "言語を選択してください",
-    "Choose your Currency": "通貨を選択してください",
-    "Choose your Layout": "レイアウトを選択してください",
-    "Type in a name for your first User.": "最初のユーザーの名前を入力してください",
+    "Choose your Language": "言語を選択",
+    "Choose your Currency": "通貨を選択",
+    "Choose your Layout": "レイアウトを選択",
+    "Type in a name for your first User.": "最初のユーザーの名前を入力",
 
-    "Are you sure you want to RESET the current User?\nUser:": "現在のユーザーをリセットしてもよろしいですか？\nユーザー：",
-    "Are you sure you want to DELETE the current User?\nUser:": "現在のユーザーを削除してもよろしいですか？\nユーザー：",
+    "Are you sure you want to RESET the current User?\nUser:": "現在のユーザーをリセットしますか？\nユーザー：",
+    "Are you sure you want to DELETE the current User?\nUser:": "現在のユーザーを削除しますか？\nユーザー：",
 
     "Create new user": "新しいユーザーを作成",
     "Rename user": "ユーザー名を変更",
@@ -17,18 +17,24 @@
 
     "User": "ユーザー",
     "Personalize": "個人設定",
+    "Info Box": "情報ボックス",
 
-    "no user jet": "まだユーザーがいません",
+    "no user jet": "ユーザーがまだいません",
 
     "Expenditures": "支出",
     "Income": "収入",
 
-    "Current Month": "現在の月",
+    "Avarge income": "平均収入",
+    "Current income": "現在の収入",
+    "Avarge expenditures": "平均支出",
+    "Current expenditures": "現在の支出",
+
+    "Current Month": "今月",
     "Average": "平均",
 
     "Entries": "エントリー",
-    "New Entry": "新しいエントリー",
-    "Add new Entry": "新しいエントリーを追加",
+    "New Entry": "新規エントリー",
+    "Add new Entry": "新規エントリーを追加",
 
     "Cancel": "キャンセル",
     "Create": "作成",
@@ -36,21 +42,21 @@
     "Next": "次へ",
     "Back": "戻る",
     "Finish": "完了",
-    "Rename": "名前を変更",
+    "Rename": "名前変更",
 
-    "Name must contain letters or numbers": "名前には文字または数字を含めてください",
-    "is already in use.": "既に使用されています。",
-    "is not allowed to use, do to storage problems.": "ストレージの問題により使用が許可されていません。",
+    "Name must contain letters or numbers": "名前は文字または数字を含む必要があります。",
+    "is already in use.": "はすでに使用されています。",
+    "is not allowed to use, do to storage problems.": "ストレージの問題のため使用が許可されていません。",
     "Invalid Name:": "無効な名前：",
     "Valid name": "有効な名前",
     "Current name": "現在の名前",
 
-    "type amount here": "ここに金額を入力",
-    "Type name here": "ここに名前を入力",
+    "type amount here": "ここに金額を入力してください",
+    "Type name here": "ここに名前を入力してください",
 
     "USD": "米ドル",
     "EUR": "ユーロ",
-    "GBP": "英ポンド",
+    "GBP": "ポンド",
     "JPY": "日本円",
     "CNY": "中国元",
     "CAD": "カナダドル",

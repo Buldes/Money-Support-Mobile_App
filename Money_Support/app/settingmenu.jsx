@@ -10,6 +10,8 @@ import PersonalizeSettings from '../components/fullComp/settingsComp/settingsPer
 import languageDictionary from '../Functions/getLanguageDictionary';
 import DefaultLabel from '../components/Lables/default';
 import { appVersion } from '../variables/string';
+import DefaultSwitch from '../components/Switches/default';
+import InfoBoxSettings from '../components/fullComp/settingsComp/infoBoxSettings';
 
 const SettingsMenu = (props) => {
     const [allKeys, setAllKeys] = useState(null)
@@ -55,8 +57,9 @@ const SettingsMenu = (props) => {
 
         <SettingsContainerLayout headline={dictionary["User"]} comp={<UserSettings allUserKeys={allKeys} BackToMainMenu={BackToMain}/>}/>
         <SettingsContainerLayout headline={dictionary["Personalize"]} comp={<PersonalizeSettings ReloadChanges={ReloadObjects}/>}/>
+        <SettingsContainerLayout headline={dictionary["Info Box"]} comp={<InfoBoxSettings ReloadChanges={ReloadObjects}/>}/>
 
-        <View style={{flex:1, height:Dimensions.get("window").height - 520, justifyContent:"flex-end"}}>
+        <View style={{flex:1, marginTop:50, marginBottom:20, justifyContent:"flex-end"}}>
           <DefaultLabel text={`Money Support ${appVersion}`} backGround={colorPallet.transperent} fontSize={infoFontSize}/>
           <DefaultLabel text={`Expo React Nativ V${version}`} backGround={colorPallet.transperent} fontSize={infoFontSize} marginBottom={5}/>
           <DefaultLabel text={`Language translation made with ChatGPT`} backGround={colorPallet.transperent} fontSize={infoFontSize} marginBottom={5}/>

@@ -17,11 +17,17 @@
 
     "User": "User",
     "Personalize": "Personalize",
+    "Info Box": "Info Box",
 
-    "no user jet": "No user yet",
+    "no user jet": "no user jet",
 
     "Expenditures": "Expenditures",
     "Income": "Income",
+
+    "Avarge income": "Avarge income",
+    "Current income": "Current income",
+    "Avarge expenditures": "Avarge expenditures",
+    "Current expenditures": "Current expenditures",
 
     "Current Month": "Current Month",
     "Average": "Average",
@@ -40,13 +46,14 @@
 
     "Name must contain letters or numbers": "Name must contain letters or numbers",
     "is already in use.": "is already in use.",
-    "is not allowed to use, do to storage problems.": "is not allowed to use, due to storage problems.",
+    "is not allowed to use, do to storage problems.": "is not allowed to use, do to storage problems.",
     "Invalid Name:": "Invalid Name:",
     "Valid name": "Valid name",
     "Current name": "Current name",
 
-    "type amount here": "Type amount here",
+    "type amount here": "type amount here",
     "Type name here": "Type name here",
+
 
     "USD": "US dollars",
     "EUR": "Euro",

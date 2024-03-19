@@ -30,6 +30,12 @@ export const setNewEntry = (value) => {
     newEntry = value
 }
 
+export var infoLableSettings = {avargeExpenditures:true, currentExpenditures:true, avargeIncome:true, currentIncome:true}
+
+export const SetInfoLableSettings = (dict) => {
+    infoLableSettings = dict
+}
+
 export const allLanguages = {
     "en": "English",           // English
     "de": "Deutsch",           // German

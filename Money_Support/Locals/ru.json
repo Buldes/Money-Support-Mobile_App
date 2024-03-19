@@ -1,8 +1,8 @@
 {
-    "Choose your Language": "Выберите свой язык",
-    "Choose your Currency": "Выберите свою валюту",
-    "Choose your Layout": "Выберите свой макет",
-    "Type in a name for your first User.": "Введите имя для вашего первого пользователя",
+    "Choose your Language": "Выберите язык",
+    "Choose your Currency": "Выберите валюту",
+    "Choose your Layout": "Выберите макет",
+    "Type in a name for your first User.": "Введите имя для вашего первого пользователя.",
 
     "Are you sure you want to RESET the current User?\nUser:": "Вы уверены, что хотите СБРОСИТЬ текущего пользователя?\nПользователь:",
     "Are you sure you want to DELETE the current User?\nUser:": "Вы уверены, что хотите УДАЛИТЬ текущего пользователя?\nПользователь:",
@@ -17,11 +17,17 @@
 
     "User": "Пользователь",
     "Personalize": "Персонализировать",
+    "Info Box": "Информационное окно",
 
-    "no user jet": "Пока нет пользователя",
+    "no user jet": "Пользователь еще не создан",
 
     "Expenditures": "Расходы",
     "Income": "Доход",
+
+    "Avarge income": "Средний доход",
+    "Current income": "Текущий доход",
+    "Avarge expenditures": "Средние расходы",
+    "Current expenditures": "Текущие расходы",
 
     "Current Month": "Текущий месяц",
     "Average": "Среднее",
@@ -35,12 +41,12 @@
     "Confirm": "Подтвердить",
     "Next": "Далее",
     "Back": "Назад",
-    "Finish": "Готово",
+    "Finish": "Завершить",
     "Rename": "Переименовать",
 
-    "Name must contain letters or numbers": "Имя должно содержать буквы или цифры",
+    "Name must contain letters or numbers": "Имя должно содержать буквы или цифры.",
     "is already in use.": "уже используется.",
-    "is not allowed to use, do to storage problems.": "нельзя использовать из-за проблем с хранением.",
+    "is not allowed to use, do to storage problems.": "не допускается к использованию из-за проблем с хранением.",
     "Invalid Name:": "Недопустимое имя:",
     "Valid name": "Допустимое имя",
     "Current name": "Текущее имя",
@@ -51,7 +57,7 @@
     "USD": "Доллар США",
     "EUR": "Евро",
     "GBP": "Фунт стерлингов",
-    "JPY": "Японская иена",
+    "JPY": "Японская йена",
     "CNY": "Китайский юань",
     "CAD": "Канадский доллар",
     "AUD": "Австралийский доллар",

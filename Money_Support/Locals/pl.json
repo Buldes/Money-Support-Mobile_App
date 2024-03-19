@@ -1,11 +1,11 @@
 {
-    "Choose your Language": "Wybierz swój język",
-    "Choose your Currency": "Wybierz swoją walutę",
-    "Choose your Layout": "Wybierz swój układ",
-    "Type in a name for your first User.": "Wprowadź imię dla swojego pierwszego użytkownika",
+    "Choose your Language": "Wybierz język",
+    "Choose your Currency": "Wybierz walutę",
+    "Choose your Layout": "Wybierz układ",
+    "Type in a name for your first User.": "Wpisz nazwę dla swojego pierwszego użytkownika.",
 
-    "Are you sure you want to RESET the current User?\nUser:": "Czy na pewno chcesz ZRESETOWAĆ obecnego użytkownika?\nUżytkownik:",
-    "Are you sure you want to DELETE the current User?\nUser:": "Czy na pewno chcesz USUNĄĆ obecnego użytkownika?\nUżytkownik:",
+    "Are you sure you want to RESET the current User?\nUser:": "Czy na pewno chcesz ZRESETOWAĆ bieżącego użytkownika?\nUżytkownik:",
+    "Are you sure you want to DELETE the current User?\nUser:": "Czy na pewno chcesz USUNĄĆ bieżącego użytkownika?\nUżytkownik:",
 
     "Create new user": "Utwórz nowego użytkownika",
     "Rename user": "Zmień nazwę użytkownika",
@@ -16,12 +16,18 @@
     "Change layout": "Zmień układ",
 
     "User": "Użytkownik",
-    "Personalize": "Spersonalizuj",
+    "Personalize": "Personalizuj",
+    "Info Box": "Pole informacyjne",
 
     "no user jet": "Brak użytkownika",
 
     "Expenditures": "Wydatki",
-    "Income": "Dochody",
+    "Income": "Dochód",
+
+    "Avarge income": "Średni dochód",
+    "Current income": "Bieżący dochód",
+    "Avarge expenditures": "Średnie wydatki",
+    "Current expenditures": "Bieżące wydatki",
 
     "Current Month": "Bieżący miesiąc",
     "Average": "Średnia",
@@ -33,19 +39,19 @@
     "Cancel": "Anuluj",
     "Create": "Utwórz",
     "Confirm": "Potwierdź",
-    "Next": "Następny",
-    "Back": "Wróć",
+    "Next": "Dalej",
+    "Back": "Wstecz",
     "Finish": "Zakończ",
     "Rename": "Zmień nazwę",
 
-    "Name must contain letters or numbers": "Nazwa musi zawierać litery lub cyfry",
-    "is already in use.": "jest już w użyciu.",
+    "Name must contain letters or numbers": "Nazwa musi zawierać litery lub cyfry.",
+    "is already in use.": "jest już używane.",
     "is not allowed to use, do to storage problems.": "nie można używać z powodu problemów z przechowywaniem.",
     "Invalid Name:": "Nieprawidłowa nazwa:",
     "Valid name": "Poprawna nazwa",
     "Current name": "Bieżąca nazwa",
 
-    "type amount here": "Wpisz kwotę tutaj",
+    "type amount here": "wpisz kwotę tutaj",
     "Type name here": "Wpisz nazwę tutaj",
 
     "USD": "Dolar amerykański",

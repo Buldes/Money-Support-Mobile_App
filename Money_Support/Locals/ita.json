@@ -2,10 +2,10 @@
     "Choose your Language": "Scegli la tua lingua",
     "Choose your Currency": "Scegli la tua valuta",
     "Choose your Layout": "Scegli il tuo layout",
-    "Type in a name for your first User.": "Inserisci un nome per il tuo primo utente",
+    "Type in a name for your first User.": "Digita un nome per il tuo primo utente",
 
-    "Are you sure you want to RESET the current User?\nUser:": "Sei sicuro di voler REIMPOSTARE l'utente corrente?\nUtente:",
-    "Are you sure you want to DELETE the current User?\nUser:": "Sei sicuro di voler ELIMINARE l'utente corrente?\nUtente:",
+    "Are you sure you want to RESET the current User?\nUser:": "Sei sicuro di voler REIMPOSTARE l'utente attuale?\nUtente:",
+    "Are you sure you want to DELETE the current User?\nUser:": "Sei sicuro di voler ELIMINARE l'utente attuale?\nUtente:",
 
     "Create new user": "Crea nuovo utente",
     "Rename user": "Rinomina utente",
@@ -17,11 +17,17 @@
 
     "User": "Utente",
     "Personalize": "Personalizza",
+    "Info Box": "Info Box",
 
-    "no user jet": "Nessun utente ancora",
+    "no user jet": "Ancora nessun utente",
 
     "Expenditures": "Spese",
     "Income": "Entrate",
+
+    "Avarge income": "Entrate medie",
+    "Current income": "Entrate attuali",
+    "Avarge expenditures": "Spese medie",
+    "Current expenditures": "Spese attuali",
 
     "Current Month": "Mese corrente",
     "Average": "Media",
@@ -38,17 +44,17 @@
     "Finish": "Fine",
     "Rename": "Rinomina",
 
-    "Name must contain letters or numbers": "Il nome deve contenere lettere o numeri",
+    "Name must contain letters or numbers": "Il nome deve contenere lettere o numeri.",
     "is already in use.": "è già in uso.",
-    "is not allowed to use, do to storage problems.": "non è consentito a causa di problemi di archiviazione.",
+    "is not allowed to use, do to storage problems.": "non è consentito l'uso, a causa di problemi di archiviazione.",
     "Invalid Name:": "Nome non valido:",
     "Valid name": "Nome valido",
     "Current name": "Nome attuale",
 
-    "type amount here": "Inserisci l'importo qui",
-    "Type name here": "Inserisci il nome qui",
+    "type amount here": "digita l'importo qui",
+    "Type name here": "Digita il nome qui",
 
-    "USD": "Dollari statunitensi",
+    "USD": "Dollaro USA",
     "EUR": "Euro",
     "GBP": "Sterlina britannica",
     "JPY": "Yen giapponese",

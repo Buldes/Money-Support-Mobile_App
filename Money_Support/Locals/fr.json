@@ -2,7 +2,7 @@
     "Choose your Language": "Choisissez votre langue",
     "Choose your Currency": "Choisissez votre devise",
     "Choose your Layout": "Choisissez votre mise en page",
-    "Type in a name for your first User.": "Tapez un nom pour votre premier utilisateur.",
+    "Type in a name for your first User.": "Tapez un nom pour votre premier utilisateur",
 
     "Are you sure you want to RESET the current User?\nUser:": "Êtes-vous sûr de vouloir RÉINITIALISER l'utilisateur actuel ?\nUtilisateur :",
     "Are you sure you want to DELETE the current User?\nUser:": "Êtes-vous sûr de vouloir SUPPRIMER l'utilisateur actuel ?\nUtilisateur :",
@@ -17,11 +17,17 @@
 
     "User": "Utilisateur",
     "Personalize": "Personnaliser",
+    "Info Box": "Boîte d'information",
 
     "no user jet": "Aucun utilisateur pour le moment",
 
     "Expenditures": "Dépenses",
-    "Income": "Revenus",
+    "Income": "Revenu",
+
+    "Avarge income": "Revenu moyen",
+    "Current income": "Revenu actuel",
+    "Avarge expenditures": "Dépenses moyennes",
+    "Current expenditures": "Dépenses actuelles",
 
     "Current Month": "Mois en cours",
     "Average": "Moyenne",
@@ -38,9 +44,10 @@
     "Finish": "Terminer",
     "Rename": "Renommer",
 
-    "Name must contain letters or numbers": "Le nom doit contenir des lettres ou des chiffres",
+    "Name must contain letters or numbers": "Le nom doit contenir des lettres ou des chiffres.",
     "is already in use.": "est déjà utilisé.",
     "is not allowed to use, do to storage problems.": "n'est pas autorisé en raison de problèmes de stockage.",
+
     "Invalid Name:": "Nom invalide :",
     "Valid name": "Nom valide",
     "Current name": "Nom actuel",

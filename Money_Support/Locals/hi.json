@@ -2,12 +2,12 @@
     "Choose your Language": "अपनी भाषा चुनें",
     "Choose your Currency": "अपनी मुद्रा चुनें",
     "Choose your Layout": "अपना लेआउट चुनें",
-    "Type in a name for your first User.": "अपने पहले उपयोगकर्ता के लिए एक नाम टाइप करें।",
+    "Type in a name for your first User.": "अपने पहले उपयोगकर्ता के लिए नाम टाइप करें।",
 
-    "Are you sure you want to RESET the current User?\nUser:": "क्या आप वाकई वर्तमान उपयोगकर्ता को रीसेट करना चाहते हैं?\nउपयोगकर्ता:",
-    "Are you sure you want to DELETE the current User?\nUser:": "क्या आप वाकई वर्तमान उपयोगकर्ता को हटाना चाहते हैं?\nउपयोगकर्ता:",
+    "Are you sure you want to RESET the current User?\nUser:": "क्या आप वाकई मौजूदा उपयोगकर्ता को रीसेट करना चाहते हैं?\nउपयोगकर्ता:",
+    "Are you sure you want to DELETE the current User?\nUser:": "क्या आप वाकई मौजूदा उपयोगकर्ता को हटाना चाहते हैं?\nउपयोगकर्ता:",
 
-    "Create new user": "नए उपयोगकर्ता बनाएं",
+    "Create new user": "नया उपयोगकर्ता बनाएं",
     "Rename user": "उपयोगकर्ता का नाम बदलें",
     "Reset user": "उपयोगकर्ता को रीसेट करें",
     "Delete user": "उपयोगकर्ता को हटाएं",
@@ -16,17 +16,23 @@
     "Change layout": "लेआउट बदलें",
 
     "User": "उपयोगकर्ता",
-    "Personalize": "व्यक्तिगतीकरण",
+    "Personalize": "व्यक्तिगतकरण",
+    "Info Box": "जानकारी बॉक्स",
 
     "no user jet": "अबतक कोई उपयोगकर्ता नहीं",
 
     "Expenditures": "व्यय",
     "Income": "आय",
 
-    "Current Month": "वर्तमान महीना",
+    "Avarge income": "औसत आय",
+    "Current income": "वर्तमान आय",
+    "Avarge expenditures": "औसत व्यय",
+    "Current expenditures": "वर्तमान व्यय",
+
+    "Current Month": "वर्तमान माह",
     "Average": "औसत",
 
-    "Entries": "एंट्रीज़",
+    "Entries": "एंट्री",
     "New Entry": "नई एंट्री",
     "Add new Entry": "नई एंट्री जोड़ें",
 
@@ -38,24 +44,24 @@
     "Finish": "समाप्त",
     "Rename": "नाम बदलें",
 
-    "Name must contain letters or numbers": "नाम में अक्षर या संख्याएं होनी चाहिए",
+    "Name must contain letters or numbers": "नाम में अक्षर या संख्याएँ होनी चाहिए।",
     "is already in use.": "पहले से ही उपयोग में है।",
-    "is not allowed to use, do to storage problems.": "स्टोरेज समस्याओं के कारण इस्तेमाल करने की अनुमति नहीं है।",
+    "is not allowed to use, do to storage problems.": "संग्रह समस्याओं के कारण उपयोग की अनुमति नहीं है।",
     "Invalid Name:": "अमान्य नाम:",
-    "Valid name": "मान्य नाम",
+    "Valid name": "वैध नाम",
     "Current name": "वर्तमान नाम",
 
-    "type amount here": "यहां राशि टाइप करें",
-    "Type name here": "यहां नाम टाइप करें",
+    "type amount here": "यहाँ राशि टाइप करें",
+    "Type name here": "यहाँ नाम टाइप करें",
 
-    "USD": "यूएस डॉलर",
+    "USD": "यूएसडी",
     "EUR": "यूरो",
     "GBP": "ब्रिटिश पाउंड",
     "JPY": "जापानी येन",
     "CNY": "चीनी युआन",
-    "CAD": "कनेडियन डॉलर",
+    "CAD": "कनाडाई डॉलर",
     "AUD": "ऑस्ट्रेलियाई डॉलर",
     "INR": "भारतीय रुपया",
-    "BRL": "ब्राज़ीलियन रियाल",
-    "CHF": "स्विस फ़्रैंक"
+    "BRL": "ब्राजीलियन रियल",
+    "CHF": "स्विस फ्रैंक"
 }

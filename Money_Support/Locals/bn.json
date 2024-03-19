@@ -1,27 +1,33 @@
 {
-    "Choose your Language": "আপনার ভাষা চয়ন করুন",
-    "Choose your Currency": "আপনার মুদ্রা চয়ন করুন",
-    "Choose your Layout": "আপনার লেআউট চয়ন করুন",
-    "Type in a name for your first User.": "আপনার প্রথম ব্যবহারকারীর জন্য একটি নাম টাইপ করুন",
+    "Choose your Language": "আপনার ভাষা নির্বাচন করুন",
+    "Choose your Currency": "আপনার মুদ্রা নির্বাচন করুন",
+    "Choose your Layout": "আপনার লেআউট নির্বাচন করুন",
+    "Type in a name for your first User.": "আপনার প্রথম ব্যবহারকারীর নাম টাইপ করুন।",
 
     "Are you sure you want to RESET the current User?\nUser:": "আপনি কি নিশ্চিত যে আপনি বর্তমান ব্যবহারকারীকে রিসেট করতে চান?\nব্যবহারকারী:",
-    "Are you sure you want to DELETE the current User?\nUser:": "আপনি কি নিশ্চিত যে আপনি বর্তমান ব্যবহারকারীকে মুছতে চান?\nব্যবহারকারী:",
+    "Are you sure you want to DELETE the current User?\nUser:": "আপনি কি নিশ্চিত যে আপনি বর্তমান ব্যবহারকারীকে মুছে ফেলতে চান?\nব্যবহারকারী:",
 
     "Create new user": "নতুন ব্যবহারকারী তৈরি করুন",
     "Rename user": "ব্যবহারকারীর নাম পরিবর্তন করুন",
     "Reset user": "ব্যবহারকারী রিসেট করুন",
-    "Delete user": "ব্যবহারকারী মুছুন",
+    "Delete user": "ব্যবহারকারী মুছে ফেলুন",
     "Change language": "ভাষা পরিবর্তন করুন",
     "Change currency": "মুদ্রা পরিবর্তন করুন",
     "Change layout": "লেআউট পরিবর্তন করুন",
 
     "User": "ব্যবহারকারী",
     "Personalize": "ব্যক্তিগতকরণ",
+    "Info Box": "তথ্য বক্স",
 
-    "no user jet": "এখনও কোনও ব্যবহারকারী নেই",
+    "no user jet": "এখনও কোন ব্যবহারকারী নেই",
 
     "Expenditures": "ব্যয়",
     "Income": "আয়",
+
+    "Avarge income": "গড় আয়",
+    "Current income": "বর্তমান আয়",
+    "Avarge expenditures": "গড় ব্যয়",
+    "Current expenditures": "বর্তমান ব্যয়",
 
     "Current Month": "বর্তমান মাস",
     "Average": "গড়",
@@ -32,10 +38,10 @@
 
     "Cancel": "বাতিল করুন",
     "Create": "তৈরি করুন",
-    "Confirm": "কনফার্ম করুন",
+    "Confirm": "অনুমোদন করুন",
     "Next": "পরবর্তী",
-    "Back": "পৃষ্ঠায় ফিরুন",
-    "Finish": "শেষ করুন",
+    "Back": "পিছনে",
+    "Finish": "শেষ",
     "Rename": "নাম পরিবর্তন করুন",
 
     "Name must contain letters or numbers": "নামে অক্ষর অথবা সংখ্যা থাকতে হবে",

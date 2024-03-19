@@ -5,8 +5,9 @@ import HeadLine from "../Lables/headlins";
 import DefaultLabel from "../Lables/default";
 import colorPallet from "../../constants/Colors";
 import ValueToString from "../../Functions/valueToString";
+import { infoLableSettings } from "../../variables/dictionary";
 
-const ExpendituresInfo = (props) => {
+const InfoBox = (props) => {
     const dictionary = languageDictionary();
 
     const {} = props;
@@ -29,25 +30,42 @@ const ExpendituresInfo = (props) => {
     })
 
     return(
+
         <View>
-            <HeadLine text={dictionary["Expenditures"]} marginTop={30}/>
-            
-            <View style={styles.parantView}>
 
-                <View style={styles.childView}>
-                    <DefaultLabel text={`${dictionary["Current Month"]}:`} textAlign="left" backGround={colorPallet.transperent}/>
-                    <DefaultLabel text={ValueToString(props.currentMonthExpenditures)} marginLeft={10} textAlign="left" backGround={colorPallet.transperent}/>
-                </View>
+            {infoLableSettings["avargeExpenditures"] || infoLableSettings["currentExpenditures"] ? 
+            <View style={{marginBottom:20}}>
+                <HeadLine text={dictionary["Expenditures"]}/>
+                <View style={styles.parantView}>
+                    {infoLableSettings["currentExpenditures"] ? <View style={styles.childView}>
+                        <DefaultLabel text={`${dictionary["Current Month"]}:`} textAlign="left" backGround={colorPallet.transperent} marginBottom={infoLableSettings["avargeExpenditures"] ? 0 : 5}/>
+                        <DefaultLabel text={props.currentMonthExpenditures != null ? ValueToString(props.currentMonthExpenditures): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent} marginBottom={infoLableSettings["avargeExpenditures"] ? 0 : 5}/>
+                    </View>: ""}
+                    {infoLableSettings["avargeExpenditures"] ? <View style={{marginBottom:5, ...styles.childView}}>
+                        <DefaultLabel text={`${dictionary["Average"]}:`} textAlign="left" backGround={colorPallet.transperent}/>
+                        <DefaultLabel text={props.avargeExpenditures != null ? ValueToString(props.avargeExpenditures): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent}/>
+                    </View>: ""}
+                 </View>
+            </View> : ""}
 
-                <View style={{marginBottom:5, ...styles.childView}}>
-                    <DefaultLabel text={`${dictionary["Average"]}:`} textAlign="left" backGround={colorPallet.transperent}/>
-                    <DefaultLabel text={ValueToString(props.avargeExpenditures)} marginLeft={10} textAlign="left" backGround={colorPallet.transperent}/>
-                </View>
+            {infoLableSettings["avargeIncome"] || infoLableSettings["currentIncome"] ? 
+            <View style={{marginBottom:20}}>
+                <HeadLine text={dictionary["Income"]}/>
+                <View style={styles.parantView}>
+                    {infoLableSettings["currentIncome"] ? <View style={styles.childView}>
+                        <DefaultLabel text={`${dictionary["Current Month"]}:`} textAlign="left" backGround={colorPallet.transperent} marginBottom={infoLableSettings["avargeExpenditures"] ? 0 : 5}/>
+                        <DefaultLabel text={props.currentMonthIncome != null ? ValueToString(props.currentMonthIncome): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent} marginBottom={infoLableSettings["avargeExpenditures"] ? 0 : 5}/>
+                    </View>: ""}
+                    {infoLableSettings["avargeIncome"] ? <View style={{marginBottom:5, ...styles.childView}}>
+                        <DefaultLabel text={`${dictionary["Average"]}:`} textAlign="left" backGround={colorPallet.transperent}/>
+                        <DefaultLabel text={props.avargeIncome != null ? ValueToString(props.avargeIncome): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent}/>
+                    </View>: ""}
+                 </View>
+            </View> : ""}
 
-             </View>
         </View>
-
-    );
+    )
+    
 }
 
-export default ExpendituresInfo;
+export default InfoBox;

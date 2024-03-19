@@ -17,11 +17,17 @@
 
     "User":"Nutzer",
     "Personalize":"Personalisierung",
+    "Info Box":"Info Box",
 
     "no user jet": "Noch keinen Benutzer",
     
     "Expenditures": "Ausgaben",
     "Income":"Einkommen",
+
+    "Avarge income":"Durchschnittliches Einkommen",
+    "Current income":"Aktuelles Einkommen",
+    "Avarge expenditures":"Durchschnittliche Ausgaben",
+    "Current expenditures":"Aktuelle Ausgaben",
 
     "Current Month": "Aktueller Monat",
     "Average": "Durchschnitt",
