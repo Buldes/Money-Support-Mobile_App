@@ -18,7 +18,7 @@ In this repository, you'll find the mobile app (currently available only for And
 
 *[Open Changelog](https://github.com/Buldes/Money-Support-Mobile_App/blob/main/CHANGELOG.md)*
 
-- [Download APK Money Support 0.2.1 - Early Acess (latest)]()
+- [Download APK Money Support 0.2.1 - Early Acess (latest)](https://expo.dev/artifacts/eas/xkcTCGAqzREEWVPhHBsKW8.apk)
 - [Download APK Money Support 0.1.1 - Early Acess](https://expo.dev/artifacts/eas/9DAGoJx3zrTfishi3HTMFJ.apk)
 
 ## Supported Languages
