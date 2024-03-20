@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
  
 ## [0.2.1 Early Acess] - 2024-03-19
- 
+[Download APK Money Support 0.2.1 - Early Acess (latest)](https://expo.dev/artifacts/eas/xkcTCGAqzREEWVPhHBsKW8.apk)
+
 Small update, that added some few features. 
 
 The new features can cause **more loading time**, because everything is calculated at the beginning, when you start the app, or when you add a new entry. The calculation time is based on youre device and amount of entry in the last 12 months, so it can vary a lot. 
