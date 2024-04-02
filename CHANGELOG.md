@@ -15,8 +15,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
  - for the calculation of *Avarge Expenditures* and *Avarge Income* it didn't uses Data from the last year, only the curent year
 
 ## [0.2.1 Early Acess] - 2024-03-19
- - [Download APK Money Support 0.2.1 - Early Acess
- ](https://expo.dev/artifacts/eas/xkcTCGAqzREEWVPhHBsKW8.apk)
+- [Download APK Money Support 0.2.1 - Early Acess](https://expo.dev/artifacts/eas/xkcTCGAqzREEWVPhHBsKW8.apk)
+
 
 Small update, that added some few features. 
 
