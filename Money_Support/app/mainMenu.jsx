@@ -128,6 +128,10 @@ const MainMenu = () => {
         setCurrentExpenditures(d[0])
         setAvargeExpenditures(d[1])
         console.log(`loaded expenditures: current: ${d[0]} avarge: ${d[1]}`)
+
+        setCurrentIncome(d[2])
+        setAvargeIncome(d[3])
+        console.log(`loaded income: current: ${d[2]} avarge: ${d[3]}`)
       })
 
     })

@@ -19,6 +19,8 @@ async function CalculateExpendituresIcome(){
     var calculatedCurrentIncome = 0
     var claculatedAvargeIncome = 0
 
+    var totalMonth = 12
+
     var element = []
     const currentDate = new Date()
     //{"id":2, "state":"Expenditures", "date":{"day":currentDate.getDate(),"month":currentDate.getMonth() + 1,"year":currentDate.getFullYear()}, "amount":0.5, "bankBalance":0},
@@ -37,12 +39,27 @@ async function CalculateExpendituresIcome(){
             else claculatedAvargeIncome += element["amount"]
         }
 
+        else if (element["date"]["year"] != currentDate.getFullYear && element["date"]["month"] == currentDate.getMonth() + 1){
+            if (element["state"] == "Expenditures") claculatedAvargeExpenditures += element["amount"]
+            else claculatedAvargeIncome += element["amount"]
+        }
+
         else if (element["date"]["year"] != currentDate.getFullYear()){
             break
         }
     }
 
-    return [calculatedCurrentExpenditures, claculatedAvargeExpenditures / 12, calculatedCurrentIncome, claculatedAvargeIncome / 12]
+    if (currentUserData[currentUserData.length - 1]["date"]["year"] == currentDate.getFullYear()){
+         totalMonth = (currentDate.getMonth() + 1) - currentUserData[currentUserData.length - 1]["date"]["month"]
+    }
+    else {
+        totalMonth = (currentDate.getMonth() + 1) - currentUserData[currentUserData.length - 1]["date"]["month"] + 12
+    }
+
+    if (totalMonth > 12) totalMonth = 12
+    console.log(`Total Months: ${totalMonth}`)
+
+    return [calculatedCurrentExpenditures, claculatedAvargeExpenditures / totalMonth, calculatedCurrentIncome, claculatedAvargeIncome / totalMonth]
 }
 
 export default CalculateExpendituresIcome
