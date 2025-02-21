@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [0.2.3 Early Acess] - 2025-21-02
 
-- [Download APK Money Support 0.2.3 - Early Acess]()
+- [Download APK Money Support 0.2.3 - Early Acess](http://dl.dropboxusercontent.com/scl/fi/03hgleg8gglqpx8mg72f0/money_support.apk?rlkey=s9dushbctadr1h8wik55dnfpk&st=ugp692o9&dl=0)
  
 ### Changed
 - dependencies update
