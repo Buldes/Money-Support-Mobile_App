@@ -16,7 +16,7 @@ const SettingsSwitch = (props) => {
             borderRadius:5,
             marginTop:10,
             marginHorizontal:10,
-            height:36
+            minHeight:36
         }
     })
 

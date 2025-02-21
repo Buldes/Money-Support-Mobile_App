@@ -3,7 +3,7 @@ import { View, StyleSheet, Dimensions, BackHandler, Alert } from 'react-native';
 import BankBalanceLable from '../components/Lables/bankBalance';
 import HeadLine from '../components/Lables/headlins';
 import colorPallet from '../constants/Colors';
-import { ScrollView } from 'react-native-gesture-handler';
+import { GestureHandlerRootView, ScrollView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import InfoBox from '../components/fullComp/info';
 import ExpendituresIncomComp from '../components/fullComp/expendituresIncom';
@@ -16,11 +16,11 @@ import languageDictionary from '../Functions/getLanguageDictionary';
 import SetDateString from '../Functions/dateTransformer';
 import { SortById } from '../Functions/dictionarySorting';
 import AddEntryModal from '../components/Modals/addEntryModal';
-import CahngeUserButton from '../components/fullComp/changeUserButton';
 import ChangeUserModal from '../components/Modals/changeUserModal';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import CreateNewUserModal from '../components/Modals/createUserModal';
 import CalculateExpendituresIcome from '../Functions/calcuateCurrentAndMonth';
+import MainMenuBottom from '../components/fullComp/mainMenuBottom';
 
 const MainMenu = () => {
   const [data, setData] = useState(null)
@@ -154,36 +154,37 @@ const MainMenu = () => {
   {
     return (
       <View style={{flex:1, ...style.dark}}>  
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <ScrollView alignItems="center"  style={{flex:1, ...style.dark}}>
 
-        <ScrollView alignItems="center"  style={{flex:1, ...style.dark}}>
-
-            <View style={{marginTop:10, alignItems:"center", ...style.dark}}>
-              <HeadLine text={currentUser}/>
-            </View>
-
-            <View style={{alignItems:"center", ...style.upArear}}>
-
-              <View>
-                <BankBalanceLable text={ValueToString(data[0].bankBalance)} marginTop={30} marginBottom={50}/>
+              <View style={{marginTop:10, alignItems:"center", ...style.dark}}>
+                <HeadLine text={currentUser}/>
               </View>
 
-              <InfoBox avargeIncome={avargeIncome} currentMonthIncome={currentIncome} avargeExpenditures={avargeExpenditures} currentMonthExpenditures={currentExpenditures}/>
+              <View style={{alignItems:"center", ...style.upArear}}>
 
-            </View>
+                <View>
+                  <BankBalanceLable text={ValueToString(data[0].bankBalance)} marginTop={30} marginBottom={50}/>
+                </View>
 
-            <View style={{alignItems:"center", ...style.downArear}}>
-              <ExpendituresIncomComp onPress={() => setModal(true)} listItems={data.slice(0, 40).map((value) => <ExpendituresIncomListItem key={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
-            </View>
+                <InfoBox avargeIncome={avargeIncome} currentMonthIncome={currentIncome} avargeExpenditures={avargeExpenditures} currentMonthExpenditures={currentExpenditures}/>
 
-            <AddEntryModal isVisible={modal} closePress={() => setModal(false)} createClick={AddDataClick}/>
-            
-            <ChangeUserModal openCreateUser={() => setCreateNewUserModal(true)} isVisible={changeUserModal} closeModal={() => setChangeUserModal(false)} keys={allKeys} reloadData={(keyOfUser) => ChangeUser(keyOfUser)}/>
-        
-            <CreateNewUserModal isVisible={createNewUserModal} closeModal={() => setCreateNewUserModal(false)} allUserKeys={allKeys} reloadData={(newUser) => ChangeUser(newUser)}/>
+              </View>
 
-        </ScrollView>
+              <View style={{alignItems:"center", ...style.downArear}}>
+                <ExpendituresIncomComp listItems={data.slice(0, 40).map((value) => <ExpendituresIncomListItem key={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
+              </View>
 
-        <CahngeUserButton onPress={() => setChangeUserModal(true)}/>
+              <AddEntryModal isVisible={modal} closePress={() => setModal(false)} createClick={AddDataClick}/>
+
+              <ChangeUserModal openCreateUser={() => setCreateNewUserModal(true)} isVisible={changeUserModal} closeModal={() => setChangeUserModal(false)} keys={allKeys} reloadData={(keyOfUser) => ChangeUser(keyOfUser)}/>
+
+              <CreateNewUserModal isVisible={createNewUserModal} closeModal={() => setCreateNewUserModal(false)} allUserKeys={allKeys} reloadData={(newUser) => ChangeUser(newUser)}/>
+
+          </ScrollView>
+        </GestureHandlerRootView>
+
+        <MainMenuBottom onPressCUB={() => setChangeUserModal(true)} onPressEIC={() => setModal(true)}/>
 
 
         <StatusBar style="light" backgroundColor={colorPallet.black}/>

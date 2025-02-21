@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import { Switch } from "react-native-gesture-handler";
+import { StyleSheet } from "react-native";
+import { GestureHandlerRootView, Switch } from "react-native-gesture-handler";
 import colorPallet from "../../constants/Colors";
 
 const DefaultSwitch = (props) => {
@@ -13,14 +13,16 @@ const DefaultSwitch = (props) => {
     })
 
     return(
-        <Switch
-            trackColor={{false: trackColorDisabled, true: trackColorEnabled}}
-            thumbColor={props.isEnabled ? enabledColor : disabledColor}
-            ios_backgroundColor="white"
-            onValueChange={props.toggleSwitch}
-            value={props.isEnabled}
-            style={{width:touchableWidth, height:touchableHeight, transform: [{ scaleX: size }, { scaleY: size }]}}
-            />
+        <GestureHandlerRootView style={{ backgroundColor:""}}>
+            <Switch
+                trackColor={{false: trackColorDisabled, true: trackColorEnabled}}
+                thumbColor={props.isEnabled ? enabledColor : disabledColor}
+                ios_backgroundColor="white"
+                onValueChange={props.toggleSwitch}
+                value={props.isEnabled}
+                style={{width:touchableWidth, height:touchableHeight, transform: [{ scaleX: size }, { scaleY: size }]}}
+                />
+        </GestureHandlerRootView>
     );
 }
 

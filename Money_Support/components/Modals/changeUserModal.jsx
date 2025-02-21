@@ -1,6 +1,6 @@
 import React from "react";
 import { Dimensions, Modal, Pressable, StyleSheet, View } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { GestureHandlerRootView, ScrollView } from "react-native-gesture-handler";
 import colorPallet from "../../constants/Colors";
 import DefaultButton from "../Buttons/default";
 import pressColorPallet from "../../constants/onPressColor";
@@ -70,13 +70,13 @@ const ChangeUserModal = (props) => {
                 <Pressable onPress={props.closeModal} style={styles.upExit}></Pressable>
 
                 <View style={[styles.container, {alignItems:"center"}]}>
-                    <ScrollView alignItems="center" style={[styles.container, {marginBottom:0}]} >
-
-                        {keys.map((value, index) => 
-                            value != currentuserKey ? <DefaultButton onPress={() => HanldeOnPress(value)} backGround={colorPallet.bg_3e} pressedColor={colorPallet.bg_4e} text={value} key={index} height={35} width={screenSize - 30} marginTop={5} />
-                            : <DefaultButton onPress={props.closeModal} backGround={colorPallet.bg_4e} pressedColor={colorPallet.bg_5e} text={<View style={styles.selectedUserView}><FontAwsomeIcon name={selectedIcon} size={selectedIconSize} color={colorPallet.white}/><DefaultLabel text={value} marginLeft={5} marginRight={5} backGround={colorPallet.transperent}/><FontAwsomeIcon name={selectedIcon} size={selectedIconSize} color={colorPallet.white}/></View>} key={index} height={35} width={screenSize - 30} marginTop={5} />
-                            )}
-                    </ScrollView>
+                        <ScrollView alignItems="center" style={[styles.container, {marginBottom:0}]} >
+        
+                            {keys.map((value, index) => 
+                                value != currentuserKey ? <DefaultButton onPress={() => HanldeOnPress(value)} backGround={colorPallet.bg_3e} pressedColor={colorPallet.bg_4e} text={value} key={index} height={35} width={screenSize - 30} marginTop={5} />
+                                : <DefaultButton onPress={props.closeModal} backGround={colorPallet.bg_4e} pressedColor={colorPallet.bg_5e} text={<View style={styles.selectedUserView}><FontAwsomeIcon name={selectedIcon} size={selectedIconSize} color={colorPallet.white}/><DefaultLabel text={value} marginLeft={5} marginRight={5} backGround={colorPallet.transperent}/><FontAwsomeIcon name={selectedIcon} size={selectedIconSize} color={colorPallet.white}/></View>} key={index} height={35} width={screenSize - 30} marginTop={5} />
+                                )}
+                        </ScrollView>
                     
                     <DefaultButton onPress={() => HandleCreatUserPress()} text={dictionary["Create new user"]} backGround={colorPallet.bg_rGb_2f9f1f} pressedColor={pressColorPallet.bg_rGb_2f9f1f} height={35} width={screenSize - 30} marginBottom={5} marginTop={10} />
                 

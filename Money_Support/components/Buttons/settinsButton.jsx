@@ -21,7 +21,7 @@ const SettingsMenuButton = (props) => {
     if (!props.useMaterialCommunityIcons){
         return(
             <Pressable style={({pressed}) => [ styles.parant, pressed ? { backgroundColor:pressedColor } : {} ]} onPress={props.onPress}>
-                <DefaultLabel fontSize={18} marginLeft={5} marginTop={5} marginBottom={5} text={props.text} backGround={colorPallet.transperent} textAlign="left" flex={1}/>
+                <DefaultLabel fontSize={18} marginLeft={5} marginTop={5} marginBottom={5} text={props.text} backGround={colorPallet.transperent} textColor={props.textColor} textAlign="left" flex={1}/>
                 <FontAwsomeIcon name={icon} size={iocnSize} color={iconColor} style={{marginHorizontal:10}}/>
             </Pressable>
         )
@@ -29,7 +29,7 @@ const SettingsMenuButton = (props) => {
     else{
         return(
             <Pressable style={({pressed}) => [ styles.parant, pressed ? { backgroundColor:pressedColor } : {} ]} onPress={props.onPress}>
-                <DefaultLabel fontSize={18} marginLeft={5} marginTop={5} marginBottom={5} text={props.text} backGround={colorPallet.transperent} textAlign="left" flex={1}/>
+                <DefaultLabel fontSize={18} marginLeft={5} marginTop={5} marginBottom={5} text={props.text} backGround={colorPallet.transperent} textColor={props.textColor} textAlign="left" flex={1}/>
                 <MaterialCommunityIcons name={icon} size={iocnSize + 5} color={iconColor} style={{marginHorizontal:10}}/>
             </Pressable>
         )

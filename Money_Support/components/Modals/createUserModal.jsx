@@ -31,7 +31,7 @@ const CreateNewUserModal = (props) => {
             alignItems:"center"
         },
         placeHolder:{
-            height:10
+            height:5
         },
         closeModalArea:{
             width:screenSize,
@@ -61,6 +61,8 @@ const CreateNewUserModal = (props) => {
         setCurrentUserKey(keyOfUser)
         SaveCurrentUserKey().then(() => {
             props.reloadData(keyOfUser)
+            setNewName(null)
+            setValid(null)
         })
     }
 
@@ -72,15 +74,15 @@ const CreateNewUserModal = (props) => {
 
                 <View style={styles.container}>
                     
-                    <DefaultLabel text={dictionary["Create new user"]} backGround={colorPallet.bg_4e} borderRadius={20} marginBottom={10} width="100%"/>
+                    <DefaultLabel  height={40} text={dictionary["Create new user"]} backGround={colorPallet.bg_4e} borderRadius={20} marginBottom={20} width="100%"/>
 
                     <DefaultInputField value={newName} onChangeText={(value) => CheckValid(value)} width={screenSize - 40} placeholder={`[${dictionary["Type name here"]}]`} backGround={colorPallet.bg_3e} borderColor={valid ? "green": valid  == false? "red": "black" }/>
                     {valid == null ? "": 
                     valid ? <DefaultLabel text={dictionary["Valid name"]} backGround={colorPallet.transperent} fontSize={10} width={screenSize-45} textAlign="left" textColor={colorPallet.bg_rGb_2f9f1f}/>:
                     !valid ? <DefaultLabel text={`${dictionary["Invalid Name:"]} ${invalidError}`} backGround={colorPallet.transperent} fontSize={10} width={screenSize-45} textAlign="left" textColor={colorPallet.bg_Rgb_bf1f1f}/>: ""}
                     
-                    <View style={{width:screenSize - 40, flexDirection:"row", marginTop:20}}> 
-                        <DefaultButton text={dictionary["Cancel"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.closeModal} pressedColor={pressColorPallet.bg_Rgb_bf1f1f} height={30} marginRight={10}/>
+                    <View style={{width:screenSize - 40, flexDirection:"row", marginTop:10}}> 
+                        <DefaultButton text={dictionary["Cancel"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.closeModal} pressedColor={pressColorPallet.bg_Rgb_bf1f1f} height={40} marginRight={10}/>
 
                         {valid == null || !valid ? 
                         <DefaultButton text={dictionary["Create"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_5e} pressedColor={pressColorPallet.bg_Rgb_bf1f1f}/>:

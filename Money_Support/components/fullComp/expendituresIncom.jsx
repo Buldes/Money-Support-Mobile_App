@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet, ToastAndroid, View } from "react-native";
 import colorPallet from "../../constants/Colors";
 import HeadLine from "../Lables/headlins";
 import ExpendituresIncomListItem from "./expendituresIncomistItem";
-import { ScrollView } from "react-native-gesture-handler";
+import { GestureHandlerRootView, ScrollView } from "react-native-gesture-handler";
 import DefaultButton from "../Buttons/default";
 import DefaultLabel from "../Lables/default";
 import languageDictionary from "../../Functions/getLanguageDictionary";
@@ -31,27 +31,26 @@ const ExpendituresIncomComp = (props) => {
         listView: {
             height:510,
             borderRadius:20,
-            width: screenWidth - 44,
+            width: screenWidth - 40,
             backgroundColor:colorPallet.bg_3e,
             marginTop:0,
             position:"absolute",
-            zIndex:1
+            zIndex:1,
         }
     })
 
     return(
         <View style={styles.parentView}>
-            <HeadLine text={dictionary["Entries"]} width={screenWidth - 40} marginTop={0} add={{/*borderColor:"black", borderWidth:2, */position:'absolute',zIndex:2}}/>
+            <HeadLine text={dictionary["Entries"]} width={screenWidth - 40} height={40} marginTop={0} add={{/*borderColor:"black", borderWidth:2, */position:'absolute',zIndex:2}}/>
 
-            <DefaultButton onPress={props.onPress} text={dictionary["New Entry"]} width={150} height={30} backGround={colorPallet.bg_rgB_134ab0} marginTop={460} left={screenWidth-199} add={{position:'absolute',zIndex:2}}/>
+            <GestureHandlerRootView style={{flex:1, width:"100%"}}>
+                <ScrollView borderRadius={20} alignItems={"center"} style={styles.listView}>
+                    <DefaultLabel text="" backGround={colorPallet.transperent} marginBottom={15}/>
+                    {props.listItems}
+                    <DefaultLabel text="" backGround={colorPallet.transperent} marginBottom={10}/>
+                </ScrollView>
+            </GestureHandlerRootView>
 
-            <ScrollView borderRadius={20} alignItems={"center"} style={styles.listView}>
-                <DefaultLabel text="" backGround={colorPallet.transperent} marginBottom={10}/>
-                {props.listItems}
-                <DefaultLabel text="" backGround={colorPallet.transperent} marginBottom={10}/>
-            </ScrollView>
-
-            
 
         </View>
     );

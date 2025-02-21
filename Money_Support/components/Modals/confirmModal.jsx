@@ -37,12 +37,12 @@ const ConfirmModal = (props) => {
                 <Pressable style={styles.exitArea} onPress={props.closeModal}></Pressable>
 
                 <View style={styles.container}>
-                    <DefaultLabel text={props.headline} backGround={colorPallet.bg_4e} borderRadius={20} marginBottom={10} width="100%"/>
+                    <DefaultLabel height={40} text={props.headline} backGround={colorPallet.bg_4e} borderRadius={20} marginBottom={10} width="100%"/>
 
                     <DefaultLabel text={props.text} backGround={colorPallet.transperent} fontSize={18} width={screenSize-50} marginBottom={10}/>
 
-                    <View style={{width:screenSize - 40, flexDirection:"row", marginBottom:10}}> 
-                        <DefaultButton text={dictionary["Cancel"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.cancel} pressedColor={pressColorPallet.bg_Rgb_bf1f1f} height={30} marginRight={10}/>
+                    <View style={{width:screenSize - 40, flexDirection:"row", marginBottom:5}}> 
+                        <DefaultButton text={dictionary["Cancel"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.cancel} pressedColor={pressColorPallet.bg_Rgb_bf1f1f} height={40} marginRight={10}/>
                         <DefaultButton text={dictionary["Confirm"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_rGb_2f9f1f} onPress={props.confirmed} pressedColor={pressColorPallet.bg_rGb_2f9f1f}/>
                     </View>
 

@@ -44,4 +44,5 @@ export const setCurrentUserKey = (value) => {
     currentuserKey = value
 }
 
-export const appVersion = "0.2.1 - Early Acess"
+export const appVersion = "0.2.3 - Early Acess"
+export const expoVersion = "52.0.32"

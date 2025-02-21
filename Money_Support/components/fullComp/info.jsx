@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import languageDictionary from "../../Functions/getLanguageDictionary";
 import HeadLine from "../Lables/headlins";
@@ -9,7 +9,7 @@ import { infoLableSettings } from "../../variables/dictionary";
 
 const InfoBox = (props) => {
     const dictionary = languageDictionary();
-
+    const [dataValid, setdataValid] = useState(true)
     const {} = props;
 
     const styles = StyleSheet.create({
@@ -28,6 +28,11 @@ const InfoBox = (props) => {
             flexDirection:"row"
         }
     })
+    
+    useEffect(() => {
+        if (isNaN(props.avargeExpenditures)) setdataValid(false);
+        else setdataValid(true)
+    }, [props.avargeExpenditures])
 
     return(
 
@@ -39,11 +44,11 @@ const InfoBox = (props) => {
                 <View style={styles.parantView}>
                     {infoLableSettings["currentExpenditures"] ? <View style={styles.childView}>
                         <DefaultLabel text={`${dictionary["Current Month"]}:`} textAlign="left" backGround={colorPallet.transperent} marginBottom={infoLableSettings["avargeExpenditures"] ? 0 : 5}/>
-                        <DefaultLabel text={props.currentMonthExpenditures != null ? ValueToString(props.currentMonthExpenditures): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent} marginBottom={infoLableSettings["avargeExpenditures"] ? 0 : 5}/>
+                        <DefaultLabel text={true ? ValueToString(props.currentMonthExpenditures): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent} marginBottom={infoLableSettings["avargeExpenditures"] ? 0 : 5}/>
                     </View>: ""}
                     {infoLableSettings["avargeExpenditures"] ? <View style={{marginBottom:5, ...styles.childView}}>
                         <DefaultLabel text={`${dictionary["Average"]}:`} textAlign="left" backGround={colorPallet.transperent}/>
-                        <DefaultLabel text={props.avargeExpenditures != null ? ValueToString(props.avargeExpenditures): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent}/>
+                        <DefaultLabel text={dataValid ? ValueToString(props.avargeExpenditures): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent}/>
                     </View>: ""}
                  </View>
             </View> : ""}
@@ -54,11 +59,11 @@ const InfoBox = (props) => {
                 <View style={styles.parantView}>
                     {infoLableSettings["currentIncome"] ? <View style={styles.childView}>
                         <DefaultLabel text={`${dictionary["Current Month"]}:`} textAlign="left" backGround={colorPallet.transperent} marginBottom={infoLableSettings["avargeExpenditures"] ? 0 : 5}/>
-                        <DefaultLabel text={props.currentMonthIncome != null ? ValueToString(props.currentMonthIncome): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent} marginBottom={infoLableSettings["avargeExpenditures"] ? 0 : 5}/>
+                        <DefaultLabel text={true ? ValueToString(props.currentMonthIncome): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent} marginBottom={infoLableSettings["avargeExpenditures"] ? 0 : 5}/>
                     </View>: ""}
                     {infoLableSettings["avargeIncome"] ? <View style={{marginBottom:5, ...styles.childView}}>
                         <DefaultLabel text={`${dictionary["Average"]}:`} textAlign="left" backGround={colorPallet.transperent}/>
-                        <DefaultLabel text={props.avargeIncome != null ? ValueToString(props.avargeIncome): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent}/>
+                        <DefaultLabel text={dataValid ? ValueToString(props.avargeIncome): "--.--"} marginLeft={10} textAlign="left" backGround={colorPallet.transperent}/>
                     </View>: ""}
                  </View>
             </View> : ""}

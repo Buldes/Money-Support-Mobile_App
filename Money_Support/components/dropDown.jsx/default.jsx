@@ -39,7 +39,8 @@ const DefaulDropBox = (props) => {
           marginBottom:props.marginBottom,
           marginLeft:props.marginLeft,
           marginTop:props.marginTop,
-          marginRight:props.marginRight}
+          marginRight:props.marginRight
+        }
     })
     
     const [open, setOpen] = useState(false);

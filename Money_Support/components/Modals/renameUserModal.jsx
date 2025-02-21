@@ -32,7 +32,7 @@ const RenameuserModal = (props) => {
             alignItems:"center"
         },
         placeHolder:{
-            height:10
+            height:5
         },
         closeModalArea:{
             width:screenSize,
@@ -74,7 +74,7 @@ const RenameuserModal = (props) => {
 
                 <View style={styles.container}>
                     
-                    <DefaultLabel text={dictionary["Rename user"]} backGround={colorPallet.bg_4e} borderRadius={20} marginBottom={5} width="100%"/>
+                    <DefaultLabel height={40} text={dictionary["Rename user"]} backGround={colorPallet.bg_4e} borderRadius={20} marginBottom={5} width="100%"/>
 
                     <DefaultLabel text={`${dictionary["Current name"]}: ${currentuserKey}`} backGround={colorPallet.transperent} fontSize={15} marginBottom={5}/>
 
@@ -83,8 +83,8 @@ const RenameuserModal = (props) => {
                     valid ? <DefaultLabel text={dictionary["Valid name"]} backGround={colorPallet.transperent} fontSize={10} width={screenSize-45} textAlign="left" textColor={colorPallet.bg_rGb_2f9f1f}/>:
                     !valid ? <DefaultLabel text={`${dictionary["Invalid Name:"]} ${invalidError}`} backGround={colorPallet.transperent} fontSize={10} width={screenSize-45} textAlign="left" textColor={colorPallet.bg_Rgb_bf1f1f}/>: ""}
                     
-                    <View style={{width:screenSize - 40, flexDirection:"row", marginTop:20}}> 
-                        <DefaultButton text={dictionary["Cancel"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.closeModal} pressedColor={pressColorPallet.bg_Rgb_bf1f1f} height={30} marginRight={10}/>
+                    <View style={{width:screenSize - 40, flexDirection:"row", marginTop:10}}> 
+                        <DefaultButton text={dictionary["Cancel"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_Rgb_bf1f1f} onPress={props.closeModal} pressedColor={pressColorPallet.bg_Rgb_bf1f1f} height={40} marginRight={10}/>
 
                         {valid == null || !valid ? 
                         <DefaultButton text={dictionary["Rename"]} width={(screenSize-40) / 2 - 5} backGround={colorPallet.bg_5e} pressedColor={pressColorPallet.bg_Rgb_bf1f1f}/>:

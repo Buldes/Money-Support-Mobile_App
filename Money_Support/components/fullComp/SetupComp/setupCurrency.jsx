@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 import DefaultLabel from "../../Lables/default";
 import colorPallet from "../../../constants/Colors";
 import languageDictionary from "../../../Functions/getLanguageDictionary";
-import { ScrollView } from "react-native-gesture-handler";
+import {GestureHandlerRootView, ScrollView } from "react-native-gesture-handler";
 import SetupCurrencyRadioButton from "./setupCurrencyRadioButton";
 import ValueToString from "../../../Functions/valueToString";
 
@@ -43,9 +43,11 @@ const SetupCurrency = (props) => {
         </View>
 
         <View style={[styles.container, {flex:1, overflow:"hidden"}]}>
-            <ScrollView alignItems={"center"} style={styles.scrollView}>
-                <SetupCurrencyRadioButton  selected={props.selected} setSelected={props.setSelected}/>
-            </ScrollView>
+            <GestureHandlerRootView>
+                <ScrollView alignItems={"center"} style={styles.scrollView}>
+                    <SetupCurrencyRadioButton  selected={props.selected} setSelected={props.setSelected}/>
+                </ScrollView>
+            </GestureHandlerRootView>
         </View>
     </View>
     );

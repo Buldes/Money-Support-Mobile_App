@@ -1,3 +1,6 @@
+import "../shim.js"
+
+
 import React, { useState, useEffect } from 'react';
 import MainMenu from './mainMenu';
 import { BackHandler, View, Text } from 'react-native';
