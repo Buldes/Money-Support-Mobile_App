@@ -1,7 +1,7 @@
 {
-    "Choose your Language": "Выберите язык",
-    "Choose your Currency": "Выберите валюту",
-    "Choose your Layout": "Выберите макет",
+    "Choose your Language": "Выберите ваш язык",
+    "Choose your Currency": "Выберите вашу валюту",
+    "Choose your Layout": "Выберите ваш макет",
     "Type in a name for your first User.": "Введите имя для вашего первого пользователя.",
 
     "Are you sure you want to RESET the current User?\nUser:": "Вы уверены, что хотите СБРОСИТЬ текущего пользователя?\nПользователь:",
@@ -19,7 +19,7 @@
     "Personalize": "Персонализировать",
     "Info Box": "Информационное окно",
 
-    "no user jet": "Пользователь еще не создан",
+    "no user jet": "Нет пользователя",
 
     "Expenditures": "Расходы",
     "Income": "Доход",
@@ -35,6 +35,7 @@
     "Entries": "Записи",
     "New Entry": "Новая запись",
     "Add new Entry": "Добавить новую запись",
+    "Edit Entry": "Редактировать запись",
 
     "Cancel": "Отмена",
     "Create": "Создать",
@@ -43,21 +44,23 @@
     "Back": "Назад",
     "Finish": "Завершить",
     "Rename": "Переименовать",
+    "Delete": "Удалить",
+    "Edit": "Редактировать",
 
-    "Name must contain letters or numbers": "Имя должно содержать буквы или цифры.",
+    "Name must contain letters or numbers": "Имя должно содержать буквы или цифры",
     "is already in use.": "уже используется.",
-    "is not allowed to use, do to storage problems.": "не допускается к использованию из-за проблем с хранением.",
-    "Invalid Name:": "Недопустимое имя:",
-    "Valid name": "Допустимое имя",
+    "is not allowed to use, do to storage problems.": "нельзя использовать из-за проблем с хранением.",
+    "Invalid Name:": "Неверное имя:",
+    "Valid name": "Действительное имя",
     "Current name": "Текущее имя",
 
     "type amount here": "Введите сумму здесь",
     "Type name here": "Введите имя здесь",
 
-    "USD": "Доллар США",
+    "USD": "Доллары США",
     "EUR": "Евро",
-    "GBP": "Фунт стерлингов",
-    "JPY": "Японская йена",
+    "GBP": "Британский фунт",
+    "JPY": "Японская иена",
     "CNY": "Китайский юань",
     "CAD": "Канадский доллар",
     "AUD": "Австралийский доллар",

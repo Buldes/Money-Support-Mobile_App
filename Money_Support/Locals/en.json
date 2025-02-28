@@ -35,6 +35,7 @@
     "Entries": "Entries",
     "New Entry": "New Entry",
     "Add new Entry": "Add new Entry",
+    "Edit Entry":"Edit Entry",
 
     "Cancel": "Cancel",
     "Create": "Create",
@@ -43,6 +44,8 @@
     "Back": "Back",
     "Finish": "Finish",
     "Rename": "Rename",
+    "Delete": "Delete",
+    "Edit": "Edit",
 
     "Name must contain letters or numbers": "Name must contain letters or numbers",
     "is already in use.": "is already in use.",
@@ -53,7 +56,6 @@
 
     "type amount here": "type amount here",
     "Type name here": "Type name here",
-
 
     "USD": "US dollars",
     "EUR": "Euro",

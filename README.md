@@ -18,7 +18,9 @@ In this repository, you'll find the mobile app (currently available only for And
 
 *[Open Changelog](https://github.com/Buldes/Money-Support-Mobile_App/blob/main/CHANGELOG.md)*
 
-- [Download APK Money Support 0.2.3 - Early Acess (latest)](http://dl.dropboxusercontent.com/scl/fi/03hgleg8gglqpx8mg72f0/money_support.apk?rlkey=s9dushbctadr1h8wik55dnfpk&st=ugp692o9&dl=0)
+- [Download APK Money Support 0.3.0 - Early Acess (latest)](http://dl.dropboxusercontent.com/scl/fi/bgodtru4ljsfptah1kd05/money_support_V0.3.0.apk?rlkey=ywmtscab0psiou1ncg0kyckcz&st=378jdyt4&dl=0)
+
+- [Download APK Money Support 0.2.3 - Early Acess ](http://dl.dropboxusercontent.com/scl/fi/03hgleg8gglqpx8mg72f0/money_support_V0.2.3.apk?rlkey=s9dushbctadr1h8wik55dnfpk&st=kgbx7paz&dl=0)
 
 ## Supported Languages
 
@@ -54,26 +56,27 @@ In this repository, you'll find the mobile app (currently available only for And
 ## Screenshots
 
 **The Main Menu**
-![Error](screenshots/MainMenu.jpg)
 
-![Error](screenshots/MainMenu-AddEntry.jpg)
+<img src="screenshots/MainMenu.jpg" width="200">
 
-![Error](screenshots/MainMenu-ChangeUser.jpg)
+<img src="screenshots/MainMenu-AddEntry.jpg" width="200">
 
-![Error](screenshots/MainMenu-AddUser.jpg)
+<img src="screenshots/MainMenu-ChangeUser.jpg" width="200">
+
+<img src="screenshots/MainMenu-AddUser.jpg" width="200">
 
 
 **Settings**
 
-![Error](screenshots/Settings.jpg)
+<img src="screenshots/Settings.jpg" width="200">
 
 **Easy Setup**
 
-![Error](screenshots/Setup-Language.jpg)
+<img src="screenshots/Setup-Language.jpg" width="200">
 
-![Error](screenshots/Setup-Currency.jpg)
+<img src="screenshots/Setup-Currency.jpg" width="200">
 
-![Error](screenshots/Setup-Layout.jpg)
+<img src="screenshots/Setup-Layout.jpg" width="200">
 
-![Error](screenshots/Setup-Name.jpg)
+<img src="screenshots/Setup-Name.jpg" width="200">
 

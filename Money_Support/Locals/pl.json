@@ -1,11 +1,11 @@
 {
-    "Choose your Language": "Wybierz język",
-    "Choose your Currency": "Wybierz walutę",
-    "Choose your Layout": "Wybierz układ",
+    "Choose your Language": "Wybierz swój język",
+    "Choose your Currency": "Wybierz swoją walutę",
+    "Choose your Layout": "Wybierz swój układ",
     "Type in a name for your first User.": "Wpisz nazwę dla swojego pierwszego użytkownika.",
 
-    "Are you sure you want to RESET the current User?\nUser:": "Czy na pewno chcesz ZRESETOWAĆ bieżącego użytkownika?\nUżytkownik:",
-    "Are you sure you want to DELETE the current User?\nUser:": "Czy na pewno chcesz USUNĄĆ bieżącego użytkownika?\nUżytkownik:",
+    "Are you sure you want to RESET the current User?\nUser:": "Czy na pewno chcesz ZRESETOWAĆ obecnego użytkownika?\nUżytkownik:",
+    "Are you sure you want to DELETE the current User?\nUser:": "Czy na pewno chcesz USUNĄĆ obecnego użytkownika?\nUżytkownik:",
 
     "Create new user": "Utwórz nowego użytkownika",
     "Rename user": "Zmień nazwę użytkownika",
@@ -22,7 +22,7 @@
     "no user jet": "Brak użytkownika",
 
     "Expenditures": "Wydatki",
-    "Income": "Dochód",
+    "Income": "Dochody",
 
     "Avarge income": "Średni dochód",
     "Current income": "Bieżący dochód",
@@ -35,6 +35,7 @@
     "Entries": "Wpisy",
     "New Entry": "Nowy wpis",
     "Add new Entry": "Dodaj nowy wpis",
+    "Edit Entry": "Edytuj wpis",
 
     "Cancel": "Anuluj",
     "Create": "Utwórz",
@@ -43,15 +44,17 @@
     "Back": "Wstecz",
     "Finish": "Zakończ",
     "Rename": "Zmień nazwę",
+    "Delete": "Usuń",
+    "Edit": "Edytuj",
 
-    "Name must contain letters or numbers": "Nazwa musi zawierać litery lub cyfry.",
-    "is already in use.": "jest już używane.",
-    "is not allowed to use, do to storage problems.": "nie można używać z powodu problemów z przechowywaniem.",
+    "Name must contain letters or numbers": "Nazwa musi zawierać litery lub cyfry",
+    "is already in use.": "jest już używana.",
+    "is not allowed to use, do to storage problems.": "nie może być używana z powodu problemów z pamięcią.",
     "Invalid Name:": "Nieprawidłowa nazwa:",
-    "Valid name": "Poprawna nazwa",
+    "Valid name": "Prawidłowa nazwa",
     "Current name": "Bieżąca nazwa",
 
-    "type amount here": "wpisz kwotę tutaj",
+    "type amount here": "Wpisz kwotę tutaj",
     "Type name here": "Wpisz nazwę tutaj",
 
     "USD": "Dolar amerykański",

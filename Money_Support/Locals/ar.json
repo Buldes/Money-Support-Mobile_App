@@ -1,8 +1,8 @@
 {
     "Choose your Language": "اختر لغتك",
     "Choose your Currency": "اختر عملتك",
-    "Choose your Layout": "اختر تخطيطك",
-    "Type in a name for your first User.": "اكتب اسمًا لمستخدمك الأول.",
+    "Choose your Layout": "اختر التخطيط",
+    "Type in a name for your first User.": "اكتب اسمًا للمستخدم الأول.",
 
     "Are you sure you want to RESET the current User?\nUser:": "هل أنت متأكد أنك تريد إعادة تعيين المستخدم الحالي؟\nالمستخدم:",
     "Are you sure you want to DELETE the current User?\nUser:": "هل أنت متأكد أنك تريد حذف المستخدم الحالي؟\nالمستخدم:",
@@ -17,35 +17,38 @@
 
     "User": "المستخدم",
     "Personalize": "تخصيص",
-    "Info Box": "صندوق المعلومات",
+    "Info Box": "مربع المعلومات",
 
     "no user jet": "لا يوجد مستخدم حتى الآن",
 
-    "Expenditures": "المصاريف",
+    "Expenditures": "النفقات",
     "Income": "الدخل",
 
-    "Avarge income": "الدخل المتوسط",
+    "Avarge income": "متوسط الدخل",
     "Current income": "الدخل الحالي",
-    "Avarge expenditures": "المصاريف المتوسطة",
-    "Current expenditures": "المصاريف الحالية",
+    "Avarge expenditures": "متوسط النفقات",
+    "Current expenditures": "النفقات الحالية",
 
     "Current Month": "الشهر الحالي",
-    "Average": "متوسط",
+    "Average": "المتوسط",
 
-    "Entries": "المدخلات",
+    "Entries": "الإدخالات",
     "New Entry": "إدخال جديد",
     "Add new Entry": "إضافة إدخال جديد",
+    "Edit Entry": "تعديل الإدخال",
 
     "Cancel": "إلغاء",
     "Create": "إنشاء",
     "Confirm": "تأكيد",
     "Next": "التالي",
-    "Back": "السابق",
+    "Back": "رجوع",
     "Finish": "إنهاء",
-    "Rename": "إعادة التسمية",
+    "Rename": "إعادة تسمية",
+    "Delete": "حذف",
+    "Edit": "تعديل",
 
-    "Name must contain letters or numbers": "يجب أن يحتوي الاسم على أحرف أو أرقام.",
-    "is already in use.": "مستخدم بالفعل.",
+    "Name must contain letters or numbers": "يجب أن يحتوي الاسم على حروف أو أرقام",
+    "is already in use.": "يتم استخدامه بالفعل.",
     "is not allowed to use, do to storage problems.": "غير مسموح باستخدامه بسبب مشاكل التخزين.",
     "Invalid Name:": "اسم غير صالح:",
     "Valid name": "اسم صالح",
@@ -56,7 +59,7 @@
 
     "USD": "الدولار الأمريكي",
     "EUR": "اليورو",
-    "GBP": "الجنيه البريطاني",
+    "GBP": "الجنيه الإسترليني",
     "JPY": "الين الياباني",
     "CNY": "اليوان الصيني",
     "CAD": "الدولار الكندي",

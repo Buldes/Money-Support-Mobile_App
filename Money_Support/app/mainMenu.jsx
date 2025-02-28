@@ -21,11 +21,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import CreateNewUserModal from '../components/Modals/createUserModal';
 import CalculateExpendituresIcome from '../Functions/calcuateCurrentAndMonth';
 import MainMenuBottom from '../components/fullComp/mainMenuBottom';
+import EditEntryModal from '../components/Modals/editEntryModal';
 
 const MainMenu = () => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [modal, setModal] = useState(false)
+  const [editModal, setEditModal] = useState(false)
+  const [editID, setEditID] = useState(null) 
   const [changeUserModal, setChangeUserModal] = useState(false)
   const [createNewUserModal, setCreateNewUserModal] = useState(false)
   const [allKeys, setAllKeys] = useState(null)
@@ -115,7 +118,7 @@ const MainMenu = () => {
   // 4. get current language dictionary
   const dictionary = languageDictionary()
 
-  // 5. create add Data function / create Click and ChangeUser function
+  // 5. functions
   const AddDataClick = async () => {
     console.log(`\nAdd ${JSON.stringify(newEntry)} to ${currentuserKey}`)
     AddToCurrentUserData(newEntry)
@@ -149,6 +152,17 @@ const MainMenu = () => {
     // setLoading(true)
   }
 
+  const EditUserModal = (i) => {
+    setEditID(i)
+    setEditModal(true)
+  }
+
+  const reload = () => {
+    setLoading(true)
+    setData(null)
+    fetchData()
+  }
+
   // 6. loading is finished and data is not null
   if (data != null)
   {
@@ -172,7 +186,7 @@ const MainMenu = () => {
               </View>
 
               <View style={{alignItems:"center", ...style.downArear}}>
-                <ExpendituresIncomComp listItems={data.slice(0, 40).map((value) => <ExpendituresIncomListItem key={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
+                <ExpendituresIncomComp listItems={data.slice(0, 40).map((value) => <ExpendituresIncomListItem openEditentry={value.state != "Initialization" ? (i) => EditUserModal(i): () => console.log("Entry can't be editet")} key={value.id} dataID={value.id} status={value.state} date={SetDateString(value.date.day, value.date.month, value.date.year)} value={value.amount}/>)}/>
               </View>
 
               <AddEntryModal isVisible={modal} closePress={() => setModal(false)} createClick={AddDataClick}/>
@@ -180,6 +194,8 @@ const MainMenu = () => {
               <ChangeUserModal openCreateUser={() => setCreateNewUserModal(true)} isVisible={changeUserModal} closeModal={() => setChangeUserModal(false)} keys={allKeys} reloadData={(keyOfUser) => ChangeUser(keyOfUser)}/>
 
               <CreateNewUserModal isVisible={createNewUserModal} closeModal={() => setCreateNewUserModal(false)} allUserKeys={allKeys} reloadData={(newUser) => ChangeUser(newUser)}/>
+
+              <EditEntryModal reloadData={() => reload()} isVisible={editModal} closePress={() => setEditModal(false)} data={data[-parseInt(editID) + data.length - 1]}/>
 
           </ScrollView>
         </GestureHandlerRootView>

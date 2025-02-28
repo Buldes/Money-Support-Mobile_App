@@ -1,11 +1,11 @@
 {
-    "Choose your Language": "言語を選択",
-    "Choose your Currency": "通貨を選択",
-    "Choose your Layout": "レイアウトを選択",
-    "Type in a name for your first User.": "最初のユーザーの名前を入力",
+    "Choose your Language": "言語を選択してください",
+    "Choose your Currency": "通貨を選択してください",
+    "Choose your Layout": "レイアウトを選択してください",
+    "Type in a name for your first User.": "最初のユーザーの名前を入力してください。",
 
-    "Are you sure you want to RESET the current User?\nUser:": "現在のユーザーをリセットしますか？\nユーザー：",
-    "Are you sure you want to DELETE the current User?\nUser:": "現在のユーザーを削除しますか？\nユーザー：",
+    "Are you sure you want to RESET the current User?\nUser:": "現在のユーザーをリセットしてもよろしいですか？\nユーザー：",
+    "Are you sure you want to DELETE the current User?\nUser:": "現在のユーザーを削除してもよろしいですか？\nユーザー：",
 
     "Create new user": "新しいユーザーを作成",
     "Rename user": "ユーザー名を変更",
@@ -16,7 +16,7 @@
     "Change layout": "レイアウトを変更",
 
     "User": "ユーザー",
-    "Personalize": "個人設定",
+    "Personalize": "カスタマイズ",
     "Info Box": "情報ボックス",
 
     "no user jet": "ユーザーがまだいません",
@@ -33,8 +33,9 @@
     "Average": "平均",
 
     "Entries": "エントリー",
-    "New Entry": "新規エントリー",
-    "Add new Entry": "新規エントリーを追加",
+    "New Entry": "新しいエントリー",
+    "Add new Entry": "新しいエントリーを追加",
+    "Edit Entry": "エントリーを編集",
 
     "Cancel": "キャンセル",
     "Create": "作成",
@@ -42,25 +43,27 @@
     "Next": "次へ",
     "Back": "戻る",
     "Finish": "完了",
-    "Rename": "名前変更",
+    "Rename": "名前を変更",
+    "Delete": "削除",
+    "Edit": "編集",
 
-    "Name must contain letters or numbers": "名前は文字または数字を含む必要があります。",
-    "is already in use.": "はすでに使用されています。",
-    "is not allowed to use, do to storage problems.": "ストレージの問題のため使用が許可されていません。",
+    "Name must contain letters or numbers": "名前には英字または数字を含める必要があります。",
+    "is already in use.": "すでに使用されています。",
+    "is not allowed to use, do to storage problems.": "ストレージの問題により使用できません。",
     "Invalid Name:": "無効な名前：",
     "Valid name": "有効な名前",
     "Current name": "現在の名前",
 
-    "type amount here": "ここに金額を入力してください",
-    "Type name here": "ここに名前を入力してください",
+    "type amount here": "ここに金額を入力",
+    "Type name here": "ここに名前を入力",
 
     "USD": "米ドル",
     "EUR": "ユーロ",
-    "GBP": "ポンド",
+    "GBP": "英国ポンド",
     "JPY": "日本円",
-    "CNY": "中国元",
+    "CNY": "中国人民元",
     "CAD": "カナダドル",
-    "AUD": "豪ドル",
+    "AUD": "オーストラリアドル",
     "INR": "インドルピー",
     "BRL": "ブラジルレアル",
     "CHF": "スイスフラン"

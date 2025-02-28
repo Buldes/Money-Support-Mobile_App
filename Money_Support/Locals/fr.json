@@ -2,7 +2,7 @@
     "Choose your Language": "Choisissez votre langue",
     "Choose your Currency": "Choisissez votre devise",
     "Choose your Layout": "Choisissez votre mise en page",
-    "Type in a name for your first User.": "Tapez un nom pour votre premier utilisateur",
+    "Type in a name for your first User.": "Entrez un nom pour votre premier utilisateur.",
 
     "Are you sure you want to RESET the current User?\nUser:": "Êtes-vous sûr de vouloir RÉINITIALISER l'utilisateur actuel ?\nUtilisateur :",
     "Are you sure you want to DELETE the current User?\nUser:": "Êtes-vous sûr de vouloir SUPPRIMER l'utilisateur actuel ?\nUtilisateur :",
@@ -11,18 +11,18 @@
     "Rename user": "Renommer l'utilisateur",
     "Reset user": "Réinitialiser l'utilisateur",
     "Delete user": "Supprimer l'utilisateur",
-    "Change language": "Changer la langue",
-    "Change currency": "Changer la devise",
+    "Change language": "Changer de langue",
+    "Change currency": "Changer de devise",
     "Change layout": "Changer la mise en page",
 
     "User": "Utilisateur",
-    "Personalize": "Personnaliser",
+    "Personalize": "Personnalisation",
     "Info Box": "Boîte d'information",
 
-    "no user jet": "Aucun utilisateur pour le moment",
+    "no user jet": "Aucun utilisateur pour l'instant",
 
     "Expenditures": "Dépenses",
-    "Income": "Revenu",
+    "Income": "Revenus",
 
     "Avarge income": "Revenu moyen",
     "Current income": "Revenu actuel",
@@ -35,6 +35,7 @@
     "Entries": "Entrées",
     "New Entry": "Nouvelle entrée",
     "Add new Entry": "Ajouter une nouvelle entrée",
+    "Edit Entry": "Modifier l'entrée",
 
     "Cancel": "Annuler",
     "Create": "Créer",
@@ -43,26 +44,27 @@
     "Back": "Retour",
     "Finish": "Terminer",
     "Rename": "Renommer",
+    "Delete": "Supprimer",
+    "Edit": "Modifier",
 
     "Name must contain letters or numbers": "Le nom doit contenir des lettres ou des chiffres.",
     "is already in use.": "est déjà utilisé.",
-    "is not allowed to use, do to storage problems.": "n'est pas autorisé en raison de problèmes de stockage.",
-
+    "is not allowed to use, do to storage problems.": "ne peut pas être utilisé en raison de problèmes de stockage.",
     "Invalid Name:": "Nom invalide :",
     "Valid name": "Nom valide",
     "Current name": "Nom actuel",
 
-    "type amount here": "Tapez le montant ici",
-    "Type name here": "Tapez le nom ici",
+    "type amount here": "Entrez le montant ici",
+    "Type name here": "Entrez le nom ici",
 
-    "USD": "Dollars américains",
+    "USD": "Dollar américain",
     "EUR": "Euro",
-    "GBP": "Livre britannique",
+    "GBP": "Livre sterling",
     "JPY": "Yen japonais",
     "CNY": "Yuan chinois",
     "CAD": "Dollar canadien",
     "AUD": "Dollar australien",
     "INR": "Roupie indienne",
-    "BRL": "Real brésilien",
+    "BRL": "Réal brésilien",
     "CHF": "Franc suisse"
 }

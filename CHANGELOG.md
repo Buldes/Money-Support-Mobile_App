@@ -3,9 +3,25 @@ All notable changes to this project will be documented in this file.
  
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [0.3.0 Early Acess] - 2025-27-02
+
+- [Download APK Money Support 0.3.0 - Early Acess (latest)](http://dl.dropboxusercontent.com/scl/fi/bgodtru4ljsfptah1kd05/money_support_V0.3.0.apk?rlkey=ywmtscab0psiou1ncg0kyckcz&st=378jdyt4&dl=0)
+ 
+### Added
+**Main Menu**
+- Entrys (except of the single Initialisation Entry) can now be edited and deleted
+
+### Changed
+**Main Menu**
+- made bankbalance label 40px biger
+
+### Removed
+- Removed Expenditures and Income in the welcome data 
+
+
 ## [0.2.3 Early Acess] - 2025-21-02
 
-- [Download APK Money Support 0.2.3 - Early Acess](http://dl.dropboxusercontent.com/scl/fi/03hgleg8gglqpx8mg72f0/money_support.apk?rlkey=s9dushbctadr1h8wik55dnfpk&st=ugp692o9&dl=0)
+- [Download APK Money Support 0.2.3 - Early Acess ](http://dl.dropboxusercontent.com/scl/fi/03hgleg8gglqpx8mg72f0/money_support_V0.2.3.apk?rlkey=s9dushbctadr1h8wik55dnfpk&st=kgbx7paz&dl=0)
  
 ### Changed
 - dependencies update

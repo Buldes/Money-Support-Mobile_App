@@ -69,7 +69,8 @@ const DefaultInputField = (props) => {
             value={props.value}
             onChangeText={props.onChangeText}
             placeholder={props.placeholder}
-            placeholderTextColor={placeholderTextColor}/>
+            placeholderTextColor={placeholderTextColor}
+            defaultValue={props.defaultValue}/>
     );
 }
 

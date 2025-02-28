@@ -4,7 +4,7 @@ import * as Font from 'expo-font';
 import colorPallet from "../../constants/Colors";
 
 const BankBalanceLable = (props) => {
-    const { size=200, fontSize=50 } = props;
+    const { size=240, fontSize=50 } = props;
 
     // load Font, because it is not a system font
     const [fontLoaded, setFontLoaded] = useState(false);

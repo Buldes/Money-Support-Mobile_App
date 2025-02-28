@@ -2,13 +2,13 @@
     "Choose your Language": "Elige tu idioma",
     "Choose your Currency": "Elige tu moneda",
     "Choose your Layout": "Elige tu diseño",
-    "Type in a name for your first User.": "Escribe un nombre para tu primer usuario",
+    "Type in a name for your first User.": "Escribe un nombre para tu primer usuario.",
 
-    "Are you sure you want to RESET the current User?\nUser:": "¿Estás seguro de que quieres RESTABLECER al usuario actual?\nUsuario:",
-    "Are you sure you want to DELETE the current User?\nUser:": "¿Estás seguro de que quieres ELIMINAR al usuario actual?\nUsuario:",
+    "Are you sure you want to RESET the current User?\nUser:": "¿Estás seguro de que quieres RESTABLECER el usuario actual?\nUsuario:",
+    "Are you sure you want to DELETE the current User?\nUser:": "¿Estás seguro de que quieres ELIMINAR el usuario actual?\nUsuario:",
 
     "Create new user": "Crear nuevo usuario",
-    "Rename user": "Cambiar nombre de usuario",
+    "Rename user": "Renombrar usuario",
     "Reset user": "Restablecer usuario",
     "Delete user": "Eliminar usuario",
     "Change language": "Cambiar idioma",
@@ -19,7 +19,7 @@
     "Personalize": "Personalizar",
     "Info Box": "Caja de información",
 
-    "no user jet": "Aún no hay usuarios",
+    "no user jet": "Aún no hay usuario",
 
     "Expenditures": "Gastos",
     "Income": "Ingresos",
@@ -34,7 +34,8 @@
 
     "Entries": "Entradas",
     "New Entry": "Nueva entrada",
-    "Add new Entry": "Agregar nueva entrada",
+    "Add new Entry": "Añadir nueva entrada",
+    "Edit Entry": "Editar entrada",
 
     "Cancel": "Cancelar",
     "Create": "Crear",
@@ -42,17 +43,19 @@
     "Next": "Siguiente",
     "Back": "Atrás",
     "Finish": "Finalizar",
-    "Rename": "Cambiar nombre",
+    "Rename": "Renombrar",
+    "Delete": "Eliminar",
+    "Edit": "Editar",
 
     "Name must contain letters or numbers": "El nombre debe contener letras o números.",
     "is already in use.": "ya está en uso.",
-    "is not allowed to use, do to storage problems.": "no se permite su uso debido a problemas de almacenamiento.",
-    "Invalid Name:": "Nombre inválido:",
+    "is not allowed to use, do to storage problems.": "no se puede usar debido a problemas de almacenamiento.",
+    "Invalid Name:": "Nombre no válido:",
     "Valid name": "Nombre válido",
     "Current name": "Nombre actual",
 
-    "type amount here": "escribe la cantidad aquí",
-    "Type name here": "escribe el nombre aquí",
+    "type amount here": "Escribe la cantidad aquí",
+    "Type name here": "Escribe el nombre aquí",
 
     "USD": "Dólar estadounidense",
     "EUR": "Euro",
