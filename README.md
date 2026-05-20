@@ -22,6 +22,10 @@ In this repository, you'll find the mobile app (currently available only for And
 
 - [Download APK Money Support 0.2.3 - Early Acess ](http://dl.dropboxusercontent.com/scl/fi/03hgleg8gglqpx8mg72f0/money_support_V0.2.3.apk?rlkey=s9dushbctadr1h8wik55dnfpk&st=kgbx7paz&dl=0)
 
+Unfortunately, the links are no longer working. Please use the release page. 
+
+I'm looking forward to getting the links working again.
+
 ## Supported Languages
 
 *Language translation made with ChatGPT*
